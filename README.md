@@ -11,7 +11,7 @@ Not Ready _Yet..._
 | 🔽 Download GZ Engine to make Games |  Goto the itch.io page or Releases page to download it! |
 | 💜 Contribute to the Engine ❤ | Install everything in requirements.txt and Python ~3.11 and don't mess up already existing code. |
 
-> Please don't make the code very messy, it's already messy enought in my opinion.
+> Please don't make the code very messy, it's already messy enough in my opinion.
 
 ## 📂 File Structure (Source Code) 
 | 📄 File | Description |
