@@ -1,0 +1,5826 @@
+<Comment> {
+  "egg-mkfont -o 'coolvetica rg.egg' 'coolvetica rg.ttf'"
+}
+<Texture> "coolvetica rg8230" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.152239583333333 0 0
+      0 0.0346354166666667 0
+      0.640677083333333 0.00416666666666666 1
+    }
+  }
+}
+<Texture> "coolvetica rg8222" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0661542338709677 0 0
+      0 0.0583043981481481 0
+      0.785282258064516 0.0353009259259259 1
+    }
+  }
+}
+<Texture> "coolvetica rg8221" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0661542338709677 0 0
+      0 0.0625 0
+      0.726688508064516 0.03125 1
+    }
+  }
+}
+<Texture> "coolvetica rg8220" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.06640625 0 0
+      0 0.0625 0
+      0.66796875 0.03125 1
+    }
+  }
+}
+<Texture> "coolvetica rg8218" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0346354166666667 0 0
+      0 0.0583043981481481 0
+      0.211197916666667 0.386863425925926 1
+    }
+  }
+}
+<Texture> "coolvetica rg8217" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0346354166666667 0 0
+      0 0.0625 0
+      0.656510416666667 0.22265625 1
+    }
+  }
+}
+<Texture> "coolvetica rg8216" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0346354166666667 0 0
+      0 0.0625 0
+      0.957291666666667 0.23046875 1
+    }
+  }
+}
+<Texture> "coolvetica rg780" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.07421875 0 0
+      0 0.046875 0
+      0.84375 0.0078125 1
+    }
+  }
+}
+<Texture> "coolvetica rg779" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0622306034482759 0 0
+      0 0.0425575657894737 0
+      0.586072198275862 -0.00370065789473684 1
+    }
+  }
+}
+<Texture> "coolvetica rg778" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0465029761904762 0 0
+      0 0.046875 0
+      0.957217261904762 0.19140625 1
+    }
+  }
+}
+<Texture> "coolvetica rg777" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0390625 0 0
+      0 0.0386029411764706 0
+      0.3984375 0.242417279411765 1
+    }
+  }
+}
+<Texture> "coolvetica rg776" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0661542338709677 0 0
+      0 0.03515625 0
+      -0.00378024193548387 0 1
+    }
+  }
+}
+<Texture> "coolvetica rg775" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0346354166666667 0 0
+      0 0.03515625 0
+      0.398697916666667 0.21484375 1
+    }
+  }
+}
+<Texture> "coolvetica rg774" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.06640625 0 0
+      0 0.04296875 0
+      0.78515625 0 1
+    }
+  }
+}
+<Texture> "coolvetica rg772" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.07421875 0 0
+      0 0.0266335227272727 0
+      0.48046875 0.00426136363636364 1
+    }
+  }
+}
+<Texture> "coolvetica rg771" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.05859375 0 0
+      0 0.0465029761904762 0
+      0.91015625 0.00799851190476191 1
+    }
+  }
+}
+<Texture> "coolvetica rg770" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.07421875 0 0
+      0 0.046875 0
+      0.9296875 0.046875 1
+    }
+  }
+}
+<Texture> "coolvetica rg769" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.054375 0 0
+      0 0.046875 0
+      0.43375 0.00390625 1
+    }
+  }
+}
+<Texture> "coolvetica rg768" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.054375 0 0
+      0 0.046875 0
+      0.386875 0.00390625 1
+    }
+  }
+}
+<Texture> "coolvetica rg567" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.078125 0 0
+      0 0.128782242063492 0
+      0.65625 0.625062003968254 1
+    }
+  }
+}
+<Texture> "coolvetica rg305" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0346354166666667 0 0
+      0 0.09375 0
+      0.273697916666667 0.51953125 1
+    }
+  }
+}
+<Texture> "coolvetica rg254" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.08984375 0 0
+      0 0.16015625 0
+      0.203125 0.84375 1
+    }
+  }
+}
+<Texture> "coolvetica rg248" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.09375 0 0
+      0 0.11328125 0
+      0.5703125 0.171875 1
+    }
+  }
+}
+<Texture> "coolvetica rg240" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.08984375 0 0
+      0 0.124871926229508 0
+      0.16015625 0.605532786885246 1
+    }
+  }
+}
+<Texture> "coolvetica rg231" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0857469512195122 0 0
+      0 0.1328125 0
+      0.742282774390244 0.74609375 1
+    }
+  }
+}
+<Texture> "coolvetica rg230" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.136602145522388 0 0
+      0 0.09765625 0
+      0.183652052238806 0.18359375 1
+    }
+  }
+}
+<Texture> "coolvetica rg223" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.08984375 0 0
+      0 0.125 0
+      0.078125 0.60546875 1
+    }
+  }
+}
+<Texture> "coolvetica rg199" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.10531556372549 0 0
+      0 0.160057357594937 0
+      0.105545343137255 0.843799446202532 1
+    }
+  }
+}
+<Texture> "coolvetica rg198" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.152239583333333 0 0
+      0 0.12109375 0
+      0.500052083333333 0.50390625 1
+    }
+  }
+}
+<Texture> "coolvetica rg191" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0857469512195122 0 0
+      0 0.125 0
+      0.644626524390244 0.5078125 1
+    }
+  }
+}
+<Texture> "coolvetica rg187" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0859375 0 0
+      0 0.0700757575757576 0
+      0.5078125 0.0235558712121212 1
+    }
+  }
+}
+<Texture> "coolvetica rg184" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0306490384615385 0 0
+      0 0.046875 0
+      0.699519230769231 0.46875 1
+    }
+  }
+}
+<Texture> "coolvetica rg181" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.078125 0 0
+      0 0.117050438596491 0
+      0.5 0.168037280701754 1
+    }
+  }
+}
+<Texture> "coolvetica rg176" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0625 0 0
+      0 0.06640625 0
+      0.5078125 0.109375 1
+    }
+  }
+}
+<Texture> "coolvetica rg171" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0859375 0 0
+      0 0.0700757575757576 0
+      -0.00390625 0.0274621212121212 1
+    }
+  }
+}
+<Texture> "coolvetica rg169" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.113139204545455 0 0
+      0 0.120961334745763 0
+      0.722727272727273 0.398503707627119 1
+    }
+  }
+}
+<Texture> "coolvetica rg161" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0390625 0 0
+      0 0.12109375 0
+      0.32421875 0.73046875 1
+    }
+  }
+}
+<Texture> "coolvetica rg126" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.09375 0 0
+      0 0.046875 0
+      0.84375 0.046875 1
+    }
+  }
+}
+<Texture> "coolvetica rg125" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0583043981481482 0 0
+      0 0.148330479452055 0
+      0.527488425925926 0.855522260273973 1
+    }
+  }
+}
+<Texture> "coolvetica rg124" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.03125 0 0
+      0 0.15234375 0
+      0.44921875 0.8515625 1
+    }
+  }
+}
+<Texture> "coolvetica rg123" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0625 0 0
+      0 0.148330479452055 0
+      0.47265625 0.855522260273973 1
+    }
+  }
+}
+<Texture> "coolvetica rg122" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.08203125 0 0
+      0 0.09375 0
+      0.3125 0.01171875 1
+    }
+  }
+}
+<Texture> "coolvetica rg121" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0859375 0 0
+      0 0.128782242063492 0
+      0.8984375 0.628968253968254 1
+    }
+  }
+}
+<Texture> "coolvetica rg120" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.09375 0 0
+      0 0.09375 0
+      0.65625 0.0859375 1
+    }
+  }
+}
+<Texture> "coolvetica rg119" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.124871926229508 0 0
+      0 0.09375 0
+      -0.0038422131147541 0.08984375 1
+    }
+  }
+}
+<Texture> "coolvetica rg118" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.09375 0 0
+      0 0.09375 0
+      0.5703125 0.0859375 1
+    }
+  }
+}
+<Texture> "coolvetica rg117" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0859375 0 0
+      0 0.0935763888888889 0
+      0.4296875 0.0821180555555556 1
+    }
+  }
+}
+<Texture> "coolvetica rg116" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.078125 0 0
+      0 0.1171875 0
+      0.4296875 0.16796875 1
+    }
+  }
+}
+<Texture> "coolvetica rg115" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0859375 0 0
+      0 0.09765625 0
+      0.234375 0.09375 1
+    }
+  }
+}
+<Texture> "coolvetica rg114" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0583043981481482 0 0
+      0 0.0935763888888889 0
+      0.437644675925926 0.414149305555556 1
+    }
+  }
+}
+<Texture> "coolvetica rg113" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.12890625 0 0
+      0 0.1328125 0
+      0.6640625 0.87109375 1
+    }
+  }
+}
+<Texture> "coolvetica rg112" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.08984375 0 0
+      0 0.1328125 0
+      0.8671875 0.87109375 1
+    }
+  }
+}
+<Texture> "coolvetica rg111" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.09375 0 0
+      0 0.09765625 0
+      0.3125 0.18359375 1
+    }
+  }
+}
+<Texture> "coolvetica rg110" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0859375 0 0
+      0 0.0935763888888889 0
+      0.90625 0.0860243055555556 1
+    }
+  }
+}
+<Texture> "coolvetica rg109" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.124871926229508 0 0
+      0 0.0935763888888889 0
+      0.312564036885246 0.0977430555555556 1
+    }
+  }
+}
+<Texture> "coolvetica rg108" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0346354166666667 0 0
+      0 0.120961334745763 0
+      0.156510416666667 0.265691207627119 1
+    }
+  }
+}
+<Texture> "coolvetica rg107" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0857469512195122 0 0
+      0 0.120961334745763 0
+      0.777439024390244 0.171941207627119 1
+    }
+  }
+}
+<Texture> "coolvetica rg106" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.078125 0 0
+      0 0.16015625 0
+      0.28515625 0.84375 1
+    }
+  }
+}
+<Texture> "coolvetica rg105" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0346354166666667 0 0
+      0 0.120961334745763 0
+      0.961197916666667 0.515691207627119 1
+    }
+  }
+}
+<Texture> "coolvetica rg104" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0859375 0 0
+      0 0.120961334745763 0
+      0.69921875 0.171941207627119 1
+    }
+  }
+}
+<Texture> "coolvetica rg103" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0896620639534884 0 0
+      0 0.1328125 0
+      0.785247093023256 0.87109375 1
+    }
+  }
+}
+<Texture> "coolvetica rg102" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0583043981481482 0 0
+      0 0.120961334745763 0
+      0.906394675925926 0.171941207627119 1
+    }
+  }
+}
+<Texture> "coolvetica rg101" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.08984375 0 0
+      0 0.09765625 0
+      -0.00390625 0.17578125 1
+    }
+  }
+}
+<Texture> "coolvetica rg100" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0896620639534884 0 0
+      0 0.125 0
+      -0.00381540697674419 0.60546875 1
+    }
+  }
+}
+<Texture> "coolvetica rg099" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0857469512195122 0 0
+      0 0.09765625 0
+      0.156345274390244 0.09375 1
+    }
+  }
+}
+<Texture> "coolvetica rg098" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.08984375 0 0
+      0 0.125 0
+      0.5625 0.6171875 1
+    }
+  }
+}
+<Texture> "coolvetica rg097" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0859375 0 0
+      0 0.09765625 0
+      0.078125 0.17578125 1
+    }
+  }
+}
+<Texture> "coolvetica rg096" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.054375 0 0
+      0 0.046875 0
+      0.46109375 0.04296875 1
+    }
+  }
+}
+<Texture> "coolvetica rg095" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0896620639534884 0 0
+      0 0.0225694444444444 0
+      0.0547783430232558 -0.00347222222222222 1
+    }
+  }
+}
+<Texture> "coolvetica rg094" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0818309294871795 0 0
+      0 0.046875 0
+      0.38681891025641 0.04296875 1
+    }
+  }
+}
+<Texture> "coolvetica rg093" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.05078125 0 0
+      0 0.148330479452055 0
+      0.62109375 0.855522260273973 1
+    }
+  }
+}
+<Texture> "coolvetica rg092" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0622306034482759 0 0
+      0 0.12109375 0
+      0.929822198275862 0.3984375 1
+    }
+  }
+}
+<Texture> "coolvetica rg091" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.05078125 0 0
+      0 0.148330479452055 0
+      0.578125 0.855522260273973 1
+    }
+  }
+}
+<Texture> "coolvetica rg090" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.09765625 0 0
+      0 0.12109375 0
+      0.4375 0.27734375 1
+    }
+  }
+}
+<Texture> "coolvetica rg089" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.109375 0 0
+      0 0.12109375 0
+      0.5 0.390625 1
+    }
+  }
+}
+<Texture> "coolvetica rg088" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.109375 0 0
+      0 0.12109375 0
+      0.828125 0.3984375 1
+    }
+  }
+}
+<Texture> "coolvetica rg087" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.1484375 0 0
+      0 0.12109375 0
+      -0.00390625 0.4921875 1
+    }
+  }
+}
+<Texture> "coolvetica rg086" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.10531556372549 0 0
+      0 0.12109375 0
+      0.246170343137255 0.38671875 1
+    }
+  }
+}
+<Texture> "coolvetica rg085" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0974900265957447 0 0
+      0 0.125 0
+      0.726645611702128 0.62890625 1
+    }
+  }
+}
+<Texture> "coolvetica rg084" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0974900265957447 0 0
+      0 0.12109375 0
+      0.882895611702128 0.28515625 1
+    }
+  }
+}
+<Texture> "coolvetica rg083" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.1015625 0 0
+      0 0.12890625 0
+      -0.00390625 0.72265625 1
+    }
+  }
+}
+<Texture> "coolvetica rg082" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.1015625 0 0
+      0 0.12109375 0
+      0.69921875 0.28515625 1
+    }
+  }
+}
+<Texture> "coolvetica rg081" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.1171875 0 0
+      0 0.160057357594937 0
+      -0.00390625 0.843799446202532 1
+    }
+  }
+}
+<Texture> "coolvetica rg080" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0935763888888889 0 0
+      0 0.12109375 0
+      0.613368055555556 0.27734375 1
+    }
+  }
+}
+<Texture> "coolvetica rg079" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.113139204545455 0 0
+      0 0.12890625 0
+      0.472727272727273 0.734375 1
+    }
+  }
+}
+<Texture> "coolvetica rg078" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.1015625 0 0
+      0 0.12109375 0
+      0.08984375 0.37890625 1
+    }
+  }
+}
+<Texture> "coolvetica rg077" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.1171875 0 0
+      0 0.12109375 0
+      0.13671875 0.4921875 1
+    }
+  }
+}
+<Texture> "coolvetica rg076" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.08984375 0 0
+      0 0.12109375 0
+      -0.00390625 0.265625 1
+    }
+  }
+}
+<Texture> "coolvetica rg075" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.10546875 0 0
+      0 0.12109375 0
+      0.6015625 0.390625 1
+    }
+  }
+}
+<Texture> "coolvetica rg074" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.08203125 0 0
+      0 0.125 0
+      0.42578125 0.5 1
+    }
+  }
+}
+<Texture> "coolvetica rg073" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0346354166666667 0 0
+      0 0.12109375 0
+      0.426041666666667 0.6171875 1
+    }
+  }
+}
+<Texture> "coolvetica rg072" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0974900265957447 0 0
+      0 0.12109375 0
+      0.793051861702128 0.28515625 1
+    }
+  }
+}
+<Texture> "coolvetica rg071" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.109227594339623 0 0
+      0 0.124871926229508 0
+      0.324292452830189 0.613345286885246 1
+    }
+  }
+}
+<Texture> "coolvetica rg070" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.08984375 0 0
+      0 0.12109375 0
+      0.34765625 0.2734375 1
+    }
+  }
+}
+<Texture> "coolvetica rg069" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0935763888888889 0 0
+      0 0.12109375 0
+      0.527430555555556 0.27734375 1
+    }
+  }
+}
+<Texture> "coolvetica rg068" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.10140306122449 0 0
+      0 0.12109375 0
+      -0.0038265306122449 0.37890625 1
+    }
+  }
+}
+<Texture> "coolvetica rg067" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.109375 0 0
+      0 0.12890625 0
+      0.35546875 0.73046875 1
+    }
+  }
+}
+<Texture> "coolvetica rg066" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.1015625 0 0
+      0 0.12109375 0
+      0.34375 0.38671875 1
+    }
+  }
+}
+<Texture> "coolvetica rg065" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.113139204545455 0 0
+      0 0.12109375 0
+      0.320383522727273 0.5 1
+    }
+  }
+}
+<Texture> "coolvetica rg064" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.12109375 0 0
+      0 0.12890625 0
+      0.8203125 0.75 1
+    }
+  }
+}
+<Texture> "coolvetica rg063" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0859375 0 0
+      0 0.125 0
+      0.8828125 0.51171875 1
+    }
+  }
+}
+<Texture> "coolvetica rg062" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.08984375 0 0
+      0 0.0935763888888889 0
+      0.82421875 0.0860243055555556 1
+    }
+  }
+}
+<Texture> "coolvetica rg061" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.08984375 0 0
+      0 0.0625 0
+      0.5859375 0.03125 1
+    }
+  }
+}
+<Texture> "coolvetica rg060" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.08984375 0 0
+      0 0.0935763888888889 0
+      0.7421875 0.0860243055555556 1
+    }
+  }
+}
+<Texture> "coolvetica rg059" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0346354166666667 0 0
+      0 0.113139204545455 0
+      0.246354166666667 0.500071022727273 1
+    }
+  }
+}
+<Texture> "coolvetica rg058" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0346354166666667 0 0
+      0 0.08984375 0
+      0.183854166666667 0.41015625 1
+    }
+  }
+}
+<Texture> "coolvetica rg057" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0859375 0 0
+      0 0.12890625 0
+      0.8203125 0.62890625 1
+    }
+  }
+}
+<Texture> "coolvetica rg056" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0857469512195122 0 0
+      0 0.12890625 0
+      0.246189024390244 0.72265625 1
+    }
+  }
+}
+<Texture> "coolvetica rg055" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0857469512195122 0 0
+      0 0.12109375 0
+      0.0782202743902439 0.265625 1
+    }
+  }
+}
+<Texture> "coolvetica rg054" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0857469512195122 0 0
+      0 0.12890625 0
+      0.168064024390244 0.72265625 1
+    }
+  }
+}
+<Texture> "coolvetica rg053" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0857469512195122 0 0
+      0 0.125 0
+      0.804782774390244 0.51171875 1
+    }
+  }
+}
+<Texture> "coolvetica rg052" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.08984375 0 0
+      0 0.12109375 0
+      0.265625 0.2734375 1
+    }
+  }
+}
+<Texture> "coolvetica rg051" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0859375 0 0
+      0 0.12890625 0
+      0.08984375 0.72265625 1
+    }
+  }
+}
+<Texture> "coolvetica rg050" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0859375 0 0
+      0 0.125 0
+      0.7265625 0.51171875 1
+    }
+  }
+}
+<Texture> "coolvetica rg049" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.05859375 0 0
+      0 0.12109375 0
+      0.85546875 0.171875 1
+    }
+  }
+}
+<Texture> "coolvetica rg048" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0857469512195122 0 0
+      0 0.12890625 0
+      0.578220274390244 0.734375 1
+    }
+  }
+}
+<Texture> "coolvetica rg047" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0622306034482759 0 0
+      0 0.12109375 0
+      0.933728448275862 0.7578125 1
+    }
+  }
+}
+<Texture> "coolvetica rg046" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0346354166666667 0 0
+      0 0.0346354166666667 0
+      0.156510416666667 0.238541666666667 1
+    }
+  }
+}
+<Texture> "coolvetica rg045" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0546875 0 0
+      0 0.03125 0
+      0.4375 0.390625 1
+    }
+  }
+}
+<Texture> "coolvetica rg044" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0346354166666667 0 0
+      0 0.0625 0
+      0.211197916666667 0.4375 1
+    }
+  }
+}
+<Texture> "coolvetica rg043" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.08984375 0 0
+      0 0.08984375 0
+      0.1953125 0.01171875 1
+    }
+  }
+}
+<Texture> "coolvetica rg042" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0896620639534884 0 0
+      0 0.08984375 0
+      0.113372093023256 0.01171875 1
+    }
+  }
+}
+<Texture> "coolvetica rg041" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.054375 0 0
+      0 0.152239583333333 0
+      0.4025 0.851614583333333 1
+    }
+  }
+}
+<Texture> "coolvetica rg040" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.054375 0 0
+      0 0.152239583333333 0
+      0.355625 0.851614583333333 1
+    }
+  }
+}
+<Texture> "coolvetica rg039" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0266335227272727 0 0
+      0 0.0546875 0
+      0.976917613636364 0.7109375 1
+    }
+  }
+}
+<Texture> "coolvetica rg038" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0857469512195122 0 0
+      0 0.125 0
+      0.242282774390244 0.60546875 1
+    }
+  }
+}
+<Texture> "coolvetica rg037" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.113139204545455 0 0
+      0 0.124871926229508 0
+      0.457102272727273 0.617251536885246 1
+    }
+  }
+}
+<Texture> "coolvetica rg036" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0857469512195122 0 0
+      0 0.132692307692308 0
+      0.664157774390244 0.746153846153846 1
+    }
+  }
+}
+<Texture> "coolvetica rg035" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0896620639534884 0 0
+      0 0.120961334745763 0
+      0.183684593023256 0.273503707627119 1
+    }
+  }
+}
+<Texture> "coolvetica rg034" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0504415760869565 0 0
+      0 0.0546875 0
+      0.656419836956522 0.17578125 1
+    }
+  }
+}
+<Texture> "coolvetica rg033" {
+  "coolvetica rg_1.png"
+  <Scalar> format { alpha }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> anisotropic-degree { 0 }
+  <Scalar> quality-level { best }
+  <Transform> {
+    <Matrix3> {
+      0.0390625 0 0
+      0 0.12109375 0
+      0.94921875 0.8828125 1
+    }
+  }
+}
+<Group> {
+  <Switch> { 1 }
+  <Scalar> fps { 2 }
+  <VertexPool> vpool {
+    <Vertex> 0 {
+      0.025 1.20000004768372 0
+    }
+    <Vertex> 1 {
+      0.2375 0 0
+    }
+    <Vertex> 2 {
+      0.025 -0.025 0
+      <UV> { 0.1 0.032258064516129 }
+    }
+    <Vertex> 3 {
+      0.225 -0.025 0
+      <UV> { 0.9 0.032258064516129 }
+    }
+    <Vertex> 4 {
+      0.225 0.7 0
+      <UV> { 0.9 0.967741935483871 }
+    }
+    <Vertex> 5 {
+      0.025 0.7 0
+      <UV> { 0.1 0.967741935483871 }
+    }
+    <Vertex> 6 {
+      0.25 0 0
+    }
+    <Vertex> 7 {
+      0 0.4 0
+      <UV> { 0.0740740740740741 0.0714285714285715 }
+    }
+    <Vertex> 8 {
+      0.2875 0.4 0
+      <UV> { 0.925925925925926 0.0714285714285715 }
+    }
+    <Vertex> 9 {
+      0.2875 0.7 0
+      <UV> { 0.925925925925926 0.928571428571429 }
+    }
+    <Vertex> 10 {
+      0 0.7 0
+      <UV> { 0.0740740740740741 0.928571428571429 }
+    }
+    <Vertex> 11 {
+      0.3 0 0
+    }
+    <Vertex> 12 {
+      -0.025 -0.0375 0
+      <UV> { 0.0425531914893617 0.0317460317460319 }
+    }
+    <Vertex> 13 {
+      0.5125 -0.0375 0
+      <UV> { 0.957446808510638 0.0317460317460319 }
+    }
+    <Vertex> 14 {
+      0.5125 0.7 0
+      <UV> { 0.957446808510638 0.968253968253968 }
+    }
+    <Vertex> 15 {
+      -0.025 0.7 0
+      <UV> { 0.0425531914893617 0.968253968253968 }
+    }
+    <Vertex> 16 {
+      0.5 0 0
+    }
+    <Vertex> 17 {
+      -0.0125 -0.075 0
+      <UV> { 0.0444444444444444 0.0289855072463768 }
+    }
+    <Vertex> 18 {
+      0.5 -0.075 0
+      <UV> { 0.955555555555556 0.0289855072463768 }
+    }
+    <Vertex> 19 {
+      0.5 0.7375 0
+      <UV> { 0.955555555555556 0.971014492753623 }
+    }
+    <Vertex> 20 {
+      -0.0125 0.7375 0
+      <UV> { 0.0444444444444444 0.971014492753623 }
+    }
+    <Vertex> 21 {
+      0.4875 0 0
+    }
+    <Vertex> 22 {
+      0 -0.05 0
+      <UV> { 0.0338983050847458 0.0307692307692307 }
+    }
+    <Vertex> 23 {
+      0.6875 -0.05 0
+      <UV> { 0.966101694915254 0.0307692307692307 }
+    }
+    <Vertex> 24 {
+      0.6875 0.7125 0
+      <UV> { 0.966101694915254 0.969230769230769 }
+    }
+    <Vertex> 25 {
+      0 0.7125 0
+      <UV> { 0.0338983050847458 0.969230769230769 }
+    }
+    <Vertex> 26 {
+      0.675 0 0
+    }
+    <Vertex> 27 {
+      -0.0125 -0.05 0
+      <UV> { 0.0444444444444444 0.03125 }
+    }
+    <Vertex> 28 {
+      0.5 -0.05 0
+      <UV> { 0.955555555555556 0.03125 }
+    }
+    <Vertex> 29 {
+      0.5 0.7 0
+      <UV> { 0.955555555555556 0.96875 }
+    }
+    <Vertex> 30 {
+      -0.0125 0.7 0
+      <UV> { 0.0444444444444444 0.96875 }
+    }
+    <Vertex> 31 {
+      0.5 0 0
+    }
+    <Vertex> 32 {
+      0 0.4 0
+      <UV> { 0.133333333333333 0.0714285714285715 }
+    }
+    <Vertex> 33 {
+      0.1375 0.4 0
+      <UV> { 0.866666666666667 0.0714285714285715 }
+    }
+    <Vertex> 34 {
+      0.1375 0.7 0
+      <UV> { 0.866666666666667 0.928571428571429 }
+    }
+    <Vertex> 35 {
+      0 0.7 0
+      <UV> { 0.133333333333333 0.928571428571429 }
+    }
+    <Vertex> 36 {
+      0.15 0 0
+    }
+    <Vertex> 37 {
+      0.0375 -0.175 0
+      <UV> { 0.0689655172413793 0.0253164556962026 }
+    }
+    <Vertex> 38 {
+      0.35 -0.175 0
+      <UV> { 0.931034482758621 0.0253164556962026 }
+    }
+    <Vertex> 39 {
+      0.35 0.7625 0
+      <UV> { 0.931034482758621 0.974683544303797 }
+    }
+    <Vertex> 40 {
+      0.0375 0.7625 0
+      <UV> { 0.0689655172413793 0.974683544303797 }
+    }
+    <Vertex> 41 {
+      0.325 0 0
+    }
+    <Vertex> 42 {
+      -0.025 -0.175 0
+      <UV> { 0.0689655172413793 0.0253164556962026 }
+    }
+    <Vertex> 43 {
+      0.2875 -0.175 0
+      <UV> { 0.931034482758621 0.0253164556962026 }
+    }
+    <Vertex> 44 {
+      0.2875 0.7625 0
+      <UV> { 0.931034482758621 0.974683544303797 }
+    }
+    <Vertex> 45 {
+      -0.025 0.7625 0
+      <UV> { 0.0689655172413793 0.974683544303797 }
+    }
+    <Vertex> 46 {
+      0.325 0 0
+    }
+    <Vertex> 47 {
+      0 0.175 0
+      <UV> { 0.0425531914893617 0.0434782608695652 }
+    }
+    <Vertex> 48 {
+      0.5375 0.175 0
+      <UV> { 0.957446808510638 0.0434782608695652 }
+    }
+    <Vertex> 49 {
+      0.5375 0.7 0
+      <UV> { 0.957446808510638 0.956521739130435 }
+    }
+    <Vertex> 50 {
+      0 0.7 0
+      <UV> { 0.0425531914893617 0.956521739130435 }
+    }
+    <Vertex> 51 {
+      0.5375 0 0
+    }
+    <Vertex> 52 {
+      0 0.0875 0
+      <UV> { 0.0434782608695652 0.0434782608695652 }
+    }
+    <Vertex> 53 {
+      0.525 0.0875 0
+      <UV> { 0.956521739130435 0.0434782608695652 }
+    }
+    <Vertex> 54 {
+      0.525 0.6125 0
+      <UV> { 0.956521739130435 0.956521739130435 }
+    }
+    <Vertex> 55 {
+      0 0.6125 0
+      <UV> { 0.0434782608695652 0.956521739130435 }
+    }
+    <Vertex> 56 {
+      0.525 0 0
+    }
+    <Vertex> 57 {
+      0 -0.1875 0
+      <UV> { 0.105263157894737 0.0625 }
+    }
+    <Vertex> 58 {
+      0.1875 -0.1875 0
+      <UV> { 0.894736842105263 0.0625 }
+    }
+    <Vertex> 59 {
+      0.1875 0.1625 0
+      <UV> { 0.894736842105263 0.9375 }
+    }
+    <Vertex> 60 {
+      0 0.1625 0
+      <UV> { 0.105263157894737 0.9375 }
+    }
+    <Vertex> 61 {
+      0.1875 0 0
+    }
+    <Vertex> 62 {
+      -0.0125 0.2375 0
+      <UV> { 0.0714285714285714 0.125 }
+    }
+    <Vertex> 63 {
+      0.2875 0.2375 0
+      <UV> { 0.928571428571428 0.125 }
+    }
+    <Vertex> 64 {
+      0.2875 0.3875 0
+      <UV> { 0.928571428571428 0.875 }
+    }
+    <Vertex> 65 {
+      -0.0125 0.3875 0
+      <UV> { 0.0714285714285714 0.875 }
+    }
+    <Vertex> 66 {
+      0.2875 0 0
+    }
+    <Vertex> 67 {
+      0 -0.025 0
+      <UV> { 0.105263157894737 0.105263157894737 }
+    }
+    <Vertex> 68 {
+      0.1875 -0.025 0
+      <UV> { 0.894736842105263 0.105263157894737 }
+    }
+    <Vertex> 69 {
+      0.1875 0.1625 0
+      <UV> { 0.894736842105263 0.894736842105263 }
+    }
+    <Vertex> 70 {
+      0 0.1625 0
+      <UV> { 0.105263157894737 0.894736842105263 }
+    }
+    <Vertex> 71 {
+      0.1875 0 0
+    }
+    <Vertex> 72 {
+      -0.0375 -0.025 0
+      <UV> { 0.0606060606060606 0.032258064516129 }
+    }
+    <Vertex> 73 {
+      0.325 -0.025 0
+      <UV> { 0.939393939393939 0.032258064516129 }
+    }
+    <Vertex> 74 {
+      0.325 0.7 0
+      <UV> { 0.939393939393939 0.967741935483871 }
+    }
+    <Vertex> 75 {
+      -0.0375 0.7 0
+      <UV> { 0.0606060606060606 0.967741935483871 }
+    }
+    <Vertex> 76 {
+      0.3 0 0
+    }
+    <Vertex> 77 {
+      -0.0125 -0.05 0
+      <UV> { 0.0444444444444444 0.0303030303030303 }
+    }
+    <Vertex> 78 {
+      0.5 -0.05 0
+      <UV> { 0.955555555555556 0.0303030303030303 }
+    }
+    <Vertex> 79 {
+      0.5 0.725 0
+      <UV> { 0.955555555555556 0.96969696969697 }
+    }
+    <Vertex> 80 {
+      -0.0125 0.725 0
+      <UV> { 0.0444444444444444 0.96969696969697 }
+    }
+    <Vertex> 81 {
+      0.4875 0 0
+    }
+    <Vertex> 82 {
+      -0.0125 -0.025 0
+      <UV> { 0.0666666666666667 0.032258064516129 }
+    }
+    <Vertex> 83 {
+      0.3125 -0.025 0
+      <UV> { 0.933333333333333 0.032258064516129 }
+    }
+    <Vertex> 84 {
+      0.3125 0.7 0
+      <UV> { 0.933333333333333 0.967741935483871 }
+    }
+    <Vertex> 85 {
+      -0.0125 0.7 0
+      <UV> { 0.0666666666666667 0.967741935483871 }
+    }
+    <Vertex> 86 {
+      0.3125 0 0
+    }
+    <Vertex> 87 {
+      -0.0125 -0.025 0
+      <UV> { 0.0454545454545455 0.03125 }
+    }
+    <Vertex> 88 {
+      0.4875 -0.025 0
+      <UV> { 0.954545454545455 0.03125 }
+    }
+    <Vertex> 89 {
+      0.4875 0.725 0
+      <UV> { 0.954545454545455 0.96875 }
+    }
+    <Vertex> 90 {
+      -0.0125 0.725 0
+      <UV> { 0.0454545454545455 0.96875 }
+    }
+    <Vertex> 91 {
+      0.475 0 0
+    }
+    <Vertex> 92 {
+      -0.0125 -0.05 0
+      <UV> { 0.0454545454545455 0.0303030303030303 }
+    }
+    <Vertex> 93 {
+      0.4875 -0.05 0
+      <UV> { 0.954545454545455 0.0303030303030303 }
+    }
+    <Vertex> 94 {
+      0.4875 0.725 0
+      <UV> { 0.954545454545455 0.96969696969697 }
+    }
+    <Vertex> 95 {
+      -0.0125 0.725 0
+      <UV> { 0.0454545454545455 0.96969696969697 }
+    }
+    <Vertex> 96 {
+      0.475 0 0
+    }
+    <Vertex> 97 {
+      -0.025 -0.025 0
+      <UV> { 0.0434782608695652 0.032258064516129 }
+    }
+    <Vertex> 98 {
+      0.5 -0.025 0
+      <UV> { 0.956521739130435 0.032258064516129 }
+    }
+    <Vertex> 99 {
+      0.5 0.7 0
+      <UV> { 0.956521739130435 0.967741935483871 }
+    }
+    <Vertex> 100 {
+      -0.025 0.7 0
+      <UV> { 0.0434782608695652 0.967741935483871 }
+    }
+    <Vertex> 101 {
+      0.475 0 0
+    }
+    <Vertex> 102 {
+      0 -0.05 0
+      <UV> { 0.0444444444444444 0.03125 }
+    }
+    <Vertex> 103 {
+      0.5125 -0.05 0
+      <UV> { 0.955555555555556 0.03125 }
+    }
+    <Vertex> 104 {
+      0.5125 0.7 0
+      <UV> { 0.955555555555556 0.96875 }
+    }
+    <Vertex> 105 {
+      0 0.7 0
+      <UV> { 0.0444444444444444 0.96875 }
+    }
+    <Vertex> 106 {
+      0.5 0 0
+    }
+    <Vertex> 107 {
+      -0.0125 -0.05 0
+      <UV> { 0.0444444444444444 0.0303030303030303 }
+    }
+    <Vertex> 108 {
+      0.5 -0.05 0
+      <UV> { 0.955555555555556 0.0303030303030303 }
+    }
+    <Vertex> 109 {
+      0.5 0.725 0
+      <UV> { 0.955555555555556 0.96969696969697 }
+    }
+    <Vertex> 110 {
+      -0.0125 0.725 0
+      <UV> { 0.0444444444444444 0.96969696969697 }
+    }
+    <Vertex> 111 {
+      0.4875 0 0
+    }
+    <Vertex> 112 {
+      -0.0125 -0.025 0
+      <UV> { 0.0444444444444444 0.032258064516129 }
+    }
+    <Vertex> 113 {
+      0.5 -0.025 0
+      <UV> { 0.955555555555556 0.032258064516129 }
+    }
+    <Vertex> 114 {
+      0.5 0.7 0
+      <UV> { 0.955555555555556 0.967741935483871 }
+    }
+    <Vertex> 115 {
+      -0.0125 0.7 0
+      <UV> { 0.0444444444444444 0.967741935483871 }
+    }
+    <Vertex> 116 {
+      0.4875 0 0
+    }
+    <Vertex> 117 {
+      -0.0125 -0.05 0
+      <UV> { 0.0444444444444444 0.0303030303030303 }
+    }
+    <Vertex> 118 {
+      0.5 -0.05 0
+      <UV> { 0.955555555555556 0.0303030303030303 }
+    }
+    <Vertex> 119 {
+      0.5 0.725 0
+      <UV> { 0.955555555555556 0.96969696969697 }
+    }
+    <Vertex> 120 {
+      -0.0125 0.725 0
+      <UV> { 0.0444444444444444 0.96969696969697 }
+    }
+    <Vertex> 121 {
+      0.4875 0 0
+    }
+    <Vertex> 122 {
+      -0.0125 -0.05 0
+      <UV> { 0.0454545454545455 0.0303030303030303 }
+    }
+    <Vertex> 123 {
+      0.4875 -0.05 0
+      <UV> { 0.954545454545455 0.0303030303030303 }
+    }
+    <Vertex> 124 {
+      0.4875 0.725 0
+      <UV> { 0.954545454545455 0.96969696969697 }
+    }
+    <Vertex> 125 {
+      -0.0125 0.725 0
+      <UV> { 0.0454545454545455 0.96969696969697 }
+    }
+    <Vertex> 126 {
+      0.4875 0 0
+    }
+    <Vertex> 127 {
+      -0.0125 -0.025 0
+      <UV> { 0.105263157894737 0.0434782608695652 }
+    }
+    <Vertex> 128 {
+      0.175 -0.025 0
+      <UV> { 0.894736842105263 0.0434782608695652 }
+    }
+    <Vertex> 129 {
+      0.175 0.5 0
+      <UV> { 0.894736842105263 0.956521739130435 }
+    }
+    <Vertex> 130 {
+      -0.0125 0.5 0
+      <UV> { 0.105263157894737 0.956521739130435 }
+    }
+    <Vertex> 131 {
+      0.1625 0 0
+    }
+    <Vertex> 132 {
+      -0.0125 -0.1875 0
+      <UV> { 0.105263157894737 0.0338983050847458 }
+    }
+    <Vertex> 133 {
+      0.175 -0.1875 0
+      <UV> { 0.894736842105263 0.0338983050847458 }
+    }
+    <Vertex> 134 {
+      0.175 0.5 0
+      <UV> { 0.894736842105263 0.966101694915254 }
+    }
+    <Vertex> 135 {
+      -0.0125 0.5 0
+      <UV> { 0.105263157894737 0.966101694915254 }
+    }
+    <Vertex> 136 {
+      0.175 0 0
+    }
+    <Vertex> 137 {
+      0 0.0625 0
+      <UV> { 0.0434782608695652 0.0408163265306123 }
+    }
+    <Vertex> 138 {
+      0.525 0.0625 0
+      <UV> { 0.956521739130435 0.0408163265306123 }
+    }
+    <Vertex> 139 {
+      0.525 0.625 0
+      <UV> { 0.956521739130435 0.959183673469388 }
+    }
+    <Vertex> 140 {
+      0 0.625 0
+      <UV> { 0.0434782608695652 0.959183673469388 }
+    }
+    <Vertex> 141 {
+      0.525 0 0
+    }
+    <Vertex> 142 {
+      0 0.175 0
+      <UV> { 0.0434782608695652 0.0625 }
+    }
+    <Vertex> 143 {
+      0.525 0.175 0
+      <UV> { 0.956521739130435 0.0625 }
+    }
+    <Vertex> 144 {
+      0.525 0.525 0
+      <UV> { 0.956521739130435 0.9375 }
+    }
+    <Vertex> 145 {
+      0 0.525 0
+      <UV> { 0.0434782608695652 0.9375 }
+    }
+    <Vertex> 146 {
+      0.525 0 0
+    }
+    <Vertex> 147 {
+      0 0.0625 0
+      <UV> { 0.0434782608695652 0.0408163265306123 }
+    }
+    <Vertex> 148 {
+      0.525 0.0625 0
+      <UV> { 0.956521739130435 0.0408163265306123 }
+    }
+    <Vertex> 149 {
+      0.525 0.625 0
+      <UV> { 0.956521739130435 0.959183673469388 }
+    }
+    <Vertex> 150 {
+      0 0.625 0
+      <UV> { 0.0434782608695652 0.959183673469388 }
+    }
+    <Vertex> 151 {
+      0.525 0 0
+    }
+    <Vertex> 152 {
+      -0.0125 -0.025 0
+      <UV> { 0.0454545454545455 0.03125 }
+    }
+    <Vertex> 153 {
+      0.4875 -0.025 0
+      <UV> { 0.954545454545455 0.03125 }
+    }
+    <Vertex> 154 {
+      0.4875 0.725 0
+      <UV> { 0.954545454545455 0.96875 }
+    }
+    <Vertex> 155 {
+      -0.0125 0.725 0
+      <UV> { 0.0454545454545455 0.96875 }
+    }
+    <Vertex> 156 {
+      0.475 0 0
+    }
+    <Vertex> 157 {
+      -0.0125 -0.1125 0
+      <UV> { 0.032258064516129 0.0303030303030303 }
+    }
+    <Vertex> 158 {
+      0.7125 -0.1125 0
+      <UV> { 0.967741935483871 0.0303030303030303 }
+    }
+    <Vertex> 159 {
+      0.7125 0.6625 0
+      <UV> { 0.967741935483871 0.96969696969697 }
+    }
+    <Vertex> 160 {
+      -0.0125 0.6625 0
+      <UV> { 0.032258064516129 0.96969696969697 }
+    }
+    <Vertex> 161 {
+      0.7 0 0
+    }
+    <Vertex> 162 {
+      -0.025 -0.025 0
+      <UV> { 0.0338983050847458 0.032258064516129 }
+    }
+    <Vertex> 163 {
+      0.6625 -0.025 0
+      <UV> { 0.966101694915254 0.032258064516129 }
+    }
+    <Vertex> 164 {
+      0.6625 0.7 0
+      <UV> { 0.966101694915254 0.967741935483871 }
+    }
+    <Vertex> 165 {
+      -0.025 0.7 0
+      <UV> { 0.0338983050847458 0.967741935483871 }
+    }
+    <Vertex> 166 {
+      0.6375 0 0
+    }
+    <Vertex> 167 {
+      0 -0.025 0
+      <UV> { 0.0384615384615385 0.032258064516129 }
+    }
+    <Vertex> 168 {
+      0.6 -0.025 0
+      <UV> { 0.961538461538462 0.032258064516129 }
+    }
+    <Vertex> 169 {
+      0.6 0.7 0
+      <UV> { 0.961538461538462 0.967741935483871 }
+    }
+    <Vertex> 170 {
+      0 0.7 0
+      <UV> { 0.0384615384615385 0.967741935483871 }
+    }
+    <Vertex> 171 {
+      0.575 0 0
+    }
+    <Vertex> 172 {
+      -0.0125 -0.05 0
+      <UV> { 0.0357142857142857 0.0303030303030303 }
+    }
+    <Vertex> 173 {
+      0.6375 -0.05 0
+      <UV> { 0.964285714285714 0.0303030303030303 }
+    }
+    <Vertex> 174 {
+      0.6375 0.725 0
+      <UV> { 0.964285714285714 0.96969696969697 }
+    }
+    <Vertex> 175 {
+      -0.0125 0.725 0
+      <UV> { 0.0357142857142857 0.96969696969697 }
+    }
+    <Vertex> 176 {
+      0.6125 0 0
+    }
+    <Vertex> 177 {
+      0 -0.025 0
+      <UV> { 0.0377358490566038 0.032258064516129 }
+    }
+    <Vertex> 178 {
+      0.6125 -0.025 0
+      <UV> { 0.962264150943396 0.032258064516129 }
+    }
+    <Vertex> 179 {
+      0.6125 0.7 0
+      <UV> { 0.962264150943396 0.967741935483871 }
+    }
+    <Vertex> 180 {
+      0 0.7 0
+      <UV> { 0.0377358490566038 0.967741935483871 }
+    }
+    <Vertex> 181 {
+      0.6125 0 0
+    }
+    <Vertex> 182 {
+      0 -0.025 0
+      <UV> { 0.0408163265306122 0.032258064516129 }
+    }
+    <Vertex> 183 {
+      0.5625 -0.025 0
+      <UV> { 0.959183673469388 0.032258064516129 }
+    }
+    <Vertex> 184 {
+      0.5625 0.7 0
+      <UV> { 0.959183673469388 0.967741935483871 }
+    }
+    <Vertex> 185 {
+      0 0.7 0
+      <UV> { 0.0408163265306122 0.967741935483871 }
+    }
+    <Vertex> 186 {
+      0.5375 0 0
+    }
+    <Vertex> 187 {
+      0 -0.025 0
+      <UV> { 0.0434782608695652 0.032258064516129 }
+    }
+    <Vertex> 188 {
+      0.525 -0.025 0
+      <UV> { 0.956521739130435 0.032258064516129 }
+    }
+    <Vertex> 189 {
+      0.525 0.7 0
+      <UV> { 0.956521739130435 0.967741935483871 }
+    }
+    <Vertex> 190 {
+      0 0.7 0
+      <UV> { 0.0434782608695652 0.967741935483871 }
+    }
+    <Vertex> 191 {
+      0.5125 0 0
+    }
+    <Vertex> 192 {
+      -0.0125 -0.05 0
+      <UV> { 0.0350877192982456 0.0307692307692307 }
+    }
+    <Vertex> 193 {
+      0.65 -0.05 0
+      <UV> { 0.964912280701754 0.0307692307692307 }
+    }
+    <Vertex> 194 {
+      0.65 0.7125 0
+      <UV> { 0.964912280701754 0.969230769230769 }
+    }
+    <Vertex> 195 {
+      -0.0125 0.7125 0
+      <UV> { 0.0350877192982456 0.969230769230769 }
+    }
+    <Vertex> 196 {
+      0.65 0 0
+    }
+    <Vertex> 197 {
+      0 -0.025 0
+      <UV> { 0.0392156862745098 0.032258064516129 }
+    }
+    <Vertex> 198 {
+      0.5875 -0.025 0
+      <UV> { 0.96078431372549 0.032258064516129 }
+    }
+    <Vertex> 199 {
+      0.5875 0.7 0
+      <UV> { 0.96078431372549 0.967741935483871 }
+    }
+    <Vertex> 200 {
+      0 0.7 0
+      <UV> { 0.0392156862745098 0.967741935483871 }
+    }
+    <Vertex> 201 {
+      0.5875 0 0
+    }
+    <Vertex> 202 {
+      0 -0.025 0
+      <UV> { 0.105263157894737 0.032258064516129 }
+    }
+    <Vertex> 203 {
+      0.1875 -0.025 0
+      <UV> { 0.894736842105263 0.032258064516129 }
+    }
+    <Vertex> 204 {
+      0.1875 0.7 0
+      <UV> { 0.894736842105263 0.967741935483871 }
+    }
+    <Vertex> 205 {
+      0 0.7 0
+      <UV> { 0.105263157894737 0.967741935483871 }
+    }
+    <Vertex> 206 {
+      0.1875 0 0
+    }
+    <Vertex> 207 {
+      -0.0125 -0.05 0
+      <UV> { 0.0476190476190476 0.03125 }
+    }
+    <Vertex> 208 {
+      0.4625 -0.05 0
+      <UV> { 0.952380952380952 0.03125 }
+    }
+    <Vertex> 209 {
+      0.4625 0.7 0
+      <UV> { 0.952380952380952 0.96875 }
+    }
+    <Vertex> 210 {
+      -0.0125 0.7 0
+      <UV> { 0.0476190476190476 0.96875 }
+    }
+    <Vertex> 211 {
+      0.4625 0 0
+    }
+    <Vertex> 212 {
+      0 -0.025 0
+      <UV> { 0.037037037037037 0.032258064516129 }
+    }
+    <Vertex> 213 {
+      0.625 -0.025 0
+      <UV> { 0.962962962962963 0.032258064516129 }
+    }
+    <Vertex> 214 {
+      0.625 0.7 0
+      <UV> { 0.962962962962963 0.967741935483871 }
+    }
+    <Vertex> 215 {
+      0 0.7 0
+      <UV> { 0.037037037037037 0.967741935483871 }
+    }
+    <Vertex> 216 {
+      0.6 0 0
+    }
+    <Vertex> 217 {
+      0 -0.025 0
+      <UV> { 0.0434782608695652 0.032258064516129 }
+    }
+    <Vertex> 218 {
+      0.525 -0.025 0
+      <UV> { 0.956521739130435 0.032258064516129 }
+    }
+    <Vertex> 219 {
+      0.525 0.7 0
+      <UV> { 0.956521739130435 0.967741935483871 }
+    }
+    <Vertex> 220 {
+      0 0.7 0
+      <UV> { 0.0434782608695652 0.967741935483871 }
+    }
+    <Vertex> 221 {
+      0.5 0 0
+    }
+    <Vertex> 222 {
+      0 -0.025 0
+      <UV> { 0.0333333333333333 0.032258064516129 }
+    }
+    <Vertex> 223 {
+      0.7 -0.025 0
+      <UV> { 0.966666666666667 0.032258064516129 }
+    }
+    <Vertex> 224 {
+      0.7 0.7 0
+      <UV> { 0.966666666666667 0.967741935483871 }
+    }
+    <Vertex> 225 {
+      0 0.7 0
+      <UV> { 0.0333333333333333 0.967741935483871 }
+    }
+    <Vertex> 226 {
+      0.7 0 0
+    }
+    <Vertex> 227 {
+      0 -0.025 0
+      <UV> { 0.0384615384615385 0.032258064516129 }
+    }
+    <Vertex> 228 {
+      0.6 -0.025 0
+      <UV> { 0.961538461538462 0.032258064516129 }
+    }
+    <Vertex> 229 {
+      0.6 0.7 0
+      <UV> { 0.961538461538462 0.967741935483871 }
+    }
+    <Vertex> 230 {
+      0 0.7 0
+      <UV> { 0.0384615384615385 0.967741935483871 }
+    }
+    <Vertex> 231 {
+      0.6 0 0
+    }
+    <Vertex> 232 {
+      -0.0125 -0.05 0
+      <UV> { 0.0338983050847458 0.0303030303030303 }
+    }
+    <Vertex> 233 {
+      0.675 -0.05 0
+      <UV> { 0.966101694915254 0.0303030303030303 }
+    }
+    <Vertex> 234 {
+      0.675 0.725 0
+      <UV> { 0.966101694915254 0.96969696969697 }
+    }
+    <Vertex> 235 {
+      -0.0125 0.725 0
+      <UV> { 0.0338983050847458 0.96969696969697 }
+    }
+    <Vertex> 236 {
+      0.6625 0 0
+    }
+    <Vertex> 237 {
+      0 -0.025 0
+      <UV> { 0.0408163265306122 0.032258064516129 }
+    }
+    <Vertex> 238 {
+      0.5625 -0.025 0
+      <UV> { 0.959183673469388 0.032258064516129 }
+    }
+    <Vertex> 239 {
+      0.5625 0.7 0
+      <UV> { 0.959183673469388 0.967741935483871 }
+    }
+    <Vertex> 240 {
+      0 0.7 0
+      <UV> { 0.0408163265306122 0.967741935483871 }
+    }
+    <Vertex> 241 {
+      0.55 0 0
+    }
+    <Vertex> 242 {
+      -0.0125 -0.2625 0
+      <UV> { 0.0333333333333333 0.0240963855421686 }
+    }
+    <Vertex> 243 {
+      0.6875 -0.2625 0
+      <UV> { 0.966666666666667 0.0240963855421686 }
+    }
+    <Vertex> 244 {
+      0.6875 0.725 0
+      <UV> { 0.966666666666667 0.975903614457831 }
+    }
+    <Vertex> 245 {
+      -0.0125 0.725 0
+      <UV> { 0.0333333333333333 0.975903614457831 }
+    }
+    <Vertex> 246 {
+      0.675 0 0
+    }
+    <Vertex> 247 {
+      0 -0.025 0
+      <UV> { 0.0384615384615385 0.032258064516129 }
+    }
+    <Vertex> 248 {
+      0.6 -0.025 0
+      <UV> { 0.961538461538462 0.032258064516129 }
+    }
+    <Vertex> 249 {
+      0.6 0.7 0
+      <UV> { 0.961538461538462 0.967741935483871 }
+    }
+    <Vertex> 250 {
+      0 0.7 0
+      <UV> { 0.0384615384615385 0.967741935483871 }
+    }
+    <Vertex> 251 {
+      0.5875 0 0
+    }
+    <Vertex> 252 {
+      -0.0125 -0.05 0
+      <UV> { 0.0384615384615385 0.0303030303030303 }
+    }
+    <Vertex> 253 {
+      0.5875 -0.05 0
+      <UV> { 0.961538461538462 0.0303030303030303 }
+    }
+    <Vertex> 254 {
+      0.5875 0.725 0
+      <UV> { 0.961538461538462 0.96969696969697 }
+    }
+    <Vertex> 255 {
+      -0.0125 0.725 0
+      <UV> { 0.0384615384615385 0.96969696969697 }
+    }
+    <Vertex> 256 {
+      0.5625 0 0
+    }
+    <Vertex> 257 {
+      -0.0125 -0.0375 0
+      <UV> { 0.0392156862745098 0.032258064516129 }
+    }
+    <Vertex> 258 {
+      0.575 -0.0375 0
+      <UV> { 0.96078431372549 0.032258064516129 }
+    }
+    <Vertex> 259 {
+      0.575 0.6875 0
+      <UV> { 0.96078431372549 0.967741935483871 }
+    }
+    <Vertex> 260 {
+      -0.0125 0.6875 0
+      <UV> { 0.0392156862745098 0.967741935483871 }
+    }
+    <Vertex> 261 {
+      0.5625 0 0
+    }
+    <Vertex> 262 {
+      0 -0.05 0
+      <UV> { 0.0392156862745098 0.03125 }
+    }
+    <Vertex> 263 {
+      0.5875 -0.05 0
+      <UV> { 0.96078431372549 0.03125 }
+    }
+    <Vertex> 264 {
+      0.5875 0.7 0
+      <UV> { 0.96078431372549 0.96875 }
+    }
+    <Vertex> 265 {
+      0 0.7 0
+      <UV> { 0.0392156862745098 0.96875 }
+    }
+    <Vertex> 266 {
+      0.5875 0 0
+    }
+    <Vertex> 267 {
+      -0.025 -0.025 0
+      <UV> { 0.0363636363636364 0.032258064516129 }
+    }
+    <Vertex> 268 {
+      0.6125 -0.025 0
+      <UV> { 0.963636363636364 0.032258064516129 }
+    }
+    <Vertex> 269 {
+      0.6125 0.7 0
+      <UV> { 0.963636363636364 0.967741935483871 }
+    }
+    <Vertex> 270 {
+      -0.025 0.7 0
+      <UV> { 0.0363636363636364 0.967741935483871 }
+    }
+    <Vertex> 271 {
+      0.5875 0 0
+    }
+    <Vertex> 272 {
+      -0.025 -0.025 0
+      <UV> { 0.0263157894736842 0.032258064516129 }
+    }
+    <Vertex> 273 {
+      0.875 -0.025 0
+      <UV> { 0.973684210526316 0.032258064516129 }
+    }
+    <Vertex> 274 {
+      0.875 0.7 0
+      <UV> { 0.973684210526316 0.967741935483871 }
+    }
+    <Vertex> 275 {
+      -0.025 0.7 0
+      <UV> { 0.0263157894736842 0.967741935483871 }
+    }
+    <Vertex> 276 {
+      0.85 0 0
+    }
+    <Vertex> 277 {
+      -0.025 -0.025 0
+      <UV> { 0.0357142857142857 0.032258064516129 }
+    }
+    <Vertex> 278 {
+      0.625 -0.025 0
+      <UV> { 0.964285714285714 0.032258064516129 }
+    }
+    <Vertex> 279 {
+      0.625 0.7 0
+      <UV> { 0.964285714285714 0.967741935483871 }
+    }
+    <Vertex> 280 {
+      -0.025 0.7 0
+      <UV> { 0.0357142857142857 0.967741935483871 }
+    }
+    <Vertex> 281 {
+      0.6 0 0
+    }
+    <Vertex> 282 {
+      -0.025 -0.025 0
+      <UV> { 0.0357142857142857 0.032258064516129 }
+    }
+    <Vertex> 283 {
+      0.625 -0.025 0
+      <UV> { 0.964285714285714 0.032258064516129 }
+    }
+    <Vertex> 284 {
+      0.625 0.7 0
+      <UV> { 0.964285714285714 0.967741935483871 }
+    }
+    <Vertex> 285 {
+      -0.025 0.7 0
+      <UV> { 0.0357142857142857 0.967741935483871 }
+    }
+    <Vertex> 286 {
+      0.6 0 0
+    }
+    <Vertex> 287 {
+      -0.0125 -0.025 0
+      <UV> { 0.04 0.032258064516129 }
+    }
+    <Vertex> 288 {
+      0.5625 -0.025 0
+      <UV> { 0.96 0.032258064516129 }
+    }
+    <Vertex> 289 {
+      0.5625 0.7 0
+      <UV> { 0.96 0.967741935483871 }
+    }
+    <Vertex> 290 {
+      -0.0125 0.7 0
+      <UV> { 0.04 0.967741935483871 }
+    }
+    <Vertex> 291 {
+      0.55 0 0
+    }
+    <Vertex> 292 {
+      0.05 -0.1625 0
+      <UV> { 0.0769230769230769 0.0259740259740259 }
+    }
+    <Vertex> 293 {
+      0.325 -0.1625 0
+      <UV> { 0.923076923076923 0.0259740259740259 }
+    }
+    <Vertex> 294 {
+      0.325 0.75 0
+      <UV> { 0.923076923076923 0.974025974025974 }
+    }
+    <Vertex> 295 {
+      0.05 0.75 0
+      <UV> { 0.0769230769230769 0.974025974025974 }
+    }
+    <Vertex> 296 {
+      0.325 0 0
+    }
+    <Vertex> 297 {
+      -0.0375 -0.025 0
+      <UV> { 0.0606060606060606 0.032258064516129 }
+    }
+    <Vertex> 298 {
+      0.325 -0.025 0
+      <UV> { 0.939393939393939 0.032258064516129 }
+    }
+    <Vertex> 299 {
+      0.325 0.7 0
+      <UV> { 0.939393939393939 0.967741935483871 }
+    }
+    <Vertex> 300 {
+      -0.0375 0.7 0
+      <UV> { 0.0606060606060606 0.967741935483871 }
+    }
+    <Vertex> 301 {
+      0.3 0 0
+    }
+    <Vertex> 302 {
+      -0.0125 -0.1625 0
+      <UV> { 0.0769230769230769 0.0259740259740259 }
+    }
+    <Vertex> 303 {
+      0.2625 -0.1625 0
+      <UV> { 0.923076923076923 0.0259740259740259 }
+    }
+    <Vertex> 304 {
+      0.2625 0.75 0
+      <UV> { 0.923076923076923 0.974025974025974 }
+    }
+    <Vertex> 305 {
+      -0.0125 0.75 0
+      <UV> { 0.0769230769230769 0.974025974025974 }
+    }
+    <Vertex> 306 {
+      0.3125 0 0
+    }
+    <Vertex> 307 {
+      -0.0125 0.45 0
+      <UV> { 0.0465116279069767 0.0833333333333334 }
+    }
+    <Vertex> 308 {
+      0.475 0.45 0
+      <UV> { 0.953488372093023 0.0833333333333334 }
+    }
+    <Vertex> 309 {
+      0.475 0.7 0
+      <UV> { 0.953488372093023 0.916666666666667 }
+    }
+    <Vertex> 310 {
+      -0.0125 0.7 0
+      <UV> { 0.0465116279069767 0.916666666666667 }
+    }
+    <Vertex> 311 {
+      0.4625 0 0
+    }
+    <Vertex> 312 {
+      -0.025 -0.15 0
+      <UV> { 0.0425531914893617 0.153846153846154 }
+    }
+    <Vertex> 313 {
+      0.5125 -0.15 0
+      <UV> { 0.957446808510638 0.153846153846154 }
+    }
+    <Vertex> 314 {
+      0.5125 -0.0375 0
+      <UV> { 0.957446808510638 0.846153846153846 }
+    }
+    <Vertex> 315 {
+      -0.025 -0.0375 0
+      <UV> { 0.0425531914893617 0.846153846153846 }
+    }
+    <Vertex> 316 {
+      0.4875 0 0
+    }
+    <Vertex> 317 {
+      0.025 0.525 0
+      <UV> { 0.0689655172413793 0.0833333333333334 }
+    }
+    <Vertex> 318 {
+      0.3375 0.525 0
+      <UV> { 0.931034482758621 0.0833333333333334 }
+    }
+    <Vertex> 319 {
+      0.3375 0.775 0
+      <UV> { 0.931034482758621 0.916666666666667 }
+    }
+    <Vertex> 320 {
+      0.025 0.775 0
+      <UV> { 0.0689655172413793 0.916666666666667 }
+    }
+    <Vertex> 321 {
+      0.35 0 0
+    }
+    <Vertex> 322 {
+      -0.0125 -0.0375 0
+      <UV> { 0.0454545454545455 0.04 }
+    }
+    <Vertex> 323 {
+      0.4875 -0.0375 0
+      <UV> { 0.954545454545455 0.04 }
+    }
+    <Vertex> 324 {
+      0.4875 0.5375 0
+      <UV> { 0.954545454545455 0.96 }
+    }
+    <Vertex> 325 {
+      -0.0125 0.5375 0
+      <UV> { 0.0454545454545455 0.96 }
+    }
+    <Vertex> 326 {
+      0.4875 0 0
+    }
+    <Vertex> 327 {
+      0 -0.0375000000000001 0
+      <UV> { 0.0434782608695652 0.03125 }
+    }
+    <Vertex> 328 {
+      0.525 -0.0375000000000001 0
+      <UV> { 0.956521739130435 0.03125 }
+    }
+    <Vertex> 329 {
+      0.525 0.7125 0
+      <UV> { 0.956521739130435 0.96875 }
+    }
+    <Vertex> 330 {
+      0 0.7125 0
+      <UV> { 0.0434782608695652 0.96875 }
+    }
+    <Vertex> 331 {
+      0.525 0 0
+    }
+    <Vertex> 332 {
+      -0.0125 -0.0375 0
+      <UV> { 0.0444444444444444 0.04 }
+    }
+    <Vertex> 333 {
+      0.5 -0.0375 0
+      <UV> { 0.955555555555556 0.04 }
+    }
+    <Vertex> 334 {
+      0.5 0.5375 0
+      <UV> { 0.955555555555556 0.96 }
+    }
+    <Vertex> 335 {
+      -0.0125 0.5375 0
+      <UV> { 0.0444444444444444 0.96 }
+    }
+    <Vertex> 336 {
+      0.475 0 0
+    }
+    <Vertex> 337 {
+      -0.0125 -0.0375000000000001 0
+      <UV> { 0.0425531914893617 0.03125 }
+    }
+    <Vertex> 338 {
+      0.525 -0.0375000000000001 0
+      <UV> { 0.957446808510638 0.03125 }
+    }
+    <Vertex> 339 {
+      0.525 0.7125 0
+      <UV> { 0.957446808510638 0.96875 }
+    }
+    <Vertex> 340 {
+      -0.0125 0.7125 0
+      <UV> { 0.0425531914893617 0.96875 }
+    }
+    <Vertex> 341 {
+      0.525 0 0
+    }
+    <Vertex> 342 {
+      -0.0125 -0.0375 0
+      <UV> { 0.0434782608695652 0.04 }
+    }
+    <Vertex> 343 {
+      0.5125 -0.0375 0
+      <UV> { 0.956521739130435 0.04 }
+    }
+    <Vertex> 344 {
+      0.5125 0.5375 0
+      <UV> { 0.956521739130435 0.96 }
+    }
+    <Vertex> 345 {
+      -0.0125 0.5375 0
+      <UV> { 0.0434782608695652 0.96 }
+    }
+    <Vertex> 346 {
+      0.5 0 0
+    }
+    <Vertex> 347 {
+      -0.0125 -0.025 0
+      <UV> { 0.0645161290322581 0.0317460317460319 }
+    }
+    <Vertex> 348 {
+      0.325 -0.025 0
+      <UV> { 0.935483870967742 0.0317460317460319 }
+    }
+    <Vertex> 349 {
+      0.325 0.7125 0
+      <UV> { 0.935483870967742 0.968253968253968 }
+    }
+    <Vertex> 350 {
+      -0.0125 0.7125 0
+      <UV> { 0.0645161290322581 0.968253968253968 }
+    }
+    <Vertex> 351 {
+      0.3125 0 0
+    }
+    <Vertex> 352 {
+      -0.0125 -0.2625 0
+      <UV> { 0.0425531914893617 0.0294117647058824 }
+    }
+    <Vertex> 353 {
+      0.525 -0.2625 0
+      <UV> { 0.957446808510638 0.0294117647058824 }
+    }
+    <Vertex> 354 {
+      0.525 0.5375 0
+      <UV> { 0.957446808510638 0.970588235294118 }
+    }
+    <Vertex> 355 {
+      -0.0125 0.5375 0
+      <UV> { 0.0425531914893617 0.970588235294118 }
+    }
+    <Vertex> 356 {
+      0.525 0 0
+    }
+    <Vertex> 357 {
+      0 -0.025 0
+      <UV> { 0.0454545454545455 0.0317460317460319 }
+    }
+    <Vertex> 358 {
+      0.5 -0.025 0
+      <UV> { 0.954545454545455 0.0317460317460319 }
+    }
+    <Vertex> 359 {
+      0.5 0.7125 0
+      <UV> { 0.954545454545455 0.968253968253968 }
+    }
+    <Vertex> 360 {
+      0 0.7125 0
+      <UV> { 0.0454545454545455 0.968253968253968 }
+    }
+    <Vertex> 361 {
+      0.5 0 0
+    }
+    <Vertex> 362 {
+      0 -0.025 0
+      <UV> { 0.105263157894737 0.0317460317460319 }
+    }
+    <Vertex> 363 {
+      0.1875 -0.025 0
+      <UV> { 0.894736842105263 0.0317460317460319 }
+    }
+    <Vertex> 364 {
+      0.1875 0.7125 0
+      <UV> { 0.894736842105263 0.968253968253968 }
+    }
+    <Vertex> 365 {
+      0 0.7125 0
+      <UV> { 0.105263157894737 0.968253968253968 }
+    }
+    <Vertex> 366 {
+      0.1875 0 0
+    }
+    <Vertex> 367 {
+      -0.2625 -0.2625 0
+      <UV> { 0.05 0.024390243902439 }
+    }
+    <Vertex> 368 {
+      0.1875 -0.2625 0
+      <UV> { 0.95 0.024390243902439 }
+    }
+    <Vertex> 369 {
+      0.1875 0.7125 0
+      <UV> { 0.95 0.975609756097561 }
+    }
+    <Vertex> 370 {
+      -0.2625 0.7125 0
+      <UV> { 0.05 0.975609756097561 }
+    }
+    <Vertex> 371 {
+      0.2 0 0
+    }
+    <Vertex> 372 {
+      0 -0.025 0
+      <UV> { 0.0444444444444444 0.0317460317460319 }
+    }
+    <Vertex> 373 {
+      0.5125 -0.025 0
+      <UV> { 0.955555555555556 0.0317460317460319 }
+    }
+    <Vertex> 374 {
+      0.5125 0.7125 0
+      <UV> { 0.955555555555556 0.968253968253968 }
+    }
+    <Vertex> 375 {
+      0 0.7125 0
+      <UV> { 0.0444444444444444 0.968253968253968 }
+    }
+    <Vertex> 376 {
+      0.4875 0 0
+    }
+    <Vertex> 377 {
+      0 -0.025 0
+      <UV> { 0.105263157894737 0.0317460317460319 }
+    }
+    <Vertex> 378 {
+      0.1875 -0.025 0
+      <UV> { 0.894736842105263 0.0317460317460319 }
+    }
+    <Vertex> 379 {
+      0.1875 0.7125 0
+      <UV> { 0.894736842105263 0.968253968253968 }
+    }
+    <Vertex> 380 {
+      0 0.7125 0
+      <UV> { 0.105263157894737 0.968253968253968 }
+    }
+    <Vertex> 381 {
+      0.1875 0 0
+    }
+    <Vertex> 382 {
+      0 -0.025 0
+      <UV> { 0.0307692307692308 0.0408163265306123 }
+    }
+    <Vertex> 383 {
+      0.7625 -0.025 0
+      <UV> { 0.969230769230769 0.0408163265306123 }
+    }
+    <Vertex> 384 {
+      0.7625 0.5375 0
+      <UV> { 0.969230769230769 0.959183673469388 }
+    }
+    <Vertex> 385 {
+      0 0.5375 0
+      <UV> { 0.0307692307692308 0.959183673469388 }
+    }
+    <Vertex> 386 {
+      0.75 0 0
+    }
+    <Vertex> 387 {
+      0 -0.025 0
+      <UV> { 0.0454545454545455 0.0408163265306123 }
+    }
+    <Vertex> 388 {
+      0.5 -0.025 0
+      <UV> { 0.954545454545455 0.0408163265306123 }
+    }
+    <Vertex> 389 {
+      0.5 0.5375 0
+      <UV> { 0.954545454545455 0.959183673469388 }
+    }
+    <Vertex> 390 {
+      0 0.5375 0
+      <UV> { 0.0454545454545455 0.959183673469388 }
+    }
+    <Vertex> 391 {
+      0.5 0 0
+    }
+    <Vertex> 392 {
+      -0.0125 -0.0375 0
+      <UV> { 0.0416666666666667 0.04 }
+    }
+    <Vertex> 393 {
+      0.5375 -0.0375 0
+      <UV> { 0.958333333333333 0.04 }
+    }
+    <Vertex> 394 {
+      0.5375 0.5375 0
+      <UV> { 0.958333333333333 0.96 }
+    }
+    <Vertex> 395 {
+      -0.0125 0.5375 0
+      <UV> { 0.0416666666666667 0.96 }
+    }
+    <Vertex> 396 {
+      0.5375 0 0
+    }
+    <Vertex> 397 {
+      0 -0.2625 0
+      <UV> { 0.0434782608695652 0.0294117647058824 }
+    }
+    <Vertex> 398 {
+      0.525 -0.2625 0
+      <UV> { 0.956521739130435 0.0294117647058824 }
+    }
+    <Vertex> 399 {
+      0.525 0.5375 0
+      <UV> { 0.956521739130435 0.970588235294118 }
+    }
+    <Vertex> 400 {
+      0 0.5375 0
+      <UV> { 0.0434782608695652 0.970588235294118 }
+    }
+    <Vertex> 401 {
+      0.525 0 0
+    }
+    <Vertex> 402 {
+      -0.0125 -0.2625 0
+      <UV> { 0.0303030303030303 0.0294117647058824 }
+    }
+    <Vertex> 403 {
+      0.7625 -0.2625 0
+      <UV> { 0.96969696969697 0.0294117647058824 }
+    }
+    <Vertex> 404 {
+      0.7625 0.5375 0
+      <UV> { 0.96969696969697 0.970588235294118 }
+    }
+    <Vertex> 405 {
+      -0.0125 0.5375 0
+      <UV> { 0.0303030303030303 0.970588235294118 }
+    }
+    <Vertex> 406 {
+      0.5125 0 0
+    }
+    <Vertex> 407 {
+      0 -0.025 0
+      <UV> { 0.0645161290322581 0.0408163265306123 }
+    }
+    <Vertex> 408 {
+      0.3375 -0.025 0
+      <UV> { 0.935483870967742 0.0408163265306123 }
+    }
+    <Vertex> 409 {
+      0.3375 0.5375 0
+      <UV> { 0.935483870967742 0.959183673469388 }
+    }
+    <Vertex> 410 {
+      0 0.5375 0
+      <UV> { 0.0645161290322581 0.959183673469388 }
+    }
+    <Vertex> 411 {
+      0.325 0 0
+    }
+    <Vertex> 412 {
+      -0.0125 -0.0375 0
+      <UV> { 0.0454545454545455 0.04 }
+    }
+    <Vertex> 413 {
+      0.4875 -0.0375 0
+      <UV> { 0.954545454545455 0.04 }
+    }
+    <Vertex> 414 {
+      0.4875 0.5375 0
+      <UV> { 0.954545454545455 0.96 }
+    }
+    <Vertex> 415 {
+      -0.0125 0.5375 0
+      <UV> { 0.0454545454545455 0.96 }
+    }
+    <Vertex> 416 {
+      0.475 0 0
+    }
+    <Vertex> 417 {
+      0 -0.0375 0
+      <UV> { 0.05 0.0333333333333333 }
+    }
+    <Vertex> 418 {
+      0.45 -0.0375 0
+      <UV> { 0.95 0.0333333333333333 }
+    }
+    <Vertex> 419 {
+      0.45 0.6625 0
+      <UV> { 0.95 0.966666666666667 }
+    }
+    <Vertex> 420 {
+      0 0.6625 0
+      <UV> { 0.05 0.966666666666667 }
+    }
+    <Vertex> 421 {
+      0.45 0 0
+    }
+    <Vertex> 422 {
+      0 -0.0375000000000001 0
+      <UV> { 0.0454545454545455 0.0408163265306123 }
+    }
+    <Vertex> 423 {
+      0.5 -0.0375000000000001 0
+      <UV> { 0.954545454545455 0.0408163265306123 }
+    }
+    <Vertex> 424 {
+      0.5 0.525 0
+      <UV> { 0.954545454545455 0.959183673469388 }
+    }
+    <Vertex> 425 {
+      0 0.525 0
+      <UV> { 0.0454545454545455 0.959183673469388 }
+    }
+    <Vertex> 426 {
+      0.5 0 0
+    }
+    <Vertex> 427 {
+      -0.025 -0.025 0
+      <UV> { 0.0416666666666667 0.0416666666666667 }
+    }
+    <Vertex> 428 {
+      0.525 -0.025 0
+      <UV> { 0.958333333333333 0.0416666666666667 }
+    }
+    <Vertex> 429 {
+      0.525 0.525 0
+      <UV> { 0.958333333333333 0.958333333333333 }
+    }
+    <Vertex> 430 {
+      -0.025 0.525 0
+      <UV> { 0.0416666666666667 0.958333333333333 }
+    }
+    <Vertex> 431 {
+      0.5 0 0
+    }
+    <Vertex> 432 {
+      -0.025 -0.025 0
+      <UV> { 0.0307692307692308 0.0416666666666667 }
+    }
+    <Vertex> 433 {
+      0.7375 -0.025 0
+      <UV> { 0.969230769230769 0.0416666666666667 }
+    }
+    <Vertex> 434 {
+      0.7375 0.525 0
+      <UV> { 0.969230769230769 0.958333333333333 }
+    }
+    <Vertex> 435 {
+      -0.025 0.525 0
+      <UV> { 0.0307692307692308 0.958333333333333 }
+    }
+    <Vertex> 436 {
+      0.7125 0 0
+    }
+    <Vertex> 437 {
+      -0.025 -0.025 0
+      <UV> { 0.0416666666666667 0.0416666666666667 }
+    }
+    <Vertex> 438 {
+      0.525 -0.025 0
+      <UV> { 0.958333333333333 0.0416666666666667 }
+    }
+    <Vertex> 439 {
+      0.525 0.525 0
+      <UV> { 0.958333333333333 0.958333333333333 }
+    }
+    <Vertex> 440 {
+      -0.025 0.525 0
+      <UV> { 0.0416666666666667 0.958333333333333 }
+    }
+    <Vertex> 441 {
+      0.5 0 0
+    }
+    <Vertex> 442 {
+      0 -0.2625 0
+      <UV> { 0.0454545454545455 0.0298507462686567 }
+    }
+    <Vertex> 443 {
+      0.5 -0.2625 0
+      <UV> { 0.954545454545455 0.0298507462686567 }
+    }
+    <Vertex> 444 {
+      0.5 0.525 0
+      <UV> { 0.954545454545455 0.970149253731343 }
+    }
+    <Vertex> 445 {
+      0 0.525 0
+      <UV> { 0.0454545454545455 0.970149253731343 }
+    }
+    <Vertex> 446 {
+      0.5 0 0
+    }
+    <Vertex> 447 {
+      -0.0125 -0.025 0
+      <UV> { 0.0476190476190476 0.0416666666666667 }
+    }
+    <Vertex> 448 {
+      0.4625 -0.025 0
+      <UV> { 0.952380952380952 0.0416666666666667 }
+    }
+    <Vertex> 449 {
+      0.4625 0.525 0
+      <UV> { 0.952380952380952 0.958333333333333 }
+    }
+    <Vertex> 450 {
+      -0.0125 0.525 0
+      <UV> { 0.0476190476190476 0.958333333333333 }
+    }
+    <Vertex> 451 {
+      0.45 0 0
+    }
+    <Vertex> 452 {
+      0 -0.1625 0
+      <UV> { 0.0625 0.0259740259740259 }
+    }
+    <Vertex> 453 {
+      0.35 -0.1625 0
+      <UV> { 0.9375 0.0259740259740259 }
+    }
+    <Vertex> 454 {
+      0.35 0.75 0
+      <UV> { 0.9375 0.974025974025974 }
+    }
+    <Vertex> 455 {
+      0 0.75 0
+      <UV> { 0.0625 0.974025974025974 }
+    }
+    <Vertex> 456 {
+      0.3375 0 0
+    }
+    <Vertex> 457 {
+      0.0875 -0.15 0
+      <UV> { 0.125 0.0256410256410257 }
+    }
+    <Vertex> 458 {
+      0.2375 -0.15 0
+      <UV> { 0.875 0.0256410256410257 }
+    }
+    <Vertex> 459 {
+      0.2375 0.775 0
+      <UV> { 0.875 0.974358974358974 }
+    }
+    <Vertex> 460 {
+      0.0875 0.775 0
+      <UV> { 0.125 0.974358974358974 }
+    }
+    <Vertex> 461 {
+      0.3375 0 0
+    }
+    <Vertex> 462 {
+      -0.025 -0.1625 0
+      <UV> { 0.0645161290322581 0.0259740259740259 }
+    }
+    <Vertex> 463 {
+      0.3125 -0.1625 0
+      <UV> { 0.935483870967742 0.0259740259740259 }
+    }
+    <Vertex> 464 {
+      0.3125 0.75 0
+      <UV> { 0.935483870967742 0.974025974025974 }
+    }
+    <Vertex> 465 {
+      -0.025 0.75 0
+      <UV> { 0.0645161290322581 0.974025974025974 }
+    }
+    <Vertex> 466 {
+      0.325 0 0
+    }
+    <Vertex> 467 {
+      0 0.1875 0
+      <UV> { 0.0416666666666667 0.0833333333333334 }
+    }
+    <Vertex> 468 {
+      0.55 0.1875 0
+      <UV> { 0.958333333333333 0.0833333333333334 }
+    }
+    <Vertex> 469 {
+      0.55 0.4375 0
+      <UV> { 0.958333333333333 0.916666666666667 }
+    }
+    <Vertex> 470 {
+      0 0.4375 0
+      <UV> { 0.0416666666666667 0.916666666666667 }
+    }
+    <Vertex> 471 {
+      0.55 0 0
+    }
+    <Vertex> 472 {
+      0.025 -0.025 0
+      <UV> { 0.1 0.032258064516129 }
+    }
+    <Vertex> 473 {
+      0.225 -0.025 0
+      <UV> { 0.9 0.032258064516129 }
+    }
+    <Vertex> 474 {
+      0.225 0.7 0
+      <UV> { 0.9 0.967741935483871 }
+    }
+    <Vertex> 475 {
+      0.025 0.7 0
+      <UV> { 0.1 0.967741935483871 }
+    }
+    <Vertex> 476 {
+      0.25 0 0
+    }
+    <Vertex> 477 {
+      -0.0125 -0.0375 0
+      <UV> { 0.0338983050847458 0.0317460317460319 }
+    }
+    <Vertex> 478 {
+      0.675 -0.0375 0
+      <UV> { 0.966101694915254 0.0317460317460319 }
+    }
+    <Vertex> 479 {
+      0.675 0.7 0
+      <UV> { 0.966101694915254 0.968253968253968 }
+    }
+    <Vertex> 480 {
+      -0.0125 0.7 0
+      <UV> { 0.0338983050847458 0.968253968253968 }
+    }
+    <Vertex> 481 {
+      0.675 0 0
+    }
+    <Vertex> 482 {
+      -0.0125 0.1125 0
+      <UV> { 0.0454545454545455 0.0540540540540539 }
+    }
+    <Vertex> 483 {
+      0.4875 0.1125 0
+      <UV> { 0.954545454545455 0.0540540540540539 }
+    }
+    <Vertex> 484 {
+      0.4875 0.525 0
+      <UV> { 0.954545454545455 0.945945945945946 }
+    }
+    <Vertex> 485 {
+      -0.0125 0.525 0
+      <UV> { 0.0454545454545455 0.945945945945946 }
+    }
+    <Vertex> 486 {
+      0.4625 0 0
+    }
+    <Vertex> 487 {
+      0.0125 0.3375 0
+      <UV> { 0.0625 0.0588235294117647 }
+    }
+    <Vertex> 488 {
+      0.3625 0.3375 0
+      <UV> { 0.9375 0.0588235294117647 }
+    }
+    <Vertex> 489 {
+      0.3625 0.7125 0
+      <UV> { 0.9375 0.941176470588235 }
+    }
+    <Vertex> 490 {
+      0.0125 0.7125 0
+      <UV> { 0.0625 0.941176470588235 }
+    }
+    <Vertex> 491 {
+      0.375 0 0
+    }
+    <Vertex> 492 {
+      0 -0.025 0
+      <UV> { 0.05 0.0327868852459016 }
+    }
+    <Vertex> 493 {
+      0.45 -0.025 0
+      <UV> { 0.95 0.0327868852459016 }
+    }
+    <Vertex> 494 {
+      0.45 0.6875 0
+      <UV> { 0.95 0.967213114754098 }
+    }
+    <Vertex> 495 {
+      0 0.6875 0
+      <UV> { 0.05 0.967213114754098 }
+    }
+    <Vertex> 496 {
+      0.45 0 0
+    }
+    <Vertex> 497 {
+      0.025 -0.2625 0
+      <UV> { 0.117647058823529 0.0833333333333334 }
+    }
+    <Vertex> 498 {
+      0.1875 -0.2625 0
+      <UV> { 0.882352941176471 0.0833333333333334 }
+    }
+    <Vertex> 499 {
+      0.1875 -0.0125 0
+      <UV> { 0.882352941176471 0.916666666666667 }
+    }
+    <Vertex> 500 {
+      0.025 -0.0125 0
+      <UV> { 0.117647058823529 0.916666666666667 }
+    }
+    <Vertex> 501 {
+      0.2 0 0
+    }
+    <Vertex> 502 {
+      -0.0125 0.1125 0
+      <UV> { 0.0454545454545455 0.0540540540540539 }
+    }
+    <Vertex> 503 {
+      0.4875 0.1125 0
+      <UV> { 0.954545454545455 0.0540540540540539 }
+    }
+    <Vertex> 504 {
+      0.4875 0.525 0
+      <UV> { 0.954545454545455 0.945945945945946 }
+    }
+    <Vertex> 505 {
+      -0.0125 0.525 0
+      <UV> { 0.0454545454545455 0.945945945945946 }
+    }
+    <Vertex> 506 {
+      0.4625 0 0
+    }
+    <Vertex> 507 {
+      -0.0125 -0.05 0
+      <UV> { 0.0444444444444444 0.03125 }
+    }
+    <Vertex> 508 {
+      0.5 -0.05 0
+      <UV> { 0.955555555555556 0.03125 }
+    }
+    <Vertex> 509 {
+      0.5 0.7 0
+      <UV> { 0.955555555555556 0.96875 }
+    }
+    <Vertex> 510 {
+      -0.0125 0.7 0
+      <UV> { 0.0444444444444444 0.96875 }
+    }
+    <Vertex> 511 {
+      0.4875 0 0
+    }
+    <Vertex> 512 {
+      -0.025 -0.025 0
+      <UV> { 0.0253164556962025 0.032258064516129 }
+    }
+    <Vertex> 513 {
+      0.9125 -0.025 0
+      <UV> { 0.974683544303797 0.032258064516129 }
+    }
+    <Vertex> 514 {
+      0.9125 0.7 0
+      <UV> { 0.974683544303797 0.967741935483871 }
+    }
+    <Vertex> 515 {
+      -0.025 0.7 0
+      <UV> { 0.0253164556962025 0.967741935483871 }
+    }
+    <Vertex> 516 {
+      0.8875 0 0
+    }
+    <Vertex> 517 {
+      -0.0125 -0.2625 0
+      <UV> { 0.0363636363636364 0.0240963855421686 }
+    }
+    <Vertex> 518 {
+      0.625 -0.2625 0
+      <UV> { 0.963636363636364 0.0240963855421686 }
+    }
+    <Vertex> 519 {
+      0.625 0.725 0
+      <UV> { 0.963636363636364 0.975903614457831 }
+    }
+    <Vertex> 520 {
+      -0.0125 0.725 0
+      <UV> { 0.0363636363636364 0.975903614457831 }
+    }
+    <Vertex> 521 {
+      0.6 0 0
+    }
+    <Vertex> 522 {
+      0 -0.0375000000000001 0
+      <UV> { 0.0434782608695652 0.03125 }
+    }
+    <Vertex> 523 {
+      0.525 -0.0375000000000001 0
+      <UV> { 0.956521739130435 0.03125 }
+    }
+    <Vertex> 524 {
+      0.525 0.7125 0
+      <UV> { 0.956521739130435 0.96875 }
+    }
+    <Vertex> 525 {
+      0 0.7125 0
+      <UV> { 0.0434782608695652 0.96875 }
+    }
+    <Vertex> 526 {
+      0.5125 0 0
+    }
+    <Vertex> 527 {
+      -0.0125 -0.0375 0
+      <UV> { 0.028169014084507 0.04 }
+    }
+    <Vertex> 528 {
+      0.825 -0.0375 0
+      <UV> { 0.971830985915493 0.04 }
+    }
+    <Vertex> 529 {
+      0.825 0.5375 0
+      <UV> { 0.971830985915493 0.96 }
+    }
+    <Vertex> 530 {
+      -0.0125 0.5375 0
+      <UV> { 0.028169014084507 0.96 }
+    }
+    <Vertex> 531 {
+      0.8125 0 0
+    }
+    <Vertex> 532 {
+      -0.0125 -0.2625 0
+      <UV> { 0.0444444444444444 0.0294117647058824 }
+    }
+    <Vertex> 533 {
+      0.5 -0.2625 0
+      <UV> { 0.955555555555556 0.0294117647058824 }
+    }
+    <Vertex> 534 {
+      0.5 0.5375 0
+      <UV> { 0.955555555555556 0.970588235294118 }
+    }
+    <Vertex> 535 {
+      -0.0125 0.5375 0
+      <UV> { 0.0444444444444444 0.970588235294118 }
+    }
+    <Vertex> 536 {
+      0.475 0 0
+    }
+    <Vertex> 537 {
+      -0.0125 -0.0375 0
+      <UV> { 0.0434782608695652 0.0307692307692307 }
+    }
+    <Vertex> 538 {
+      0.5125 -0.0375 0
+      <UV> { 0.956521739130435 0.0307692307692307 }
+    }
+    <Vertex> 539 {
+      0.5125 0.725 0
+      <UV> { 0.956521739130435 0.969230769230769 }
+    }
+    <Vertex> 540 {
+      -0.0125 0.725 0
+      <UV> { 0.0434782608695652 0.969230769230769 }
+    }
+    <Vertex> 541 {
+      0.5125 0 0
+    }
+    <Vertex> 542 {
+      -0.0125 -0.0875 0
+      <UV> { 0.0416666666666667 0.0344827586206897 }
+    }
+    <Vertex> 543 {
+      0.5375 -0.0875 0
+      <UV> { 0.958333333333333 0.0344827586206897 }
+    }
+    <Vertex> 544 {
+      0.5375 0.5875 0
+      <UV> { 0.958333333333333 0.96551724137931 }
+    }
+    <Vertex> 545 {
+      -0.0125 0.5875 0
+      <UV> { 0.0416666666666667 0.96551724137931 }
+    }
+    <Vertex> 546 {
+      0.5375 0 0
+    }
+    <Vertex> 547 {
+      0 -0.2625 0
+      <UV> { 0.0434782608695652 0.024390243902439 }
+    }
+    <Vertex> 548 {
+      0.525 -0.2625 0
+      <UV> { 0.956521739130435 0.024390243902439 }
+    }
+    <Vertex> 549 {
+      0.525 0.7125 0
+      <UV> { 0.956521739130435 0.975609756097561 }
+    }
+    <Vertex> 550 {
+      0 0.7125 0
+      <UV> { 0.0434782608695652 0.975609756097561 }
+    }
+    <Vertex> 551 {
+      0.525 0 0
+    }
+    <Vertex> 552 {
+      0 -0.025 0
+      <UV> { 0.105263157894737 0.0416666666666667 }
+    }
+    <Vertex> 553 {
+      0.1875 -0.025 0
+      <UV> { 0.894736842105263 0.0416666666666667 }
+    }
+    <Vertex> 554 {
+      0.1875 0.525 0
+      <UV> { 0.894736842105263 0.958333333333333 }
+    }
+    <Vertex> 555 {
+      0 0.525 0
+      <UV> { 0.105263157894737 0.958333333333333 }
+    }
+    <Vertex> 556 {
+      0.1875 0 0
+    }
+    <Vertex> 557 {
+      -0.25 -0.2625 0
+      <UV> { 0.05 0.0298507462686567 }
+    }
+    <Vertex> 558 {
+      0.2 -0.2625 0
+      <UV> { 0.95 0.0298507462686567 }
+    }
+    <Vertex> 559 {
+      0.2 0.525 0
+      <UV> { 0.95 0.970149253731343 }
+    }
+    <Vertex> 560 {
+      -0.25 0.525 0
+      <UV> { 0.05 0.970149253731343 }
+    }
+    <Vertex> 561 {
+      0.2 0 0
+    }
+    <Vertex> 562 {
+      0 0.425 0
+      <UV> { 0.105263157894737 0.0625 }
+    }
+    <Vertex> 563 {
+      0.1875 0.425 0
+      <UV> { 0.894736842105263 0.0625 }
+    }
+    <Vertex> 564 {
+      0.1875 0.775 0
+      <UV> { 0.894736842105263 0.9375 }
+    }
+    <Vertex> 565 {
+      0 0.775 0
+      <UV> { 0.105263157894737 0.9375 }
+    }
+    <Vertex> 566 {
+      0.1875 0 0
+    }
+    <Vertex> 567 {
+      0 0.375 0
+      <UV> { 0.105263157894737 0.0625 }
+    }
+    <Vertex> 568 {
+      0.1875 0.375 0
+      <UV> { 0.894736842105263 0.0625 }
+    }
+    <Vertex> 569 {
+      0.1875 0.725 0
+      <UV> { 0.894736842105263 0.9375 }
+    }
+    <Vertex> 570 {
+      0 0.725 0
+      <UV> { 0.105263157894737 0.9375 }
+    }
+    <Vertex> 571 {
+      0.1875 0 0
+    }
+    <Vertex> 572 {
+      0.0125 -0.1875 0
+      <UV> { 0.105263157894737 0.0645161290322581 }
+    }
+    <Vertex> 573 {
+      0.2 -0.1875 0
+      <UV> { 0.894736842105263 0.0645161290322581 }
+    }
+    <Vertex> 574 {
+      0.2 0.15 0
+      <UV> { 0.894736842105263 0.935483870967742 }
+    }
+    <Vertex> 575 {
+      0.0125 0.15 0
+      <UV> { 0.105263157894737 0.935483870967742 }
+    }
+    <Vertex> 576 {
+      0.2125 0 0
+    }
+    <Vertex> 577 {
+      0 -0.025 0
+      <UV> { 0.05 0.0327868852459016 }
+    }
+    <Vertex> 578 {
+      0.45 -0.025 0
+      <UV> { 0.95 0.0327868852459016 }
+    }
+    <Vertex> 579 {
+      0.45 0.6875 0
+      <UV> { 0.95 0.967213114754098 }
+    }
+    <Vertex> 580 {
+      0 0.6875 0
+      <UV> { 0.05 0.967213114754098 }
+    }
+    <Vertex> 581 {
+      0.45 0 0
+    }
+    <Vertex> 582 {
+      0 0.425 0
+      <UV> { 0.0588235294117647 0.0625 }
+    }
+    <Vertex> 583 {
+      0.375 0.425 0
+      <UV> { 0.941176470588235 0.0625 }
+    }
+    <Vertex> 584 {
+      0.375 0.775 0
+      <UV> { 0.941176470588235 0.9375 }
+    }
+    <Vertex> 585 {
+      0 0.775 0
+      <UV> { 0.0588235294117647 0.9375 }
+    }
+    <Vertex> 586 {
+      0.3875 0 0
+    }
+    <Vertex> 587 {
+      0 0.375 0
+      <UV> { 0.0571428571428571 0.0625 }
+    }
+    <Vertex> 588 {
+      0.3875 0.375 0
+      <UV> { 0.942857142857143 0.0625 }
+    }
+    <Vertex> 589 {
+      0.3875 0.725 0
+      <UV> { 0.942857142857143 0.9375 }
+    }
+    <Vertex> 590 {
+      0 0.725 0
+      <UV> { 0.0571428571428571 0.9375 }
+    }
+    <Vertex> 591 {
+      0.3875 0 0
+    }
+    <Vertex> 592 {
+      0.0125 -0.1875 0
+      <UV> { 0.0571428571428571 0.0645161290322581 }
+    }
+    <Vertex> 593 {
+      0.4 -0.1875 0
+      <UV> { 0.942857142857143 0.0645161290322581 }
+    }
+    <Vertex> 594 {
+      0.4 0.15 0
+      <UV> { 0.942857142857143 0.935483870967742 }
+    }
+    <Vertex> 595 {
+      0.0125 0.15 0
+      <UV> { 0.0571428571428571 0.935483870967742 }
+    }
+    <Vertex> 596 {
+      0.4125 0 0
+    }
+    <Vertex> 597 {
+      0 -0.025 0
+      <UV> { 0.05 0.0327868852459016 }
+    }
+    <Vertex> 598 {
+      0.45 -0.025 0
+      <UV> { 0.95 0.0327868852459016 }
+    }
+    <Vertex> 599 {
+      0.45 0.6875 0
+      <UV> { 0.95 0.967213114754098 }
+    }
+    <Vertex> 600 {
+      0 0.6875 0
+      <UV> { 0.05 0.967213114754098 }
+    }
+    <Vertex> 601 {
+      0.45 0 0
+    }
+    <Vertex> 602 {
+      0 -0.025 0
+      <UV> { 0.0253164556962025 0.105263157894737 }
+    }
+    <Vertex> 603 {
+      0.9375 -0.025 0
+      <UV> { 0.974683544303797 0.105263157894737 }
+    }
+    <Vertex> 604 {
+      0.9375 0.1625 0
+      <UV> { 0.974683544303797 0.894736842105263 }
+    }
+    <Vertex> 605 {
+      0 0.1625 0
+      <UV> { 0.0253164556962025 0.894736842105263 }
+    }
+    <Vertex> 606 {
+      0.9375 0 0
+    }
+    <Vertex> 607 {
+      -0.4375 0.525 0
+      <UV> { 0.0689655172413793 0.0833333333333334 }
+    }
+    <Vertex> 608 {
+      -0.125 0.525 0
+      <UV> { 0.931034482758621 0.0833333333333334 }
+    }
+    <Vertex> 609 {
+      -0.125 0.775 0
+      <UV> { 0.931034482758621 0.916666666666667 }
+    }
+    <Vertex> 610 {
+      -0.4375 0.775 0
+      <UV> { 0.0689655172413793 0.916666666666667 }
+    }
+    <Vertex> 611 {
+      0 0 0
+    }
+    <Vertex> 612 {
+      -0.375 0.525 0
+      <UV> { 0.0689655172413793 0.0833333333333334 }
+    }
+    <Vertex> 613 {
+      -0.0625 0.525 0
+      <UV> { 0.931034482758621 0.0833333333333334 }
+    }
+    <Vertex> 614 {
+      -0.0625 0.775 0
+      <UV> { 0.931034482758621 0.916666666666667 }
+    }
+    <Vertex> 615 {
+      -0.375 0.775 0
+      <UV> { 0.0689655172413793 0.916666666666667 }
+    }
+    <Vertex> 616 {
+      0 0 0
+    }
+    <Vertex> 617 {
+      -0.4625 0.5375 0
+      <UV> { 0.0526315789473684 0.0833333333333334 }
+    }
+    <Vertex> 618 {
+      -0.0375 0.5375 0
+      <UV> { 0.947368421052632 0.0833333333333334 }
+    }
+    <Vertex> 619 {
+      -0.0375 0.7875 0
+      <UV> { 0.947368421052632 0.916666666666667 }
+    }
+    <Vertex> 620 {
+      -0.4625 0.7875 0
+      <UV> { 0.0526315789473684 0.916666666666667 }
+    }
+    <Vertex> 621 {
+      0 0 0
+    }
+    <Vertex> 622 {
+      0.025 0.525 0
+      <UV> { 0.0666666666666667 0.08 }
+    }
+    <Vertex> 623 {
+      0.35 0.525 0
+      <UV> { 0.933333333333333 0.08 }
+    }
+    <Vertex> 624 {
+      0.35 0.7875 0
+      <UV> { 0.933333333333333 0.92 }
+    }
+    <Vertex> 625 {
+      0.025 0.7875 0
+      <UV> { 0.0666666666666667 0.92 }
+    }
+    <Vertex> 626 {
+      0.375 0 0
+    }
+    <Vertex> 627 {
+      -0.4625 0.5875 0
+      <UV> { 0.0526315789473684 0.133333333333333 }
+    }
+    <Vertex> 628 {
+      -0.0375 0.5875 0
+      <UV> { 0.947368421052632 0.133333333333333 }
+    }
+    <Vertex> 629 {
+      -0.0375 0.725 0
+      <UV> { 0.947368421052632 0.866666666666667 }
+    }
+    <Vertex> 630 {
+      -0.4625 0.725 0
+      <UV> { 0.0526315789473684 0.866666666666667 }
+    }
+    <Vertex> 631 {
+      0 0 0
+    }
+    <Vertex> 632 {
+      0 -0.025 0
+      <UV> { 0.05 0.0327868852459016 }
+    }
+    <Vertex> 633 {
+      0.45 -0.025 0
+      <UV> { 0.95 0.0327868852459016 }
+    }
+    <Vertex> 634 {
+      0.45 0.6875 0
+      <UV> { 0.95 0.967213114754098 }
+    }
+    <Vertex> 635 {
+      0 0.6875 0
+      <UV> { 0.05 0.967213114754098 }
+    }
+    <Vertex> 636 {
+      0.45 0 0
+    }
+    <Vertex> 637 {
+      -0.4375 0.5625 0
+      <UV> { 0.0588235294117647 0.0909090909090908 }
+    }
+    <Vertex> 638 {
+      -0.0625 0.5625 0
+      <UV> { 0.941176470588235 0.0909090909090908 }
+    }
+    <Vertex> 639 {
+      -0.0625 0.7875 0
+      <UV> { 0.941176470588235 0.909090909090909 }
+    }
+    <Vertex> 640 {
+      -0.4375 0.7875 0
+      <UV> { 0.0588235294117647 0.909090909090909 }
+    }
+    <Vertex> 641 {
+      0 0 0
+    }
+    <Vertex> 642 {
+      -0.3375 0.5625 0
+      <UV> { 0.105263157894737 0.111111111111111 }
+    }
+    <Vertex> 643 {
+      -0.15 0.5625 0
+      <UV> { 0.894736842105263 0.111111111111111 }
+    }
+    <Vertex> 644 {
+      -0.15 0.7375 0
+      <UV> { 0.894736842105263 0.888888888888889 }
+    }
+    <Vertex> 645 {
+      -0.3375 0.7375 0
+      <UV> { 0.105263157894737 0.888888888888889 }
+    }
+    <Vertex> 646 {
+      0 0 0
+    }
+    <Vertex> 647 {
+      -0.4375 0.5625 0
+      <UV> { 0.0571428571428571 0.111111111111111 }
+    }
+    <Vertex> 648 {
+      -0.05 0.5625 0
+      <UV> { 0.942857142857143 0.111111111111111 }
+    }
+    <Vertex> 649 {
+      -0.05 0.7375 0
+      <UV> { 0.942857142857143 0.888888888888889 }
+    }
+    <Vertex> 650 {
+      -0.4375 0.7375 0
+      <UV> { 0.0571428571428571 0.888888888888889 }
+    }
+    <Vertex> 651 {
+      0 0 0
+    }
+    <Vertex> 652 {
+      0.025 0.5625 0
+      <UV> { 0.1 0.0952380952380953 }
+    }
+    <Vertex> 653 {
+      0.225 0.5625 0
+      <UV> { 0.9 0.0952380952380953 }
+    }
+    <Vertex> 654 {
+      0.225 0.775 0
+      <UV> { 0.9 0.904761904761905 }
+    }
+    <Vertex> 655 {
+      0.025 0.775 0
+      <UV> { 0.1 0.904761904761905 }
+    }
+    <Vertex> 656 {
+      0.25 0 0
+    }
+    <Vertex> 657 {
+      -0.375 0.5375 0
+      <UV> { 0.08 0.0833333333333334 }
+    }
+    <Vertex> 658 {
+      -0.1125 0.5375 0
+      <UV> { 0.92 0.0833333333333334 }
+    }
+    <Vertex> 659 {
+      -0.1125 0.7875 0
+      <UV> { 0.92 0.916666666666667 }
+    }
+    <Vertex> 660 {
+      -0.375 0.7875 0
+      <UV> { 0.08 0.916666666666667 }
+    }
+    <Vertex> 661 {
+      0 0 0
+    }
+    <Vertex> 662 {
+      -0.4 0.55 0
+      <UV> { 0.0606060606060606 0.0869565217391305 }
+    }
+    <Vertex> 663 {
+      -0.0375 0.55 0
+      <UV> { 0.939393939393939 0.0869565217391305 }
+    }
+    <Vertex> 664 {
+      -0.0375 0.7875 0
+      <UV> { 0.939393939393939 0.91304347826087 }
+    }
+    <Vertex> 665 {
+      -0.4 0.7875 0
+      <UV> { 0.0606060606060606 0.91304347826087 }
+    }
+    <Vertex> 666 {
+      0 0 0
+    }
+    <Vertex> 667 {
+      -0.4625 0.55 0
+      <UV> { 0.0526315789473684 0.0833333333333334 }
+    }
+    <Vertex> 668 {
+      -0.0375 0.55 0
+      <UV> { 0.947368421052632 0.0833333333333334 }
+    }
+    <Vertex> 669 {
+      -0.0375 0.8 0
+      <UV> { 0.947368421052632 0.916666666666667 }
+    }
+    <Vertex> 670 {
+      -0.4625 0.8 0
+      <UV> { 0.0526315789473684 0.916666666666667 }
+    }
+    <Vertex> 671 {
+      0 0 0
+    }
+    <Vertex> 672 {
+      0 -0.025 0
+      <UV> { 0.05 0.0327868852459016 }
+    }
+    <Vertex> 673 {
+      0.45 -0.025 0
+      <UV> { 0.95 0.0327868852459016 }
+    }
+    <Vertex> 674 {
+      0.45 0.6875 0
+      <UV> { 0.95 0.967213114754098 }
+    }
+    <Vertex> 675 {
+      0 0.6875 0
+      <UV> { 0.05 0.967213114754098 }
+    }
+    <Vertex> 676 {
+      0.45 0 0
+    }
+    <Vertex> 677 {
+      0 -0.025 0
+      <UV> { 0.05 0.0327868852459016 }
+    }
+    <Vertex> 678 {
+      0.45 -0.025 0
+      <UV> { 0.95 0.0327868852459016 }
+    }
+    <Vertex> 679 {
+      0.45 0.6875 0
+      <UV> { 0.95 0.967213114754098 }
+    }
+    <Vertex> 680 {
+      0 0.6875 0
+      <UV> { 0.05 0.967213114754098 }
+    }
+    <Vertex> 681 {
+      0.45 0 0
+    }
+    <Vertex> 682 {
+      0 -0.025 0
+      <UV> { 0.05 0.0327868852459016 }
+    }
+    <Vertex> 683 {
+      0.45 -0.025 0
+      <UV> { 0.95 0.0327868852459016 }
+    }
+    <Vertex> 684 {
+      0.45 0.6875 0
+      <UV> { 0.95 0.967213114754098 }
+    }
+    <Vertex> 685 {
+      0 0.6875 0
+      <UV> { 0.05 0.967213114754098 }
+    }
+    <Vertex> 686 {
+      0.45 0 0
+    }
+  }
+  <Group> ds {
+    <PointLight> {
+      <VertexRef> { 0 <Ref> { vpool } }
+    }
+  }
+  <Group> 32 {
+    <PointLight> {
+      <VertexRef> { 1 <Ref> { vpool } }
+    }
+  }
+  <Group> 33 {
+    <Polygon> {
+      <TRef> { "coolvetica rg033" }
+      <VertexRef> { 2 3 4 5 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 6 <Ref> { vpool } }
+    }
+  }
+  <Group> 34 {
+    <Polygon> {
+      <TRef> { "coolvetica rg034" }
+      <VertexRef> { 7 8 9 10 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 11 <Ref> { vpool } }
+    }
+  }
+  <Group> 35 {
+    <Polygon> {
+      <TRef> { "coolvetica rg035" }
+      <VertexRef> { 12 13 14 15 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 16 <Ref> { vpool } }
+    }
+  }
+  <Group> 36 {
+    <Polygon> {
+      <TRef> { "coolvetica rg036" }
+      <VertexRef> { 17 18 19 20 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 21 <Ref> { vpool } }
+    }
+  }
+  <Group> 37 {
+    <Polygon> {
+      <TRef> { "coolvetica rg037" }
+      <VertexRef> { 22 23 24 25 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 26 <Ref> { vpool } }
+    }
+  }
+  <Group> 38 {
+    <Polygon> {
+      <TRef> { "coolvetica rg038" }
+      <VertexRef> { 27 28 29 30 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 31 <Ref> { vpool } }
+    }
+  }
+  <Group> 39 {
+    <Polygon> {
+      <TRef> { "coolvetica rg039" }
+      <VertexRef> { 32 33 34 35 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 36 <Ref> { vpool } }
+    }
+  }
+  <Group> 40 {
+    <Polygon> {
+      <TRef> { "coolvetica rg040" }
+      <VertexRef> { 37 38 39 40 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 41 <Ref> { vpool } }
+    }
+  }
+  <Group> 41 {
+    <Polygon> {
+      <TRef> { "coolvetica rg041" }
+      <VertexRef> { 42 43 44 45 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 46 <Ref> { vpool } }
+    }
+  }
+  <Group> 42 {
+    <Polygon> {
+      <TRef> { "coolvetica rg042" }
+      <VertexRef> { 47 48 49 50 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 51 <Ref> { vpool } }
+    }
+  }
+  <Group> 43 {
+    <Polygon> {
+      <TRef> { "coolvetica rg043" }
+      <VertexRef> { 52 53 54 55 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 56 <Ref> { vpool } }
+    }
+  }
+  <Group> 44 {
+    <Polygon> {
+      <TRef> { "coolvetica rg044" }
+      <VertexRef> { 57 58 59 60 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 61 <Ref> { vpool } }
+    }
+  }
+  <Group> 45 {
+    <Polygon> {
+      <TRef> { "coolvetica rg045" }
+      <VertexRef> { 62 63 64 65 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 66 <Ref> { vpool } }
+    }
+  }
+  <Group> 46 {
+    <Polygon> {
+      <TRef> { "coolvetica rg046" }
+      <VertexRef> { 67 68 69 70 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 71 <Ref> { vpool } }
+    }
+  }
+  <Group> 47 {
+    <Polygon> {
+      <TRef> { "coolvetica rg047" }
+      <VertexRef> { 72 73 74 75 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 76 <Ref> { vpool } }
+    }
+  }
+  <Group> 48 {
+    <Polygon> {
+      <TRef> { "coolvetica rg048" }
+      <VertexRef> { 77 78 79 80 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 81 <Ref> { vpool } }
+    }
+  }
+  <Group> 49 {
+    <Polygon> {
+      <TRef> { "coolvetica rg049" }
+      <VertexRef> { 82 83 84 85 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 86 <Ref> { vpool } }
+    }
+  }
+  <Group> 50 {
+    <Polygon> {
+      <TRef> { "coolvetica rg050" }
+      <VertexRef> { 87 88 89 90 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 91 <Ref> { vpool } }
+    }
+  }
+  <Group> 51 {
+    <Polygon> {
+      <TRef> { "coolvetica rg051" }
+      <VertexRef> { 92 93 94 95 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 96 <Ref> { vpool } }
+    }
+  }
+  <Group> 52 {
+    <Polygon> {
+      <TRef> { "coolvetica rg052" }
+      <VertexRef> { 97 98 99 100 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 101 <Ref> { vpool } }
+    }
+  }
+  <Group> 53 {
+    <Polygon> {
+      <TRef> { "coolvetica rg053" }
+      <VertexRef> { 102 103 104 105 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 106 <Ref> { vpool } }
+    }
+  }
+  <Group> 54 {
+    <Polygon> {
+      <TRef> { "coolvetica rg054" }
+      <VertexRef> { 107 108 109 110 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 111 <Ref> { vpool } }
+    }
+  }
+  <Group> 55 {
+    <Polygon> {
+      <TRef> { "coolvetica rg055" }
+      <VertexRef> { 112 113 114 115 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 116 <Ref> { vpool } }
+    }
+  }
+  <Group> 56 {
+    <Polygon> {
+      <TRef> { "coolvetica rg056" }
+      <VertexRef> { 117 118 119 120 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 121 <Ref> { vpool } }
+    }
+  }
+  <Group> 57 {
+    <Polygon> {
+      <TRef> { "coolvetica rg057" }
+      <VertexRef> { 122 123 124 125 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 126 <Ref> { vpool } }
+    }
+  }
+  <Group> 58 {
+    <Polygon> {
+      <TRef> { "coolvetica rg058" }
+      <VertexRef> { 127 128 129 130 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 131 <Ref> { vpool } }
+    }
+  }
+  <Group> 59 {
+    <Polygon> {
+      <TRef> { "coolvetica rg059" }
+      <VertexRef> { 132 133 134 135 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 136 <Ref> { vpool } }
+    }
+  }
+  <Group> 60 {
+    <Polygon> {
+      <TRef> { "coolvetica rg060" }
+      <VertexRef> { 137 138 139 140 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 141 <Ref> { vpool } }
+    }
+  }
+  <Group> 61 {
+    <Polygon> {
+      <TRef> { "coolvetica rg061" }
+      <VertexRef> { 142 143 144 145 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 146 <Ref> { vpool } }
+    }
+  }
+  <Group> 62 {
+    <Polygon> {
+      <TRef> { "coolvetica rg062" }
+      <VertexRef> { 147 148 149 150 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 151 <Ref> { vpool } }
+    }
+  }
+  <Group> 63 {
+    <Polygon> {
+      <TRef> { "coolvetica rg063" }
+      <VertexRef> { 152 153 154 155 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 156 <Ref> { vpool } }
+    }
+  }
+  <Group> 64 {
+    <Polygon> {
+      <TRef> { "coolvetica rg064" }
+      <VertexRef> { 157 158 159 160 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 161 <Ref> { vpool } }
+    }
+  }
+  <Group> 65 {
+    <Polygon> {
+      <TRef> { "coolvetica rg065" }
+      <VertexRef> { 162 163 164 165 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 166 <Ref> { vpool } }
+    }
+  }
+  <Group> 66 {
+    <Polygon> {
+      <TRef> { "coolvetica rg066" }
+      <VertexRef> { 167 168 169 170 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 171 <Ref> { vpool } }
+    }
+  }
+  <Group> 67 {
+    <Polygon> {
+      <TRef> { "coolvetica rg067" }
+      <VertexRef> { 172 173 174 175 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 176 <Ref> { vpool } }
+    }
+  }
+  <Group> 68 {
+    <Polygon> {
+      <TRef> { "coolvetica rg068" }
+      <VertexRef> { 177 178 179 180 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 181 <Ref> { vpool } }
+    }
+  }
+  <Group> 69 {
+    <Polygon> {
+      <TRef> { "coolvetica rg069" }
+      <VertexRef> { 182 183 184 185 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 186 <Ref> { vpool } }
+    }
+  }
+  <Group> 70 {
+    <Polygon> {
+      <TRef> { "coolvetica rg070" }
+      <VertexRef> { 187 188 189 190 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 191 <Ref> { vpool } }
+    }
+  }
+  <Group> 71 {
+    <Polygon> {
+      <TRef> { "coolvetica rg071" }
+      <VertexRef> { 192 193 194 195 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 196 <Ref> { vpool } }
+    }
+  }
+  <Group> 72 {
+    <Polygon> {
+      <TRef> { "coolvetica rg072" }
+      <VertexRef> { 197 198 199 200 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 201 <Ref> { vpool } }
+    }
+  }
+  <Group> 73 {
+    <Polygon> {
+      <TRef> { "coolvetica rg073" }
+      <VertexRef> { 202 203 204 205 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 206 <Ref> { vpool } }
+    }
+  }
+  <Group> 74 {
+    <Polygon> {
+      <TRef> { "coolvetica rg074" }
+      <VertexRef> { 207 208 209 210 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 211 <Ref> { vpool } }
+    }
+  }
+  <Group> 75 {
+    <Polygon> {
+      <TRef> { "coolvetica rg075" }
+      <VertexRef> { 212 213 214 215 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 216 <Ref> { vpool } }
+    }
+  }
+  <Group> 76 {
+    <Polygon> {
+      <TRef> { "coolvetica rg076" }
+      <VertexRef> { 217 218 219 220 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 221 <Ref> { vpool } }
+    }
+  }
+  <Group> 77 {
+    <Polygon> {
+      <TRef> { "coolvetica rg077" }
+      <VertexRef> { 222 223 224 225 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 226 <Ref> { vpool } }
+    }
+  }
+  <Group> 78 {
+    <Polygon> {
+      <TRef> { "coolvetica rg078" }
+      <VertexRef> { 227 228 229 230 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 231 <Ref> { vpool } }
+    }
+  }
+  <Group> 79 {
+    <Polygon> {
+      <TRef> { "coolvetica rg079" }
+      <VertexRef> { 232 233 234 235 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 236 <Ref> { vpool } }
+    }
+  }
+  <Group> 80 {
+    <Polygon> {
+      <TRef> { "coolvetica rg080" }
+      <VertexRef> { 237 238 239 240 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 241 <Ref> { vpool } }
+    }
+  }
+  <Group> 81 {
+    <Polygon> {
+      <TRef> { "coolvetica rg081" }
+      <VertexRef> { 242 243 244 245 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 246 <Ref> { vpool } }
+    }
+  }
+  <Group> 82 {
+    <Polygon> {
+      <TRef> { "coolvetica rg082" }
+      <VertexRef> { 247 248 249 250 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 251 <Ref> { vpool } }
+    }
+  }
+  <Group> 83 {
+    <Polygon> {
+      <TRef> { "coolvetica rg083" }
+      <VertexRef> { 252 253 254 255 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 256 <Ref> { vpool } }
+    }
+  }
+  <Group> 84 {
+    <Polygon> {
+      <TRef> { "coolvetica rg084" }
+      <VertexRef> { 257 258 259 260 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 261 <Ref> { vpool } }
+    }
+  }
+  <Group> 85 {
+    <Polygon> {
+      <TRef> { "coolvetica rg085" }
+      <VertexRef> { 262 263 264 265 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 266 <Ref> { vpool } }
+    }
+  }
+  <Group> 86 {
+    <Polygon> {
+      <TRef> { "coolvetica rg086" }
+      <VertexRef> { 267 268 269 270 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 271 <Ref> { vpool } }
+    }
+  }
+  <Group> 87 {
+    <Polygon> {
+      <TRef> { "coolvetica rg087" }
+      <VertexRef> { 272 273 274 275 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 276 <Ref> { vpool } }
+    }
+  }
+  <Group> 88 {
+    <Polygon> {
+      <TRef> { "coolvetica rg088" }
+      <VertexRef> { 277 278 279 280 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 281 <Ref> { vpool } }
+    }
+  }
+  <Group> 89 {
+    <Polygon> {
+      <TRef> { "coolvetica rg089" }
+      <VertexRef> { 282 283 284 285 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 286 <Ref> { vpool } }
+    }
+  }
+  <Group> 90 {
+    <Polygon> {
+      <TRef> { "coolvetica rg090" }
+      <VertexRef> { 287 288 289 290 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 291 <Ref> { vpool } }
+    }
+  }
+  <Group> 91 {
+    <Polygon> {
+      <TRef> { "coolvetica rg091" }
+      <VertexRef> { 292 293 294 295 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 296 <Ref> { vpool } }
+    }
+  }
+  <Group> 92 {
+    <Polygon> {
+      <TRef> { "coolvetica rg092" }
+      <VertexRef> { 297 298 299 300 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 301 <Ref> { vpool } }
+    }
+  }
+  <Group> 93 {
+    <Polygon> {
+      <TRef> { "coolvetica rg093" }
+      <VertexRef> { 302 303 304 305 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 306 <Ref> { vpool } }
+    }
+  }
+  <Group> 94 {
+    <Polygon> {
+      <TRef> { "coolvetica rg094" }
+      <VertexRef> { 307 308 309 310 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 311 <Ref> { vpool } }
+    }
+  }
+  <Group> 95 {
+    <Polygon> {
+      <TRef> { "coolvetica rg095" }
+      <VertexRef> { 312 313 314 315 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 316 <Ref> { vpool } }
+    }
+  }
+  <Group> 96 {
+    <Polygon> {
+      <TRef> { "coolvetica rg096" }
+      <VertexRef> { 317 318 319 320 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 321 <Ref> { vpool } }
+    }
+  }
+  <Group> 97 {
+    <Polygon> {
+      <TRef> { "coolvetica rg097" }
+      <VertexRef> { 322 323 324 325 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 326 <Ref> { vpool } }
+    }
+  }
+  <Group> 98 {
+    <Polygon> {
+      <TRef> { "coolvetica rg098" }
+      <VertexRef> { 327 328 329 330 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 331 <Ref> { vpool } }
+    }
+  }
+  <Group> 99 {
+    <Polygon> {
+      <TRef> { "coolvetica rg099" }
+      <VertexRef> { 332 333 334 335 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 336 <Ref> { vpool } }
+    }
+  }
+  <Group> 100 {
+    <Polygon> {
+      <TRef> { "coolvetica rg100" }
+      <VertexRef> { 337 338 339 340 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 341 <Ref> { vpool } }
+    }
+  }
+  <Group> 101 {
+    <Polygon> {
+      <TRef> { "coolvetica rg101" }
+      <VertexRef> { 342 343 344 345 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 346 <Ref> { vpool } }
+    }
+  }
+  <Group> 102 {
+    <Polygon> {
+      <TRef> { "coolvetica rg102" }
+      <VertexRef> { 347 348 349 350 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 351 <Ref> { vpool } }
+    }
+  }
+  <Group> 103 {
+    <Polygon> {
+      <TRef> { "coolvetica rg103" }
+      <VertexRef> { 352 353 354 355 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 356 <Ref> { vpool } }
+    }
+  }
+  <Group> 104 {
+    <Polygon> {
+      <TRef> { "coolvetica rg104" }
+      <VertexRef> { 357 358 359 360 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 361 <Ref> { vpool } }
+    }
+  }
+  <Group> 105 {
+    <Polygon> {
+      <TRef> { "coolvetica rg105" }
+      <VertexRef> { 362 363 364 365 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 366 <Ref> { vpool } }
+    }
+  }
+  <Group> 106 {
+    <Polygon> {
+      <TRef> { "coolvetica rg106" }
+      <VertexRef> { 367 368 369 370 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 371 <Ref> { vpool } }
+    }
+  }
+  <Group> 107 {
+    <Polygon> {
+      <TRef> { "coolvetica rg107" }
+      <VertexRef> { 372 373 374 375 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 376 <Ref> { vpool } }
+    }
+  }
+  <Group> 108 {
+    <Polygon> {
+      <TRef> { "coolvetica rg108" }
+      <VertexRef> { 377 378 379 380 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 381 <Ref> { vpool } }
+    }
+  }
+  <Group> 109 {
+    <Polygon> {
+      <TRef> { "coolvetica rg109" }
+      <VertexRef> { 382 383 384 385 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 386 <Ref> { vpool } }
+    }
+  }
+  <Group> 110 {
+    <Polygon> {
+      <TRef> { "coolvetica rg110" }
+      <VertexRef> { 387 388 389 390 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 391 <Ref> { vpool } }
+    }
+  }
+  <Group> 111 {
+    <Polygon> {
+      <TRef> { "coolvetica rg111" }
+      <VertexRef> { 392 393 394 395 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 396 <Ref> { vpool } }
+    }
+  }
+  <Group> 112 {
+    <Polygon> {
+      <TRef> { "coolvetica rg112" }
+      <VertexRef> { 397 398 399 400 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 401 <Ref> { vpool } }
+    }
+  }
+  <Group> 113 {
+    <Polygon> {
+      <TRef> { "coolvetica rg113" }
+      <VertexRef> { 402 403 404 405 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 406 <Ref> { vpool } }
+    }
+  }
+  <Group> 114 {
+    <Polygon> {
+      <TRef> { "coolvetica rg114" }
+      <VertexRef> { 407 408 409 410 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 411 <Ref> { vpool } }
+    }
+  }
+  <Group> 115 {
+    <Polygon> {
+      <TRef> { "coolvetica rg115" }
+      <VertexRef> { 412 413 414 415 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 416 <Ref> { vpool } }
+    }
+  }
+  <Group> 116 {
+    <Polygon> {
+      <TRef> { "coolvetica rg116" }
+      <VertexRef> { 417 418 419 420 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 421 <Ref> { vpool } }
+    }
+  }
+  <Group> 117 {
+    <Polygon> {
+      <TRef> { "coolvetica rg117" }
+      <VertexRef> { 422 423 424 425 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 426 <Ref> { vpool } }
+    }
+  }
+  <Group> 118 {
+    <Polygon> {
+      <TRef> { "coolvetica rg118" }
+      <VertexRef> { 427 428 429 430 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 431 <Ref> { vpool } }
+    }
+  }
+  <Group> 119 {
+    <Polygon> {
+      <TRef> { "coolvetica rg119" }
+      <VertexRef> { 432 433 434 435 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 436 <Ref> { vpool } }
+    }
+  }
+  <Group> 120 {
+    <Polygon> {
+      <TRef> { "coolvetica rg120" }
+      <VertexRef> { 437 438 439 440 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 441 <Ref> { vpool } }
+    }
+  }
+  <Group> 121 {
+    <Polygon> {
+      <TRef> { "coolvetica rg121" }
+      <VertexRef> { 442 443 444 445 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 446 <Ref> { vpool } }
+    }
+  }
+  <Group> 122 {
+    <Polygon> {
+      <TRef> { "coolvetica rg122" }
+      <VertexRef> { 447 448 449 450 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 451 <Ref> { vpool } }
+    }
+  }
+  <Group> 123 {
+    <Polygon> {
+      <TRef> { "coolvetica rg123" }
+      <VertexRef> { 452 453 454 455 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 456 <Ref> { vpool } }
+    }
+  }
+  <Group> 124 {
+    <Polygon> {
+      <TRef> { "coolvetica rg124" }
+      <VertexRef> { 457 458 459 460 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 461 <Ref> { vpool } }
+    }
+  }
+  <Group> 125 {
+    <Polygon> {
+      <TRef> { "coolvetica rg125" }
+      <VertexRef> { 462 463 464 465 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 466 <Ref> { vpool } }
+    }
+  }
+  <Group> 126 {
+    <Polygon> {
+      <TRef> { "coolvetica rg126" }
+      <VertexRef> { 467 468 469 470 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 471 <Ref> { vpool } }
+    }
+  }
+  <Group> 161 {
+    <Polygon> {
+      <TRef> { "coolvetica rg161" }
+      <VertexRef> { 472 473 474 475 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 476 <Ref> { vpool } }
+    }
+  }
+  <Group> 169 {
+    <Polygon> {
+      <TRef> { "coolvetica rg169" }
+      <VertexRef> { 477 478 479 480 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 481 <Ref> { vpool } }
+    }
+  }
+  <Group> 171 {
+    <Polygon> {
+      <TRef> { "coolvetica rg171" }
+      <VertexRef> { 482 483 484 485 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 486 <Ref> { vpool } }
+    }
+  }
+  <Group> 176 {
+    <Polygon> {
+      <TRef> { "coolvetica rg176" }
+      <VertexRef> { 487 488 489 490 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 491 <Ref> { vpool } }
+    }
+  }
+  <Group> 181 {
+    <Polygon> {
+      <TRef> { "coolvetica rg181" }
+      <VertexRef> { 492 493 494 495 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 496 <Ref> { vpool } }
+    }
+  }
+  <Group> 184 {
+    <Polygon> {
+      <TRef> { "coolvetica rg184" }
+      <VertexRef> { 497 498 499 500 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 501 <Ref> { vpool } }
+    }
+  }
+  <Group> 187 {
+    <Polygon> {
+      <TRef> { "coolvetica rg187" }
+      <VertexRef> { 502 503 504 505 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 506 <Ref> { vpool } }
+    }
+  }
+  <Group> 191 {
+    <Polygon> {
+      <TRef> { "coolvetica rg191" }
+      <VertexRef> { 507 508 509 510 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 511 <Ref> { vpool } }
+    }
+  }
+  <Group> 198 {
+    <Polygon> {
+      <TRef> { "coolvetica rg198" }
+      <VertexRef> { 512 513 514 515 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 516 <Ref> { vpool } }
+    }
+  }
+  <Group> 199 {
+    <Polygon> {
+      <TRef> { "coolvetica rg199" }
+      <VertexRef> { 517 518 519 520 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 521 <Ref> { vpool } }
+    }
+  }
+  <Group> 223 {
+    <Polygon> {
+      <TRef> { "coolvetica rg223" }
+      <VertexRef> { 522 523 524 525 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 526 <Ref> { vpool } }
+    }
+  }
+  <Group> 230 {
+    <Polygon> {
+      <TRef> { "coolvetica rg230" }
+      <VertexRef> { 527 528 529 530 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 531 <Ref> { vpool } }
+    }
+  }
+  <Group> 231 {
+    <Polygon> {
+      <TRef> { "coolvetica rg231" }
+      <VertexRef> { 532 533 534 535 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 536 <Ref> { vpool } }
+    }
+  }
+  <Group> 240 {
+    <Polygon> {
+      <TRef> { "coolvetica rg240" }
+      <VertexRef> { 537 538 539 540 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 541 <Ref> { vpool } }
+    }
+  }
+  <Group> 248 {
+    <Polygon> {
+      <TRef> { "coolvetica rg248" }
+      <VertexRef> { 542 543 544 545 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 546 <Ref> { vpool } }
+    }
+  }
+  <Group> 254 {
+    <Polygon> {
+      <TRef> { "coolvetica rg254" }
+      <VertexRef> { 547 548 549 550 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 551 <Ref> { vpool } }
+    }
+  }
+  <Group> 305 {
+    <Polygon> {
+      <TRef> { "coolvetica rg305" }
+      <VertexRef> { 552 553 554 555 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 556 <Ref> { vpool } }
+    }
+  }
+  <Group> 567 {
+    <Polygon> {
+      <TRef> { "coolvetica rg567" }
+      <VertexRef> { 557 558 559 560 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 561 <Ref> { vpool } }
+    }
+  }
+  <Group> 8216 {
+    <Polygon> {
+      <TRef> { "coolvetica rg8216" }
+      <VertexRef> { 562 563 564 565 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 566 <Ref> { vpool } }
+    }
+  }
+  <Group> 8217 {
+    <Polygon> {
+      <TRef> { "coolvetica rg8217" }
+      <VertexRef> { 567 568 569 570 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 571 <Ref> { vpool } }
+    }
+  }
+  <Group> 8218 {
+    <Polygon> {
+      <TRef> { "coolvetica rg8218" }
+      <VertexRef> { 572 573 574 575 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 576 <Ref> { vpool } }
+    }
+  }
+  <Group> 8219 {
+    <Polygon> {
+      <TRef> { "coolvetica rg181" }
+      <VertexRef> { 577 578 579 580 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 581 <Ref> { vpool } }
+    }
+  }
+  <Group> 8220 {
+    <Polygon> {
+      <TRef> { "coolvetica rg8220" }
+      <VertexRef> { 582 583 584 585 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 586 <Ref> { vpool } }
+    }
+  }
+  <Group> 8221 {
+    <Polygon> {
+      <TRef> { "coolvetica rg8221" }
+      <VertexRef> { 587 588 589 590 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 591 <Ref> { vpool } }
+    }
+  }
+  <Group> 8222 {
+    <Polygon> {
+      <TRef> { "coolvetica rg8222" }
+      <VertexRef> { 592 593 594 595 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 596 <Ref> { vpool } }
+    }
+  }
+  <Group> 8223 {
+    <Polygon> {
+      <TRef> { "coolvetica rg181" }
+      <VertexRef> { 597 598 599 600 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 601 <Ref> { vpool } }
+    }
+  }
+  <Group> 8230 {
+    <Polygon> {
+      <TRef> { "coolvetica rg8230" }
+      <VertexRef> { 602 603 604 605 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 606 <Ref> { vpool } }
+    }
+  }
+  <Group> 768 {
+    <Polygon> {
+      <TRef> { "coolvetica rg768" }
+      <VertexRef> { 607 608 609 610 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 611 <Ref> { vpool } }
+    }
+  }
+  <Group> 769 {
+    <Polygon> {
+      <TRef> { "coolvetica rg769" }
+      <VertexRef> { 612 613 614 615 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 616 <Ref> { vpool } }
+    }
+  }
+  <Group> 770 {
+    <Polygon> {
+      <TRef> { "coolvetica rg770" }
+      <VertexRef> { 617 618 619 620 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 621 <Ref> { vpool } }
+    }
+  }
+  <Group> 771 {
+    <Polygon> {
+      <TRef> { "coolvetica rg771" }
+      <VertexRef> { 622 623 624 625 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 626 <Ref> { vpool } }
+    }
+  }
+  <Group> 772 {
+    <Polygon> {
+      <TRef> { "coolvetica rg772" }
+      <VertexRef> { 627 628 629 630 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 631 <Ref> { vpool } }
+    }
+  }
+  <Group> 773 {
+    <Polygon> {
+      <TRef> { "coolvetica rg181" }
+      <VertexRef> { 632 633 634 635 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 636 <Ref> { vpool } }
+    }
+  }
+  <Group> 774 {
+    <Polygon> {
+      <TRef> { "coolvetica rg774" }
+      <VertexRef> { 637 638 639 640 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 641 <Ref> { vpool } }
+    }
+  }
+  <Group> 775 {
+    <Polygon> {
+      <TRef> { "coolvetica rg775" }
+      <VertexRef> { 642 643 644 645 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 646 <Ref> { vpool } }
+    }
+  }
+  <Group> 776 {
+    <Polygon> {
+      <TRef> { "coolvetica rg776" }
+      <VertexRef> { 647 648 649 650 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 651 <Ref> { vpool } }
+    }
+  }
+  <Group> 777 {
+    <Polygon> {
+      <TRef> { "coolvetica rg777" }
+      <VertexRef> { 652 653 654 655 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 656 <Ref> { vpool } }
+    }
+  }
+  <Group> 778 {
+    <Polygon> {
+      <TRef> { "coolvetica rg778" }
+      <VertexRef> { 657 658 659 660 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 661 <Ref> { vpool } }
+    }
+  }
+  <Group> 779 {
+    <Polygon> {
+      <TRef> { "coolvetica rg779" }
+      <VertexRef> { 662 663 664 665 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 666 <Ref> { vpool } }
+    }
+  }
+  <Group> 780 {
+    <Polygon> {
+      <TRef> { "coolvetica rg780" }
+      <VertexRef> { 667 668 669 670 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 671 <Ref> { vpool } }
+    }
+  }
+  <Group> 781 {
+    <Polygon> {
+      <TRef> { "coolvetica rg181" }
+      <VertexRef> { 672 673 674 675 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 676 <Ref> { vpool } }
+    }
+  }
+  <Group> 782 {
+    <Polygon> {
+      <TRef> { "coolvetica rg181" }
+      <VertexRef> { 677 678 679 680 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 681 <Ref> { vpool } }
+    }
+  }
+  <Group> 783 {
+    <Polygon> {
+      <TRef> { "coolvetica rg181" }
+      <VertexRef> { 682 683 684 685 <Ref> { vpool } }
+    }
+    <PointLight> {
+      <VertexRef> { 686 <Ref> { vpool } }
+    }
+  }
+}

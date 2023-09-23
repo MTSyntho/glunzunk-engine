@@ -1,0 +1,15 @@
+Alpha 1 - TO-DO:
+Done: 
+i guess adding images and text?
+
+Working on:
+-Home Menu:
+ -Buttons
+ -Project Creation Pop-Up
+
+Haven't Started: 
+Project Creation
+Level Editor
+Credits
+
+Last Modified: 2023/09/23 10:51PM CAT(GMT+2)
