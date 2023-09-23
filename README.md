@@ -49,12 +49,13 @@ _(Probably doesn't deserve it)_
 
 ![GitHub Downloads](https://img.shields.io/github/downloads/Official-IceCreeperPE/glunzunk-engine/total)
 
+![Total GitHub Commits](https://img.shields.io/github/commit-activity/t/Official-IceCreeperPE/glunzunk-engine)
+
 ![GitHub Issues](https://img.shields.io/github/issues/Official-IceCreeperPE/glunzunk-engine)
 
 ![GitHub Pull Requests](https://img.shields.io/github/issues-pr/Official-IceCreeperPE/glunzunk-engine)
 
 ![GitHub Discussions](https://img.shields.io/github/discussions/Official-IceCreeperPE/glunzunk-engine)
-
 
 ![GitHub Repository Size](https://img.shields.io/github/repo-size/Official-IceCreeperPE/glunzunk-engine)
 
