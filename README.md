@@ -29,7 +29,7 @@ The way Glunzunk Engine compiles your game is pretty simple, your game's code ge
 Glunzunk Engine has never been compiled yet so i don't know how... :P
 ## 📎 Links
 **Community:**
-- [Discord Server](https://discord.gg/invitelink)
+- [Discord Server](https://discord.gg/YV9XDvRYbw)
 - [GitHub Discussions](https://github.com/Official-IceCreeperPE/Glunzunk-Engine/discussions)
 
 **Download:**
