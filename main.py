@@ -17,7 +17,7 @@ import darkdetect # Checks system theme
 
 engineTheme="Dark"
 autoTheme=False
-version="Alpha 1 Build 3"
+version="Alpha 1 Build 4"
 
 projectFolder="C:\\Users\\User\\Documents\\Glunzunk Engine"
 
@@ -149,6 +149,10 @@ class GZEngine(ShowBase):
 
 
 		def homeMenu():
+			def openProject():
+				print('Oh boy oh boy, i am in for a real treat :|')
+
+
 			print('NOTE: Displaying Home Menu [homeMenu()]')
 			title = OnscreenText(text='Glunzunk Engine', pos=(-1.0, 0.70), scale=0.12, fg=(1, 1, 1, 1)) #, parent=base.aspect2d(a2dTopLeft))
 			lmRegular = self.loader.loadFont('assets\\fonts\\egg\\LEMONMILK-Regular.egg')
@@ -156,7 +160,7 @@ class GZEngine(ShowBase):
 			p3dText = OnscreenText(text='Powered by Panda3D', pos=(-1.28, 0.62), scale=0.05, fg=(1, 1, 1, 1))
 			lmLight = self.loader.loadFont('assets\\fonts\\egg\\LEMONMILK-Light.egg')
 			p3dText.setFont(lmLight)
-			versionText = OnscreenText(text=version, pos=(-1.43, 0.56), scale=0.04, fg=(1, 1, 1, 1))
+			versionText = OnscreenText(text=version, pos=(-1.42, 0.56), scale=0.04, fg=(1, 1, 1, 1))
 #			lmLight = self.loader.loadFont('assets\\fonts\\egg\\LEMONMILK-Light.egg')
 			versionText.setFont(lmLight)
 
@@ -189,12 +193,22 @@ class GZEngine(ShowBase):
 #			clickSettingsText = DirectButton(text=' ', pos=(-1, 0, -0.35), scale=(1.5, 0, 0.15), text_bg=(1, 1, 1, 1), relief=None, command=createProject, image=('assets\\textures\\tiled_Green Background.png'))
 #			clickSettingsText.hide()
 
+			projectList = DirectScrolledFrame(canvasSize=(-.80, .70, -2, 8), frameSize=(-.80, .80, -1.2, .40), scrollBarWidth=0.05)
+			projectList.setPos(0.80, 0, 0.38)
+			projectList.setColor(.22, .22, .22)
+
+			project1 = DirectButton(relief=None, image='assets\\placeholder\\dark.png', pos=(0, 0, 7.8), scale=(0.7, 1, 0.12), parent=projectList.getCanvas(), command=openProject)
+			p1name = OnscreenText(text='UNTITLED', parent=project1, scale=(0.15, 0.8), fg=(1, 1, 1, 1), pos=(0, -0.32))
+			p1name.setFont(lmRegular)
+
 			endLoad()
 
 #		createProject()
 		splashScreen()
+#		homeMenu()
 
 gz = GZEngine()
 gz.run()
 
 # This is MTSyntho at 9:54 PM on 2023/09/24, i'm suffering tryna get project creation working and the project entry positioned correctly
+# This is MTSyntho at 8:41 AM on 2023/09/25, i love google bard now, not in that sus way though :skull: :moyai:
