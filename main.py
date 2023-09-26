@@ -21,11 +21,39 @@ version="Alpha 1 Build 4"
 
 projectFolder="C:\\Users\\User\\Documents\\Glunzunk Engine"
 
-if os.path.exists(projectFolder):
+if os.path.exists(projectFolder)==True:
 	print('projectFolder exists at {}'.format(projectFolder))
 else:
 	print('Creating projectFolder at {}'.format(projectFolder))
 	os.mkdir(projectFolder)
+
+if os.path.exists('{}\\Projects'.format(projectFolder))==True:
+	print('projectFolder\\Projects created')
+else:
+	print('Creating projectFolder\\Projects at {}'.format(projectFolder))
+	os.mkdir('{}\\Projects'.format(projectFolder))
+
+if os.path.exists('{}\\projects.json'.format(projectFolder))==True:
+	print("'projects.json' exists so projects should be listed")
+else:
+	print("Creating projects.json at '{}'".format(projectFolder))
+	projek = {
+	    "0": "",
+	    "1": "",
+	    "2": "",
+	    "3": "",
+	    "4": "",
+	    "5": "",
+	    "6": "",
+	    "7": "",
+	    "8": "",
+	    "9": "",
+	    "projekCount": 0
+	}
+	projekJson = json.dumps(projek, indent=2)
+	with open("{}\\projects.json".format(projectFolder), "w") as outfile:
+	    outfile.write(projekJson)
+	    print('Generated projects.json(your projeks) at {}'.format(projectFolder))	
 
 #splashLogo=0
 #splashText=0
@@ -100,7 +128,7 @@ class GZEngine(ShowBase):
 		def createProject():
 			def createProjectConfirm():
 	#			print('lemme get suma dat kokain powerder')
-				if os.path.exists('{}\\{}'.format(projectFolder, projectNameEntry.get())):
+				if os.path.exists('{}\\Projects\\{}'.format(projectFolder, projectNameEntry.get())):
 					print("Project '{}' already exists.".format(projectNameEntry.get()))
 					print('So haha no crash 4 u')
 					fadeBlackBG.destroy()
@@ -112,7 +140,7 @@ class GZEngine(ShowBase):
 					createProjectBtnTxt.destroy()
 				else:
 					print("Creating New Project named '{}'".format(projectNameEntry.get()))
-					os.mkdir("{}\\{}".format(projectFolder, projectNameEntry.get()))
+					os.mkdir("{}\\Projects\\{}".format(projectFolder, projectNameEntry.get()))
 					properties = {
 					    "name": projectNameEntry.get(),
 					    "description": "Not Implemented",
@@ -120,9 +148,16 @@ class GZEngine(ShowBase):
 					    "engineVer": "{}".format(version)
 					}
 					propertiesJson = json.dumps(properties, indent=2)
-					with open("{}\\{}\\properties.json".format(projectFolder, projectNameEntry.get()), "w") as outfile:
+					with open("{}\\Projects\\{}\\properties.json".format(projectFolder, projectNameEntry.get()), "w") as outfile:
 					    outfile.write(propertiesJson)
-					    print('Generated properties.json at {}\\{}'.format(projectFolder, projectNameEntry.get()))
+					    print('Generated properties.json at {}\\Projects\\{}'.format(projectFolder, projectNameEntry.get()))
+					with open('{}\\projects.json'.format(projectFolder)) as projekJajon: #Jajon is json
+ 						loadedProjectsList = json.load(projekJajon)
+ 						for p in loadedProjectsList:
+ 							if p[projekCount]==0:
+ 								print('0')
+ 								projekCount=1
+ 								1==rojectNameEntry.get()
 					fadeBlackBG.destroy()
 					darkCreateBG.destroy()
 					createtitle.destroy()
