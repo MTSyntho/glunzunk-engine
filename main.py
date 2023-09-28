@@ -18,8 +18,9 @@ import darkdetect # Checks system theme
 engineTheme="Dark"
 autoTheme=False
 version="Alpha 1 Build 6"
+pcname=os.getlogin()
 
-projectFolder="C:\\Users\\User\\Documents\\Glunzunk Engine"
+projectFolder="C:\\Users\\{}\\Documents\\Glunzunk Engine".format(pcname)
 
 if os.path.exists(projectFolder)==True:
 	print('projectFolder exists at {}'.format(projectFolder))
@@ -199,11 +200,35 @@ class GZEngine(ShowBase):
 			createProjectBtnTxt = OnscreenText(text='Create', pos=(-0.85, -0.27), scale=0.10, fg=(1, 1, 1, 1))
 			createProjectBtnTxt.setFont(cvc)
 
+		def openProject():
+			def openProjectConfirm():
+				# Get the default display region
+				dr = base.camNode.getDisplayRegion(0)
+				
+				# Clear the screen
+				dr.clear()
+
+
+			print('NOTE: Displaying Open Project Menu[openProject()]')
+			# createProjectFr actually makes the file
+			fadeBlackBG = OnscreenImage(image='assets\\placeholder\\fadeBlack.png', pos=(0, 0, 0), scale=100)
+			fadeBlackBG.setTransparency(TransparencyAttrib.MAlpha)
+			darkCreateBG = OnscreenImage(image='assets\\placeholder\\lightDark.png', pos=(0, 0, 0), scale=(1.1, 0, 0.4))
+			opentitle = OnscreenText(text='OPEN AN EXISTING PROJECT', pos=(-0.45, 0.17), scale=0.15, fg=(1, 1, 1, 1))
+			opentitle.setFont(bbn)
+			projectnametitle = OnscreenText(text='PROJECT NAME:', pos=(-0.70, 0.05), scale=0.11, fg=(1, 1, 1, 1))
+			projectnametitle.setFont(bbn)
+			projectNameEntry = DirectEntry(text = "", scale=.07,  numLines=1, focus=1, command=openProjectConfirm, width=30, pos=-0.07)
+			projectNameEntry.set_x(-1.05)
+#			print(projectNameEntry.textEntered())
+			openProjectBtn = DirectButton(relief=None, image='assets\\placeholder\\dark.png', pos=(-0.85, 0, -0.24), scale=(0.15, 1, 0.06), command=openProjectConfirm)
+			openProjectBtnTxt = OnscreenText(text='Open', pos=(-0.85, -0.27), scale=0.10, fg=(1, 1, 1, 1))
+			openProjectBtnTxt.setFont(cvc)
+
 
 		def homeMenu():
-			def openProject():
+			def launchProject():
 				print('Oh boy oh boy, i am in for a real treat :|')
-
 
 			print('NOTE: Displaying Home Menu [homeMenu()]')
 			title = OnscreenText(text='Glunzunk Engine', pos=(-1.0, 0.70), scale=0.12, fg=(1, 1, 1, 1)) #, parent=base.aspect2d(a2dTopLeft))
@@ -250,7 +275,7 @@ class GZEngine(ShowBase):
 			projectList.setColor(.22, .22, .22)
 
 			project1 = DirectButton(relief=None, image='assets\\placeholder\\dark.png', pos=(0, 0, 7.8), scale=(0.7, 1, 0.12), parent=projectList.getCanvas(), command=openProject)
-			p1name = OnscreenText(text='UNTITLED', parent=project1, scale=(0.15, 0.8), fg=(1, 1, 1, 1), pos=(0, -0.32))
+			p1name = OnscreenText(text='OPEN PROJECT', parent=project1, scale=(0.15, 0.8), fg=(1, 1, 1, 1), pos=(0, -0.32))
 			p1name.setFont(lmRegular)
 
 			endLoad()
