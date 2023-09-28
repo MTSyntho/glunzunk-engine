@@ -17,7 +17,7 @@ import darkdetect # Checks system theme
 
 engineTheme="Dark"
 autoTheme=False
-version="Alpha 1 Build 4"
+version="Alpha 1 Build 6"
 
 projectFolder="C:\\Users\\User\\Documents\\Glunzunk Engine"
 
@@ -47,8 +47,7 @@ else:
 	    "6": "",
 	    "7": "",
 	    "8": "",
-	    "9": "",
-	    "projekCount": 0
+	    "9": ""
 	}
 	projekJson = json.dumps(projek, indent=2)
 	with open("{}\\projects.json".format(projectFolder), "w") as outfile:
@@ -153,11 +152,29 @@ class GZEngine(ShowBase):
 					    print('Generated properties.json at {}\\Projects\\{}'.format(projectFolder, projectNameEntry.get()))
 					with open('{}\\projects.json'.format(projectFolder)) as projekJajon: #Jajon is json
  						loadedProjectsList = json.load(projekJajon)
- 						for p in loadedProjectsList:
- 							if p[projekCount]==0:
- 								print('0')
- 								projekCount=1
- 								1==rojectNameEntry.get()
+ 						if loadedProjectsList['0']=="":
+ 							loadedProjectsList['0']==projectNameEntry.get()
+ 						if loadedProjectsList['1']=="":
+ 							loadedProjectsList['1']==projectNameEntry.get()
+ 						if loadedProjectsList['2']=="":
+ 							loadedProjectsList['2']==projectNameEntry.get()
+ 						if loadedProjectsList['3']=="":
+ 							loadedProjectsList['3']==projectNameEntry.get()
+ 						if loadedProjectsList['4']=="":
+ 							loadedProjectsList['4']==projectNameEntry.get()
+ 						if loadedProjectsList['5']=="":
+ 							loadedProjectsList['5']==projectNameEntry.get()
+ 						if loadedProjectsList['6']=="":
+ 							loadedProjectsList['6']==projectNameEntry.get()
+ 						if loadedProjectsList['7']=="":
+ 							loadedProjectsList['7']==projectNameEntry.get()
+ 						if loadedProjectsList['8']=="":
+ 							loadedProjectsList['8']==projectNameEntry.get()
+ 						if loadedProjectsList['9']=="":
+ 							loadedProjectsList['9']==projectNameEntry.get()
+
+ 						with open('{}\\projects.json'.format(projectFolder), "w") as f:
+ 							json.dump(loadedProjectsList, f, indent=2)
 					fadeBlackBG.destroy()
 					darkCreateBG.destroy()
 					createtitle.destroy()
@@ -247,3 +264,4 @@ gz.run()
 
 # This is MTSyntho at 9:54 PM on 2023/09/24, i'm suffering tryna get project creation working and the project entry positioned correctly
 # This is MTSyntho at 8:41 AM on 2023/09/25, i love google bard now, not in that sus way though :skull: :moyai:
+# im such a fukin dumbass rn at 10:32 PM on 2023/09/28, not even bard can help
