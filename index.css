@@ -89,7 +89,7 @@ button:active {
 .projectlist {
 	background-color: #383838;
 	position: fixed;
-	width: 100vh;
+	width: 50%;
 	left: 40%;
 	top: 160px;
 	height: 60%;
