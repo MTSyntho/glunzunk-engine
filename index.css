@@ -23,6 +23,11 @@ body {
   src: url('assets/fonts/BebasNeue-Regular.ttf');
 }
 
+@font-face {
+  font-family: 'louis';
+  src: url('assets/fonts/Louis George Cafe.ttf');
+}
+
 p, h1, h2, h3, h4, h5, h6 {
 	font-family: 'lemonmilk';
 	color: white;
@@ -71,6 +76,7 @@ button:active {
   top: 50%;
   left: 16.5%;
   transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
 .credittxt {
@@ -142,4 +148,107 @@ button:active {
 
 .projectoption:active {
 	background-color: #1e1e1e;
+}
+
+.overlay {
+	background-color: #000000BB;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	z-index: 10;
+	pointer-events: none;
+	opacity: 0;
+}
+
+.projectdialog {
+	background-color: #2C2C2C;
+	position: fixed;
+	margin: auto;
+	inset: 0;
+	width: 50%;
+	height: 180px;
+	padding: 20px;
+	padding-top: 10px;
+	box-shadow: 0 0 20px 10px rgba(0, 0, 0, .71);
+	display: flex;
+	flex-direction: column;
+}
+
+.projectdialogtitle {
+	font-size: 30px;
+	margin: 0;
+	margin-top: 10px;
+}
+
+.projectdialognametitle {
+	font-size: 20px;
+	margin-top: 7px;
+	margin-left: 10px;
+	margin-bottom: 5px;
+}
+
+.projectinput {
+	margin-left: 20px;
+	height: 30px;
+	width: 94%;
+	font-size: 20px;
+	background-color: #404040;
+	color: white;
+	font-family: 'louis';
+}
+
+input {
+	box-shadow: 0 0 10px 2px rgba(0, 0, 0, .20);
+	border: none;
+	outline: none;	
+}
+
+.projectbuttons {
+	display: flex;
+	flex-direction: row;
+	margin-left: -25px;
+	margin-top: 15px;
+	scale: 0.9;
+}
+
+.projectbtn {
+	font-family: 'coolvetica';
+	background-color: #202020;
+	margin-right: 10px;
+	font-size: 30px;
+	height: 45px;
+	width: 170px;
+}
+
+/* fade in - fade out */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    pointer-events: none;
+  }
+  to {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    pointer-events: all;
+  }
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.fadeOut {
+  animation: fadeOut 0.25s ease-out forwards;
 }
