@@ -15,22 +15,32 @@ function projectdialog(status) {
     }
 }
 
-async function createproject() {
+// async function createproject() {
+//   try {
+//     const dirHandle = await window.showDirectoryPicker();
+    
+//     // You can now work with the directory handle (dirHandle)
+//     console.log("Selected directory:", dirHandle.name);
+    
+//     // Example: List all files in the selected directory
+//     const iterator = await dirHandle.values();
+//     for await (const entry of iterator) {
+//       console.log("File:", entry.name);
+//     }
+//     var main = document.getElementById("main");
+//     var overlay = document.getElementById("overlay");
+//     main.classList.remove('fadeIn')
+//     main.classList.add('fadeOut')
+//     overlay.classList.remove('fadeIn')
+//     overlay.classList.add('fadeOut')
+//   } catch (err) {
+//     console.error("Error selecting directory:", err);
+//   }
+// }
+
+function createproject() {
   try {
-    const dirHandle = await window.showDirectoryPicker();
-    
-    // You can now work with the directory handle (dirHandle)
-    console.log("Selected directory:", dirHandle.name);
-    
-    // Example: List all files in the selected directory
-    const iterator = await dirHandle.values();
-    for await (const entry of iterator) {
-      console.log("File:", entry.name);
-    }
-    var main = document.getElementById("main");
     var overlay = document.getElementById("overlay");
-    main.classList.remove('fadeIn')
-    main.classList.add('fadeOut')
     overlay.classList.remove('fadeIn')
     overlay.classList.add('fadeOut')
   } catch (err) {

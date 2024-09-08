@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Glunzunk Engine</title>
+		<link rel="stylesheet" href="index.css">
+		<script src="scripts/mainmenu.js"></script>
+	</head>
+	<body>
+		<div id=overlay class=overlay>
+			<div class=projectdialog>
+				<p class=projectdialogtitle>CREATE A NEW PROJECT</p>
+				<p class=projectdialognametitle>Project Name:</p>
+				<input type="text" id="name" name="projectname" class=projectinput>
+				<div class=projectbuttons>
+					<button onclick="createproject()" class=projectbtn>Create</button>
+					<button onclick="projectdialog('hide')" class=projectbtn>Cancel</button>
+				</div>
+			</div>
+		</div>
+		<div id=main class="main">
+			<p class=title>Glunzunk Engine</p>
+			<div class=mainactions>
+				<button onclick="projectdialog('show')" class=mainbtn>CREATE PROJECT</button>
+				<button class=mainbtn>EDIT PROJECT</button>
+				<button class=mainbtn2>SETTINGS</button>
+			</div>
+			<p class=credittxt>Written by: MTSyntho Dev</p>
+		</div>
+		<div class="projects">
+			<p class=projectslisttitle>PROJECTS</p>
+			<div class="projectlist">
+				<!-- <p class=noprojects>No Projects</p> -->
+				<div class="projectoption">
+					<p>Project</p>
+				</div>
+				<div class="projectoption">
+					<p>Project</p>
+				</div>
+				<div class="projectoption">
+					<p>Project</p>
+				</div>
+				<div class="projectoption">
+					<p>Project</p>
+				</div>
+				<div class="projectoption">
+					<p>Project</p>
+				</div>
+				<div class="projectoption">
+					<p>Project</p>
+				</div>
+				<div class="projectoption">
+					<p>Project</p>
+				</div>
+				<div class="projectoption">
+					<p>Project</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

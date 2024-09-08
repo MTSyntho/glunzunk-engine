@@ -3,56 +3,61 @@
 	<head>
 		<title>Glunzunk Engine</title>
 		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="assets/css/satoshi.css">
+		<link rel="stylesheet" href="assets/fonts/web/inter.css">
+		<link rel="stylesheet" href="assets/fonts/roboto/style.css">
 		<script src="scripts/mainmenu.js"></script>
 	</head>
 	<body>
-		<div id=overlay class=overlay>
-			<div class=projectdialog>
-				<p class=projectdialogtitle>CREATE A NEW PROJECT</p>
-				<p class=projectdialognametitle>Project Name:</p>
-				<input type="text" id="name" name="projectname" class=projectinput>
-				<div class=projectbuttons>
-					<button onclick="createproject()" class=projectbtn>Create</button>
-					<button onclick="projectdialog('hide')" class=projectbtn>Cancel</button>
+			<div id=overlay class=overlay>
+				<div class=projectdialog>
+					<p class=projectdialogtitle>Create A New Project</p>
+					<p class=projectdialognametitle>Project Name:</p>
+					<input type="text" id="name" name="projectname" class=projectinput>
+					<div class=projectbuttons>
+						<button onclick="createproject()" class=projectbtn>Create</button>
+						<button onclick="projectdialog('hide')" class=projectbtn>Cancel</button>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div id=main class="main">
-			<p class=title>Glunzunk Engine</p>
-			<div class=mainactions>
-				<button onclick="projectdialog('show')" class=mainbtn>CREATE PROJECT</button>
-				<button class=mainbtn>EDIT PROJECT</button>
-				<button class=mainbtn2>SETTINGS</button>
+		<div class=wrapper>
+			<div id=main class="main">
+				<p class=title>Glunzunk Engine</p>
+				<p class=projectslisttitle>Your Projects</p>
+				<div class=mainactions>
+					<button onclick="projectdialog('show')" class=mainbtn>Create Project</button>
+					<button class=mainbtn>Edit Project</button>
+					<button class=mainbtn>Settings</button>
+				</div>
+				<p class=credittxt>Written by: MTSyntho Dev</p>
 			</div>
-			<p class=credittxt>Written by: MTSyntho Dev</p>
-		</div>
-		<div class="projects">
-			<p class=projectslisttitle>PROJECTS</p>
-			<div class="projectlist">
-				<!-- <p class=noprojects>No Projects</p> -->
-				<div class="projectoption">
-					<p>Project</p>
-				</div>
-				<div class="projectoption">
-					<p>Project</p>
-				</div>
-				<div class="projectoption">
-					<p>Project</p>
-				</div>
-				<div class="projectoption">
-					<p>Project</p>
-				</div>
-				<div class="projectoption">
-					<p>Project</p>
-				</div>
-				<div class="projectoption">
-					<p>Project</p>
-				</div>
-				<div class="projectoption">
-					<p>Project</p>
-				</div>
-				<div class="projectoption">
-					<p>Project</p>
+			<div class="projects">
+				<div class="projectlist">
+					<!-- <p class=noprojects>No Projects</p> -->
+					<div class="projectoption">
+						<p>Project</p>
+					</div>
+					<div class="projectoption">
+						<p>Project</p>
+					</div>
+					<div class="projectoption">
+						<p>Project</p>
+					</div>
+					<div class="projectoption">
+						<p>Project</p>
+					</div>
+					<div class="projectoption">
+						<p>Project</p>
+					</div>
+					<div class="projectoption">
+						<p>Project</p>
+					</div>
+					<div class="projectoption">
+						<p>Project</p>
+					</div>
+					<div class="projectoption">
+						<p>Project</p>
+					</div>
 				</div>
 			</div>
 		</div>
