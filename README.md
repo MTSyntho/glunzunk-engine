@@ -11,22 +11,26 @@ Not Ready _Yet..._
 | 🔽 Download GZ Engine to make Games |  Goto the itch.io page or Releases page to download it! |
 | 💜 Contribute to the Engine ❤ | Install everything in requirements.txt and Python ~3.11 and don't mess up already existing code. |
 
-> Please don't make the code very messy, it's already messy enough in my opinion.
+> Please don't make the code very messy, it's probably already messy enough.
 
 ## 📂 File Structure (Source Code) 
 | 📄 File | Description |
 | :-------- | :-------- |
-| 📂 assets | Contains all engine assets like Images, Audio, Fonts and such.
-| main.py | Imports required libaries/modules. Contains Splash Screen, Home Menu and Project Management Tools |
-| editor.py | This is the Game Editor, where all the game building takes place! _**(Not Implemented!)**_ |
-| events.py | This is the Event Sheet, where all the game's code will be written(_or rather placed ~ehehe_)! _**(Not Implemented!)**_ |
-| compileGame.py | This compiles the game to your desired platforms! _**(Not Implemented!)**_ |
+| 📂 assets | Contains all engine assets like Images, Audio, Fonts and such. |
+| 📂 scripts | Where most required engine scripts reside. |
+| main.py | Imports required libaries/modules. Starts the `pywebview` module, triggering the engine to load |
+| editor.html | This is the Game Editor, where all the game building takes place! |
+| babylon.js | The 3D Game Engine Glunzunk Engine is based off of.|
+| index.html | Glunzunk Engine Home Menu |
 
 ## ❓ How GZ Engine Compiles Games?
-The way Glunzunk Engine compiles your game is pretty simple, your game's code gets rewritten into Python and uses the Panda3D library for well... 3D.
+Your Glunzunk Project is exported as a python project, which then using `pyinstaller`, the game can be compiled for Windows, Mac & Linux, and using Kivy's `buildozer`, Android builds are compiled.
+Traditional methods of compilation done-through electron, nw.js or cordova is typically avoided due to the potential of games containing important python code required for it to function correctly.
 
 ## 💻 How to Compile GZ Engine?
-Glunzunk Engine has never been compiled yet so i don't know how... :P
+Install all modules in `requirements.txt`
+And compile via `pyinstaller`
+`pyinstaller` command-line arguments have yet to be determined, as the engine hasn't been compiled before.
 ## 📎 Links
 **Community:**
 - [Discord Server](https://discord.gg/YV9XDvRYbw)
@@ -92,13 +96,11 @@ Nope!
 - Live previews
 - Fullscreen mode
 - Cross platform
-- No-Code
-- Open-Sourced
-- 100% Features
-- Fully Featured
-- Tutorials
+- No-Code (Optional)
+- Custom JavaScript & Python Support 
+- Helpful Tutorials
 - Pre-Made Assets
-- PBR Rendering (Thanks to [Render Pipeline ❤](https://github.com/tobspr/RenderPipeline))
+- Potential Path-Tracing
 - Pre-Made and Custom Shaders
 - Both Orthographic and Perspective Camera Options
 - Supports Windows, MacOS, Linux, Android and Web!
