@@ -1,0 +1,59 @@
+/* fade in - fade out */
+@keyframes windowOpen {
+  from {
+    opacity: 0;
+    scale: 0.95;
+    rotateX: -5;
+    perspective: 1000px;
+  }
+  to {                                                                                                                                                                                                                                                                                                                         
+    opacity: 1;
+    scale: 1;
+    rotateX: 0;
+    perspective: 1000px;
+  }
+}
+
+@keyframes windowClose {
+  from {
+    opacity: 1;
+    scale: 1;
+    rotateX: 0;
+    perspective: 1000px;
+  }
+  to {
+    opacity: 0;
+    scale: 0.95;
+    rotateX: -5;
+    perspective: 1000px;
+  }
+}
+
+.windowClose {
+  animation: windowClose 0.2s ease forwards !important;
+  pointer-events: none !important;
+}
+
+.winbox {
+    background-color: #101010ee;
+    backdrop-filter: blur(10px);
+    border: 2px solid #303030;
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px #000000;
+    animation: windowOpen 0.2s ease-out forwards;
+}
+
+.wb-body {
+    /* set the width of window border via margin: */
+    background: #202020aa;
+}
+
+@font-face {
+  font-family: 'Roboto Regular';
+}
+
+.wb-title {
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Inter Regular';
+}

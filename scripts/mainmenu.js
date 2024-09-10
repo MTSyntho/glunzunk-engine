@@ -1,3 +1,9 @@
+/*
+    Glunzunk Engine Main Menu Functionality
+    Written by: MTSyntho
+    Sep 2024
+*/
+
 function projectdialog(status) {
     var overlay = document.getElementById("overlay");
     var main = document.getElementById("main");

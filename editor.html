@@ -7,8 +7,12 @@
 		<link rel="stylesheet" href="assets/css/satoshi.css">
 		<link rel="stylesheet" href="assets/fonts/web/inter.css">
 		<link rel="stylesheet" href="assets/fonts/roboto/style.css">
+		<link rel="stylesheet" href="scripts/winbox.min.css">
+		<link rel="stylesheet" href="window.css">
 		<script src="scripts/mainmenu.js"></script>
 		<script src="scripts/engine/babylon.js"></script>
+		<script src="scripts/default-project.js"></script>
+		<script src="scripts/winbox.min.js"></script>
         <style>
             #renderCanvas {
             	position: fixed;
@@ -25,15 +29,16 @@
 			<img width=50px src=assets/ui/gzlogo.png>
 			<p class=projectname>Project Name</p>
 		</div>
-		<div class='scene-content dark-color'>
-			<p>Scene Content</p>
+		<!-- note to self, move these commented-out elements into windows (use winbox.js) -->
+<!-- 		<div class='scene-content dark-color'>
+			<p>Scene Explorer</p>
 		</div>
 		<div class='attributes-panel dark-color'>
 			<p>Attributes</p>
 		</div>
 		<div class='objects-panel dark-color'>
 			<p>Attributes</p>
-		</div>
+		</div> -->
 		<canvas id=renderCanvas></canvas>
 		<script src="editor.js"></script>
 	</body>

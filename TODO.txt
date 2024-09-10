@@ -1,15 +1,11 @@
-Alpha 1 - TO-DO:
+Working On: 
+Implementing Editor Panels
+
 Done: 
-i guess adding images and text?
+Main Menu
 
-Working on:
--Home Menu:
- -Buttons
- -Project Creation Pop-Up
+Unfinished:
+Proper Editor Controls
+Ability to open projects from main menu
 
-Haven't Started: 
-Project Creation
-Level Editor
-Credits
-
-Last Modified: 2023/09/23 10:51PM CAT(GMT+2)
+Last Modified: 2024/09/10 9:39PM - SAST/CAT/GMT+2
