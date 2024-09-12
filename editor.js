@@ -6,7 +6,6 @@
 */
 
 function SceneExplorer(state) {
-
   var winbox = new WinBox({
       title: 'Scene Explorer',
       max: false,
@@ -93,7 +92,7 @@ function windowCreateObject() {
       max: false,
       top: '50px',
       class: [ "no-full" ],
-      url: '',
+      url: 'embed-panels/createObject/index.html',
       overflow: true,
       onclose: function(){
         this.g.classList.add("windowClose");

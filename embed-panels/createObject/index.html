@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Choose an Object</title>
+		<link rel="stylesheet" href="index.css">
+		<script src="index.js"></script>
+	</head>
+	<body>
+		<p>3D Items</p>
+		<div class=line></div>
+		<button onclick="window.parent.postMessage('__create3DObj', '*')">
+			<img src=../../assets/icons/cube.svg>
+			<div class=left-alignment>
+				<p>3D Object</p>
+				<p class=mini>Insert a pre-made 3D Object</p>
+			</div>
+		</button>
+		<button onclick="window.parent.postMessage('__create3DModel', '*')">
+			<img src=../../assets/icons/cube.svg>
+			<div class=left-alignment>
+				<p>3D Model</p>
+				<p class=mini>Insert a 3D Model</p>
+			</div>
+		</button>
+		<button onclick="window.parent.postMessage('__create3DCam', '*')">
+			<img src=../../assets/icons/videocam.svg>
+			<div class=left-alignment>
+				<p>3D Camera</p>
+				<p class=mini>Insert a Camera into the scene</p>
+			</div>
+		</button>
+		<button onclick="window.parent.postMessage('__create3DBillboard', '*')">
+			<img src=../../assets/icons/square.svg>
+			<div class=left-alignment>
+				<p>3D Billboard</p>
+				<p class=mini>Insert a 2D Image into a 3D Space</p>
+			</div>
+		</button>
+		<button onclick="window.parent.postMessage('__create3DTerrain', '*')">
+			<img src=../../assets/icons/earth.svg>
+			<div class=left-alignment>
+				<p>3D Terrain</p>
+				<p class=mini>Insert terrain into scene</p>
+			</div>
+		</button>
+		<button onclick="window.parent.postMessage('__create3DSpeaker', '*')">
+			<img src=../../assets/icons/speaker.svg>
+			<div class=left-alignment>
+				<p>Spatial Audio</p>
+				<p class=mini>Play audio at a certain position like a speaker</p>
+			</div>
+		</button>
+		<p>2D Items (GUI)</p>
+		<div class=line></div>
+		<button onclick="window.parent.postMessage('__createBlankWindow', '*')">
+			<img src=../../assets/icons/window.svg>
+			<div class=left-alignment>
+				<p>Blank Window</p>
+				<p class=mini>Create an adjustable 2D window</p>
+			</div>
+		</button>
+		<button onclick="window.parent.postMessage('__createBlankPanel', '*')">
+			<img src='../../assets/icons/dock to left.svg'>
+			<div class=left-alignment>
+				<p>Blank Panel</p>
+				<p class=mini>Create an unjustable 2D surface</p>
+			</div>
+		</button>
+		<button onclick="window.parent.postMessage('__create2DText', '*')">
+			<img src=../../assets/icons/text.svg>
+			<div class=left-alignment>
+				<p>Text</p>
+				<p class=mini>Displays Text on the GUI</p>
+			</div>
+		</button>
+		<button onclick="window.parent.postMessage('__createRich2DText', '*')">
+			<img src=../../assets/icons/pencil.svg>
+			<div class=left-alignment>
+				<p>Rich Text</p>
+				<p class=mini>Display Markdown or BBCode Text on the GUI</p>
+			</div>
+		</button>
+		<button onclick="window.parent.postMessage('__createHTMLRenderer', '*')">
+			<img src=../../assets/icons/code.svg>
+			<div class=left-alignment>
+				<p>HTML Renderer</p>
+				<p class=mini>Render HTML on the GUI</p>
+			</div>
+		</button>
+		<button onclick="window.parent.postMessage('__createButton', '*')">
+			<img src='../../assets/icons/radio button.svg'>
+			<div class=left-alignment>
+				<p>Button</p>
+				<p class=mini>Create an interactable button</p>
+			</div>
+		</button>
+		<button onclick="window.parent.postMessage('__createJoystick', '*')">
+			<img src=../../assets/icons/joystick.svg>
+			<div class=left-alignment>
+				<p>Joystick</p>
+				<p class=mini>Create a joystick</p>
+			</div>
+		</button>
+		<button onclick="window.parent.postMessage('__createSwitch', '*')">
+			<img src=../../assets/icons/switch.svg>
+			<div class=left-alignment>
+				<p>Switch</p>
+				<p class=mini>Create a switch of any type</p>
+			</div>
+		</button>
+		<button onclick="window.parent.postMessage('__createSlider', '*')">
+			<img src=../../assets/icons/slider.svg>
+			<div class=left-alignment>
+				<p>Slider</p>
+				<p class=mini>Create an adjustable slider</p>
+			</div>
+		</button>
+		<button onclick="window.parent.postMessage('__createImage', '*')">
+			<img src=../../assets/icons/image.svg>
+			<div class=left-alignment>
+				<p>Image</p>
+				<p class=mini>Insert an Image into the GUI</p>
+			</div>
+		</button>
+		<button onclick="window.parent.postMessage('__createVideo', '*')">
+			<img src=../../assets/icons/video.svg>
+			<div class=left-alignment>
+				<p>Video</p>
+				<p class=mini>Insert a Video into the GUI</p>
+			</div>
+		</button>
+	</body>
+</html>
