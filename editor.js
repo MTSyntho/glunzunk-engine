@@ -38,8 +38,7 @@ function InspectorPanel(state) {
       top: '50px',
       min: state,
       class: [ "no-full", "no-close" ],
-      innerHTML: `
-      <p>might replace with embed instead of innerhtml</p>`,
+      url: 'embed-panels/inspector/index.html',
       overflow: true,
       onclose: function(){
         this.g.classList.add("windowClose");
@@ -108,12 +107,21 @@ function windowCreateObject() {
         return true;
       }
   });
+    window.addEventListener('message', function(event) {
+        if (event.data == 'closeCurrentWindow') {
+            winbox.close(true); 
+        };
+    });
 };
 
 // Listen for messages from iframe (taken from zdkrimson)
 window.addEventListener('message', function(event) {
     if (event.data == 'windowCreateObject') {
         windowCreateObject();
+    };
+
+    if (event.data == '__create3DObj') {
+        var esphere = BABYLON.MeshBuilder.CreateBox("cube", {width: 5, height: 5, depth: 5}, gzscene);
     };
 });
 
@@ -124,9 +132,42 @@ var engine = new BABYLON.Engine(canvas, true, {preserveDrawingBuffer: true, sten
 // CreateScene function that creates and return the scene
 var createScene = function(){
     // Create a basic BJS Scene object
-    var scene = new BABYLON.Scene(engine);
+    var gzscene = new BABYLON.Scene(engine);
     // This creates and positions a free camera (non-mesh)
-    var camera = new BABYLON.FreeCamera("camera1", new BABYLON.Vector3(0, 5, -10), scene);
+    var camera = new BABYLON.FreeCamera("camera1", new BABYLON.Vector3(0, 5, -10), gzscene);
+    // Activate Gizmo Manager (Move, Scale & Rotation)
+    const gizmoManager = new BABYLON.GizmoManager(gzscene);
+    function showGizmo(state) {
+        if (state == 'position') {
+            gizmoManager.positionGizmoEnabled = true;
+        };
+        if (state == 'rotation') {
+            gizmoManager.rotationGizmoEnabled = true;
+        };
+        if (state == 'scale') {
+            gizmoManager.scaleGizmoEnabled = true;
+        };
+        if (state == 'hitbox' || state == '') {
+            gizmoManager.boundingBoxGizmoEnabled = true;
+        };
+    };
+
+    function hideGizmo(state) {
+        if (state == 'position') {
+            gizmoManager.positionGizmoEnabled = false;
+        };
+        if (state == 'rotation') {
+            gizmoManager.rotationGizmoEnabled = false;
+        };
+        if (state == 'scale') {
+            gizmoManager.scaleGizmoEnabled = false;
+        };
+        if (state == 'hitbox' || state == '') {
+            gizmoManager.boundingBoxGizmoEnabled = false;
+        };
+    };
+
+    showGizmo('position');
 
     // Enable mouse wheel inputs.
     camera.inputs.addMouseWheel();
@@ -140,14 +181,14 @@ var createScene = function(){
     // Import Scene into Editor
     __defaultGlunzunkProject(camera);
 
-    return scene;
+    return gzscene;
 
 };
 // call the createScene function
-var scene = createScene();
+var gzscene = createScene();
 // run the render loop
 engine.runRenderLoop(function(){
-    scene.render();
+    gzscene.render();
 });
 // the canvas/window resize event handler
 window.addEventListener('resize', function(){

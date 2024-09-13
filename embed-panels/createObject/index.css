@@ -62,3 +62,24 @@ button:active {
 .left-alignment {
 	text-align: left;
 }
+
+/* Customize scrollbar for WebKit browsers */
+body::-webkit-scrollbar {
+    width: 7px; /* Specify the width of the scrollbar */
+}
+
+/* Customize scrollbar thumb for WebKit browsers */
+body::-webkit-scrollbar-thumb {
+    background-color: #ffffff30; /* Specify the color of the scrollbar thumb */
+    border-radius: 4px; /* Specify the border radius of the scrollbar thumb */
+}
+
+/* Hide the scrollbar track and button */
+body::-webkit-scrollbar-track {
+    background-color: transparent; /* Set background color of track to transparent */
+    border: none; /* Remove border */
+}
+
+body::-webkit-scrollbar-button {
+    display: none; /* Hide the scrollbar button */
+}

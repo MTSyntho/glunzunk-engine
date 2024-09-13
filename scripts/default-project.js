@@ -13,17 +13,17 @@ function __defaultGlunzunkProject(camera) {
     camera.attachControl(true);
 
     // This creates a light, aiming 0,1,0 - to the sky (non-mesh)
-    var light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 5, 0), scene);
+    var light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 5, 0), gzscene);
 
     // Default intensity is 1. Let's dim the light a small amount
     light.intensity = 0.7;
 
     // Our built-in 'sphere' shape.
-    var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {diameter: 2, segments: 32}, scene);
+    var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {diameter: 2, segments: 32}, gzscene);
 
     // Move the sphere upward 1/2 its height
     // sphere.position.y = 1;
 
     // Our built-in 'ground' shape.
-    var ground = BABYLON.MeshBuilder.CreateGround("ground", {width: 24, height: 24}, scene);
+    var ground = BABYLON.MeshBuilder.CreateGround("ground", {width: 24, height: 24}, gzscene);
 };

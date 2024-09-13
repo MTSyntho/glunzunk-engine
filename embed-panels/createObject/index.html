@@ -3,7 +3,7 @@
 	<head>
 		<title>Choose an Object</title>
 		<link rel="stylesheet" href="index.css">
-		<script src="index.js"></script>
+		<!-- <script src="index.js"></script> -->
 	</head>
 	<body>
 		<p>3D Items</p>
@@ -130,4 +130,11 @@
 			</div>
 		</button>
 	</body>
+	<script>
+		document.querySelectorAll('button').forEach(button => {
+			button.addEventListener('click', function() {
+				window.parent.postMessage('closeCurrentWindow', '*')
+			});
+		});
+	</script>
 </html>
