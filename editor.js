@@ -140,32 +140,46 @@ var createScene = function(){
     function showGizmo(state) {
         if (state == 'position') {
             gizmoManager.positionGizmoEnabled = true;
+            gizmoManager.rotationGizmoEnabled = false;
+            gizmoManager.scaleGizmoEnabled = false;
+            gizmoManager.boundingBoxGizmoEnabled = false;
         };
         if (state == 'rotation') {
+            gizmoManager.positionGizmoEnabled = false;
             gizmoManager.rotationGizmoEnabled = true;
+            gizmoManager.scaleGizmoEnabled = false;
+            gizmoManager.boundingBoxGizmoEnabled = false;
         };
         if (state == 'scale') {
+            gizmoManager.positionGizmoEnabled = false;
             gizmoManager.scaleGizmoEnabled = true;
+            gizmoManager.rotationGizmoEnabled = false;
+            gizmoManager.boundingBoxGizmoEnabled = false;
         };
         if (state == 'hitbox' || state == '') {
             gizmoManager.boundingBoxGizmoEnabled = true;
+            gizmoManager.positionGizmoEnabled = false;
+            gizmoManager.rotationGizmoEnabled = false;
+            gizmoManager.scaleGizmoEnabled = false;
         };
     };
 
-    function hideGizmo(state) {
-        if (state == 'position') {
-            gizmoManager.positionGizmoEnabled = false;
-        };
-        if (state == 'rotation') {
-            gizmoManager.rotationGizmoEnabled = false;
-        };
-        if (state == 'scale') {
-            gizmoManager.scaleGizmoEnabled = false;
-        };
-        if (state == 'hitbox' || state == '') {
-            gizmoManager.boundingBoxGizmoEnabled = false;
-        };
-    };
+    // function hideGizmo(state) {
+    //     if (state == 'position') {
+    //         gizmoManager.positionGizmoEnabled = false;
+    //     };
+    //     if (state == 'rotation') {
+    //         gizmoManager.rotationGizmoEnabled = false;
+    //     };
+    //     if (state == 'scale') {
+    //         gizmoManager.scaleGizmoEnabled = false;
+    //     };
+    //     if (state == 'hitbox' || state == '') {
+    //         gizmoManager.boundingBoxGizmoEnabled = false;
+    //     };
+    // };
+
+    window.showGizmo = showGizmo;
 
     showGizmo('position');
 

@@ -29,17 +29,18 @@
 			<img width=50px src=assets/ui/gzlogo.png>
 			<p class=projectname>Project Name</p>
 		</div>
-		<!-- note to self, move these commented-out elements into windows (use winbox.js) -->
-<!-- 		<div class='scene-content dark-color'>
-			<p>Scene Explorer</p>
-		</div>
-		<div class='attributes-panel dark-color'>
-			<p>Attributes</p>
-		</div>
-		<div class='objects-panel dark-color'>
-			<p>Attributes</p>
-		</div> -->
 		<canvas id=renderCanvas></canvas>
 		<script src="editor.js"></script>
+		<div class=gizmo-manager>
+			<button class='tiny-btn light-color' onclick="showGizmo('position')">
+				<img width=24 src=assets/icons/position.svg>
+			</button>
+			<button class='tiny-btn light-color' onclick="showGizmo('rotation')">
+				<img width=24 src=assets/icons/rotate.svg>
+			</button>
+			<button class='tiny-btn light-color' onclick="showGizmo('scale')">
+				<img width=24 src=assets/icons/scale.svg>
+			</button>
+		</div>
 	</body>
 </html>
