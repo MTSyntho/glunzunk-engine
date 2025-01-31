@@ -1,0 +1,83 @@
+{
+  "projectDetails": {
+    "name": "Default Project",
+    "version": "1.0.0",
+    "description": "Default project for Glunzunk Engine.",
+    "engineVer": ""
+  },
+  "scene": {
+    "toneMapping": {
+      "type": "ACESFilmicToneMapping",
+      "exposure": 0.5
+    },
+    "sky": {
+      "scale": {
+        "x": 450000,
+        "y": 450000,
+        "z": 450000
+      },
+      "material": {
+          "turbidity": 11.4,
+          "rayleigh": 3,
+          "mieCoefficient": 0.004,
+          "mieDirectionalG": 0.619,
+          "sunPosition": {
+            "x": 1,
+            "y": 1.154213,
+            "z": 0
+        }
+      }
+    },
+    "objects": {
+      "ground": {
+        "geometry": {
+          "type": "BoxGeometry",
+          "width": 10,
+          "height": 0.05,
+          "depth": 10
+        },
+        "material": {
+          "type": "MeshBasicMaterial",
+          "color": "#2e9c24"
+        },
+        "position": {
+          "x": 0,
+          "y": 0.025,
+          "z": 0
+        }
+      },
+      "cube": {
+        "geometry": {
+          "type": "BoxGeometry",
+          "width": 1,
+          "height": 1,
+          "depth": 1
+        },
+        "material": {
+          "type": "MeshBasicMaterial",
+          "color": "#633eb5"
+        },
+        "position": {
+          "x": 0,
+          "y": 0.5,
+          "z": 0
+        }
+      }
+    },
+    "fog": {
+      "color": "#cccccc",
+      "near": 10,
+      "far": 15
+    },
+    "sunLight": {
+      "color": "#ffffff",
+      "intensity": 2,
+      "position": {
+        "x": 100,
+        "y": 115.4213,
+        "z": 0
+      },
+      "castShadow": true
+    }
+  }
+}

@@ -10,20 +10,34 @@
 		<link rel="stylesheet" href="libs/winbox.min.css">
 		<link rel="stylesheet" href="window.css">
 		<script src="scripts/mainmenu.js"></script>
-		<script src="scripts/engine/babylon.js"></script>
-		<script src="scripts/default-project.js"></script>
+		<!-- <script src="scripts/engine/babylon.js"></script> -->
 		<script src="libs/winbox.min.js"></script>
 		<script src="libs/jquery.min.js"></script>
-        <style>
-            #renderCanvas {
-            	position: fixed;
-            	top: 0;
-            	z-index: -5;
-                width: 100%;
-                height: 100%;
-                touch-action: none;
-            }
-        </style>
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+		<style>
+			#renderCanvas {
+				position: fixed;
+				top: 0;
+				z-index: -5;
+				width: 100%;
+				height: 100%;
+				touch-action: none;
+			}
+		</style>
+		<script type="importmap">
+		  {
+			"imports": {
+			  "three": "/libs/threejs/three.module.min.js",
+			  "three/addons/": "https://cdn.jsdelivr.net/npm/three@latest/examples/jsm/"
+			}
+		  }
+		</script>
+		<script src="scripts/editor/init.js" type=module></script>
+		<script src="scripts/editor/windows.js" type=module></script>
+		<script src="scripts/editor/camera.js" type=module></script>
+		<script src="scripts/editor/loadproject.js" type=module></script>
+		<script src="scripts/default-project.js" type=module></script>
+		<!-- <script src="scripts/editor/render.js" type=module></script> -->
 	</head>
 	<body>
 		<div class=titlebar>
@@ -31,7 +45,6 @@
 			<p class=projectname>Project Name</p>
 		</div>
 		<canvas id=renderCanvas></canvas>
-		<script src="editor.js"></script>
 		<div class=gizmo-manager>
 			<button class='tiny-btn light-color' onclick="showGizmo('position')">
 				<img width=24 src=assets/icons/position.svg>

@@ -1,29 +1,52 @@
-/*
-    Default New Project for Glunzunk Engine
-    Written by: MTSyntho
-    Multiple Snippets of Code taken from Babylon.JS Docs n Forums
-    Sep 2024
-*/
+import * as THREE from 'three';
+import { scene, camera, renderer } from './editor/init.js';
 
-function __defaultGlunzunkProject(camera) {
-    // This targets the camera to scene origin
-    camera.setTarget(BABYLON.Vector3.Zero());
+// const renderer = new THREE.WebGLRenderer({ canvas: renderCanvas });
+// const scene = new THREE.Scene();
 
-    // This attaches the camera to the canvas
-    camera.attachControl(true);
+// Create a Sky
+import { Sky } from 'three/addons/objects/Sky.js';
 
-    // This creates a light, aiming 0,1,0 - to the sky (non-mesh)
-    var light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 5, 0), gzscene);
+const sky = new Sky();
+sky.scale.setScalar( 450000 );
+scene.add( sky );
 
-    // Default intensity is 1. Let's dim the light a small amount
-    light.intensity = 0.7;
+const skyUniforms = sky.material.uniforms;
+skyUniforms['turbidity'].value = 11.4;
+skyUniforms['rayleigh'].value = 3;
+skyUniforms['mieCoefficient'].value = 0.004;
+skyUniforms['mieDirectionalG'].value = 0.619;
 
-    // Our built-in 'sphere' shape.
-    var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {diameter: 2, segments: 32}, gzscene);
+const phi = THREE.MathUtils.degToRad( 90 - 17 );
+const theta = THREE.MathUtils.degToRad( 180 );
+const sunPosition = new THREE.Vector3().setFromSphericalCoords( 1, phi, theta );
 
-    // Move the sphere upward 1/2 its height
-    // sphere.position.y = 1;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 0.5;
 
-    // Our built-in 'ground' shape.
-    var ground = BABYLON.MeshBuilder.CreateGround("ground", {width: 24, height: 24}, gzscene);
-};
+sky.material.uniforms.sunPosition.value = sunPosition;
+
+// Objects 
+const ground = new THREE.Mesh( new THREE.BoxGeometry( 10, 0.05 , 10 ), new THREE.MeshBasicMaterial({ color: 0x2e9c24 }));
+const cube = new THREE.Mesh( new THREE.BoxGeometry( 1, 1, 1 ), new THREE.MeshBasicMaterial({ color: 0x633eb5 }) );
+scene.add( cube );
+scene.add( ground );
+
+cube.position.y = 0.5;
+scene.fog = new THREE.Fog( 0xcccccc, 10, 15 );
+
+// Sunlight
+const sunLight = new THREE.DirectionalLight(0xffffff, 2); // Bright white light
+sunLight.position.copy(sunPosition).multiplyScalar(100); // Move light far away
+sunLight.castShadow = true; // Enable shadows
+scene.add( sunLight );
+
+
+function animate() {
+	requestAnimationFrame(animate);
+	// cube.rotation.x += 0.01;
+	// cube.rotation.y += 0.01;
+
+	renderer.render( scene, camera );
+}
+animate();

@@ -91,7 +91,7 @@ function windowCreateObject() {
 	  max: false,
 	  top: '50px',
 	  class: [ "no-full" ],
-	  url: 'embed-panels/createObject/index.html',
+	  url: '/embed-panels/createObject/index.html',
 	  overflow: true,
 	  onclose: function(){
 		this.g.classList.add("windowClose");
@@ -114,55 +114,55 @@ function windowCreateObject() {
 	});
 };
 
-// Listen for messages from iframe (taken from zdkrimson)
-window.addEventListener('message', function(event) {
-	if (event.data == 'windowCreateObject') {
-		windowCreateObject();
-	};
+// // Listen for messages from iframe (taken from zdkrimson)
+// window.addEventListener('message', function(event) {
+// 	if (event.data == 'windowCreateObject') {
+// 		windowCreateObject();
+// 	};
 
-	if (event.data == '__create3DObj') {
-		var esphere = BABYLON.MeshBuilder.CreateBox("cube", {width: 5, height: 5, depth: 5}, gzscene);
-	};
-});
+// 	if (event.data == '__create3DObj') {
+// 		var esphere = BABYLON.MeshBuilder.CreateBox("cube", {width: 5, height: 5, depth: 5}, gzscene);
+// 	};
+// });
 
-// Get the canvas DOM element
-var canvas = document.getElementById('renderCanvas');
-// Load the 3D engine
-var engine = new BABYLON.Engine(canvas, true, {preserveDrawingBuffer: true, stencil: true});
-// CreateScene function that creates and return the scene
-var createScene = function(){
-	// Create a basic BJS Scene object
-	var gzscene = new BABYLON.Scene(engine);
-	// This creates and positions a free camera (non-mesh)
-	var camera = new BABYLON.FreeCamera("camera1", new BABYLON.Vector3(0, 5, -10), gzscene);
-	gzscene.clearColor = new BABYLON.Color3(0.5, 0.5, 0.5);
+// // Get the canvas DOM element
+// var canvas = document.getElementById('renderCanvas');
+// // Load the 3D engine
+// var engine = new BABYLON.Engine(canvas, true, {preserveDrawingBuffer: true, stencil: true});
+// // CreateScene function that creates and return the scene
+// var createScene = function(){
+// 	// Create a basic BJS Scene object
+// 	var gzscene = new BABYLON.Scene(engine);
+// 	// This creates and positions a free camera (non-mesh)
+// 	var camera = new BABYLON.FreeCamera("camera1", new BABYLON.Vector3(0, 5, -10), gzscene);
+// 	gzscene.clearColor = new BABYLON.Color3(0.5, 0.5, 0.5);
 
-	// camera.inputs.removeByType("FreeCameraKeyboardMoveInput");
+// 	// camera.inputs.removeByType("FreeCameraKeyboardMoveInput");
 
-	// thx to HirangaG on BabylonJS forums for this code snippet <3
-	camera.attachControl(this.canvas, true);
-	// camera.keysUpward.push(69); //increase elevation
-	// camera.keysDownward.push(81); //decrease elevation
-	// camera.keysUp.push(87); //forwards 
-	// camera.keysDown.push(83); //backwards
-	// camera.keysLeft.push(65);
-	// camera.keysRight.push(68);
+// 	// thx to HirangaG on BabylonJS forums for this code snippet <3
+// 	camera.attachControl(this.canvas, true);
+// 	// camera.keysUpward.push(69); //increase elevation
+// 	// camera.keysDownward.push(81); //decrease elevation
+// 	// camera.keysUp.push(87); //forwards 
+// 	// camera.keysDown.push(83); //backwards
+// 	// camera.keysLeft.push(65);
+// 	// camera.keysRight.push(68);
 
-	// Movement controls (WASD)
-	camera.keysUp.push(87);    // W
-	camera.keysDown.push(83);  // S
-	camera.keysLeft.push(65);  // A
-	camera.keysRight.push(68); // D
+// 	// Movement controls (WASD)
+// 	camera.keysUp.push(87);    // W
+// 	camera.keysDown.push(83);  // S
+// 	camera.keysLeft.push(65);  // A
+// 	camera.keysRight.push(68); // D
 
-	// Rotation controls (Arrow keys)
-	const rotationSensibility = 0.01; // Adjust this value for sensitivity
-	canvas.addEventListener('keydown', (e) => {
-	    if (e.keyCode === 37) { // Left arrow
-	        camera.cameraRotation.y -= rotationSensibility;
-	    } else if (e.keyCode === 39) { // Right arrow
-	        camera.cameraRotation.y += rotationSensibility;
-	    }
-	});
+// 	// Rotation controls (Arrow keys)
+// 	const rotationSensibility = 0.01; // Adjust this value for sensitivity
+// 	canvas.addEventListener('keydown', (e) => {
+// 	    if (e.keyCode === 37) { // Left arrow
+// 	        camera.cameraRotation.y -= rotationSensibility;
+// 	    } else if (e.keyCode === 39) { // Right arrow
+// 	        camera.cameraRotation.y += rotationSensibility;
+// 	    }
+// 	});
 
 	// // thx to nogalo on BabylonJS forums for this code snippet :3
 	// canvas.addEventListener('keydown', (e)=>{
@@ -261,94 +261,94 @@ var createScene = function(){
 	//   this.sensibility = 0.01;
 	// };
 
-	// Activate Gizmo Manager (Move, Scale & Rotation)
-	const gizmoManager = new BABYLON.GizmoManager(gzscene);
+// 	// Activate Gizmo Manager (Move, Scale & Rotation)
+// 	const gizmoManager = new BABYLON.GizmoManager(gzscene);
 	
-	function showGizmo(state) {
-		if (state == 'position') {
-			gizmoManager.positionGizmoEnabled = true;
-			gizmoManager.rotationGizmoEnabled = false;
-			gizmoManager.scaleGizmoEnabled = false;
-			gizmoManager.boundingBoxGizmoEnabled = false;
-		};
-		if (state == 'rotation') {
-			gizmoManager.positionGizmoEnabled = false;
-			gizmoManager.rotationGizmoEnabled = true;
-			gizmoManager.scaleGizmoEnabled = false;
-			gizmoManager.boundingBoxGizmoEnabled = false;
-		};
-		if (state == 'scale') {
-			gizmoManager.positionGizmoEnabled = false;
-			gizmoManager.scaleGizmoEnabled = true;
-			gizmoManager.rotationGizmoEnabled = false;
-			gizmoManager.boundingBoxGizmoEnabled = false;
-		};
-		if (state == 'hitbox' || state == '') {
-			gizmoManager.boundingBoxGizmoEnabled = true;
-			gizmoManager.positionGizmoEnabled = false;
-			gizmoManager.rotationGizmoEnabled = false;
-			gizmoManager.scaleGizmoEnabled = false;
-		};
-	};
+// 	function showGizmo(state) {
+// 		if (state == 'position') {
+// 			gizmoManager.positionGizmoEnabled = true;
+// 			gizmoManager.rotationGizmoEnabled = false;
+// 			gizmoManager.scaleGizmoEnabled = false;
+// 			gizmoManager.boundingBoxGizmoEnabled = false;
+// 		};
+// 		if (state == 'rotation') {
+// 			gizmoManager.positionGizmoEnabled = false;
+// 			gizmoManager.rotationGizmoEnabled = true;
+// 			gizmoManager.scaleGizmoEnabled = false;
+// 			gizmoManager.boundingBoxGizmoEnabled = false;
+// 		};
+// 		if (state == 'scale') {
+// 			gizmoManager.positionGizmoEnabled = false;
+// 			gizmoManager.scaleGizmoEnabled = true;
+// 			gizmoManager.rotationGizmoEnabled = false;
+// 			gizmoManager.boundingBoxGizmoEnabled = false;
+// 		};
+// 		if (state == 'hitbox' || state == '') {
+// 			gizmoManager.boundingBoxGizmoEnabled = true;
+// 			gizmoManager.positionGizmoEnabled = false;
+// 			gizmoManager.rotationGizmoEnabled = false;
+// 			gizmoManager.scaleGizmoEnabled = false;
+// 		};
+// 	};
 
-	// function hideGizmo(state) {
-	//     if (state == 'position') {
-	//         gizmoManager.positionGizmoEnabled = false;
-	//     };
-	//     if (state == 'rotation') {
-	//         gizmoManager.rotationGizmoEnabled = false;
-	//     };
-	//     if (state == 'scale') {
-	//         gizmoManager.scaleGizmoEnabled = false;
-	//     };
-	//     if (state == 'hitbox' || state == '') {
-	//         gizmoManager.boundingBoxGizmoEnabled = false;
-	//     };
-	// };
+// 	// function hideGizmo(state) {
+// 	//     if (state == 'position') {
+// 	//         gizmoManager.positionGizmoEnabled = false;
+// 	//     };
+// 	//     if (state == 'rotation') {
+// 	//         gizmoManager.rotationGizmoEnabled = false;
+// 	//     };
+// 	//     if (state == 'scale') {
+// 	//         gizmoManager.scaleGizmoEnabled = false;
+// 	//     };
+// 	//     if (state == 'hitbox' || state == '') {
+// 	//         gizmoManager.boundingBoxGizmoEnabled = false;
+// 	//     };
+// 	// };
 
-	window.showGizmo = showGizmo;
+// 	window.showGizmo = showGizmo;
 
-	showGizmo('position');
+// 	showGizmo('position');
 
-	// Enable mouse wheel inputs.
-	camera.inputs.addMouseWheel();
+// 	// Enable mouse wheel inputs.
+// 	camera.inputs.addMouseWheel();
 	
-	// Change the mouse wheel Y axis to controll the cameras height in the scene:
-	//camera.inputs.attached["mousewheel"].wheelYMoveRelative = BABYLON.Coordinate.Y;
+// 	// Change the mouse wheel Y axis to controll the cameras height in the scene:
+// 	//camera.inputs.attached["mousewheel"].wheelYMoveRelative = BABYLON.Coordinate.Y;
 	
-	// Revese the mouse wheel Y axis direction:
-	// camera.inputs.attached["mousewheel"].wheelPrecisionY = -1;
+// 	// Revese the mouse wheel Y axis direction:
+// 	// camera.inputs.attached["mousewheel"].wheelPrecisionY = -1;
 
-	// Import Scene into Editor
-	__defaultGlunzunkProject(camera);
+// 	// Import Scene into Editor
+// 	__defaultGlunzunkProject(camera);
 
-	return gzscene;
+// 	return gzscene;
 
-};
+// };
 
 
-// Keybinds 
-$(document).on("keypress", function(event) {
-	switch (event.key) {
-		case '1':
-			showGizmo('position');
-			break;
-		case '2':
-			showGizmo('rotation');
-			break;
-		case '3':
-			showGizmo('scale');
-			break;
-	}
-});
+// // Keybinds 
+// $(document).on("keypress", function(event) {
+// 	switch (event.key) {
+// 		case '1':
+// 			showGizmo('position');
+// 			break;
+// 		case '2':
+// 			showGizmo('rotation');
+// 			break;
+// 		case '3':
+// 			showGizmo('scale');
+// 			break;
+// 	}
+// });
 
-// call the createScene function
-var gzscene = createScene();
-// run the render loop
-engine.runRenderLoop(function(){
-	gzscene.render();
-});
-// the canvas/window resize event handler
-window.addEventListener('resize', function(){
-	engine.resize();
-});
+// // call the createScene function
+// var gzscene = createScene();
+// // run the render loop
+// engine.runRenderLoop(function(){
+// 	gzscene.render();
+// });
+// // the canvas/window resize event handler
+// window.addEventListener('resize', function(){
+// 	engine.resize();
+// });
