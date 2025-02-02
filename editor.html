@@ -10,6 +10,8 @@
 		<link rel="stylesheet" href="libs/winbox.min.css">
 		<link rel="stylesheet" href="window.css">
 		<script src="scripts/mainmenu.js"></script>
+		<script src="scripts/editor/dropdown.js"></script>
+
 		<!-- <script src="scripts/engine/babylon.js"></script> -->
 		<script src="libs/winbox.min.js"></script>
 		<script src="libs/jquery.min.js"></script>
@@ -32,17 +34,45 @@
 			}
 		  }
 		</script>
+		<script src="scripts/engine/glunzunk.js" type=module></script>
 		<script src="scripts/editor/init.js" type=module></script>
 		<script src="scripts/editor/windows.js" type=module></script>
 		<script src="scripts/editor/camera.js" type=module></script>
 		<script src="scripts/editor/loadproject.js" type=module></script>
+		<!-- <script src="scripts/editor/gizmo.js" type=module></script> -->
 		<script src="scripts/default-project.js" type=module></script>
+		<script src="scripts/editor/preview.js" type=module></script>
 		<!-- <script src="scripts/editor/render.js" type=module></script> -->
 	</head>
 	<body>
 		<div class=titlebar>
 			<img width=50px src=assets/ui/gzlogo.png>
 			<p class=projectname>Project Name</p>
+			<div class=titlebar-right>
+				<a class=titlebar-a onclick='toggleDropdown("quick-settings")'>
+					<img width=24 src=assets/icons/build.svg>
+				</a>
+				<a class=titlebar-a onclick='toggleGameplay()'>
+					<img width=24 src=assets/icons/play.svg>
+				</a>
+				<a class=titlebar-a onclick='toggleDropdown("environment")'>
+					<img width=24 src=assets/icons/world.svg>
+				</a>
+				<a class=titlebar-a onclick='toggleDropdown("quick-settings")'>
+					<img width=24 src=assets/icons/menu.svg>
+				</a>
+			</div>
+		</div>
+		<div class=dropdown>
+			<div class=titlebar-dropdown id=quick-settings>
+				<button>Save Project</button>
+				<button>Project Properties</button>
+				<button>Close Project</button>
+				<button>Exit Engine</button>
+			</div>
+			<div class=titlebar-dropdown id=environment-settings>
+				<p>Unimplemented</p>
+			</div>
 		</div>
 		<canvas id=renderCanvas></canvas>
 		<div class=gizmo-manager>

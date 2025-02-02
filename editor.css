@@ -8,7 +8,7 @@ body {
 	position: fixed;
 	width: 100%;
 	height: 50px;
-	background-color: #383838ee;
+	background-color: #383838aa;
 	margin: 0;
 	padding: 0;
 	padding-left: 10px;
@@ -19,7 +19,36 @@ body {
 	z-index: 500;
 	gap: 10px;
 	backdrop-filter: blur(10px);
+	box-sizing: border-box;
 }
+
+.titlebar-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    gap: 7px;
+}
+
+.titlebar-right a {
+	height: 24px;
+	transition-duration: 0.1s;
+	border-radius: 5px;
+	padding: 3px;
+	border: 0px solid #00000000;
+}
+
+.titlebar-right a:hover {
+	background-color: #ffffff20;
+	scale: 1.05;
+	border: 1px solid #00000030;
+}
+
+.titlebar-right a:active {
+	background-color: #00000020;
+	scale: 0.95;
+	border: 1px solid #00000020;
+}
+
 
 p, h1, h2, h3, h4, h5, h6 {
 	font-family: 'Inter Regular';
@@ -74,4 +103,77 @@ p, h1, h2, h3, h4, h5, h6 {
 	scale: 0.95;
 	background-color: #353535ee;
 	border: 2px solid #404040;
+}
+
+.dropdown .titlebar-dropdown {
+	position: fixed;
+	margin: 10px;
+	background-color: #383838ee;
+	box-shadow: 0 0 20px 3px rgba(0, 0, 0, .50);
+	z-index: 500;
+	backdrop-filter: blur(10px);
+	width: 200px;
+	height: auto;
+	gap: 10px;
+	padding: 7px;
+	border-radius: 10px;
+	top: 50px;
+	right: 0px;
+	pointer-events: none;
+	opacity: 0;
+}
+
+.dropdown .titlebar-dropdown button {
+	width: 100%;
+	padding: 10px;
+	font-family: 'Inter Regular';
+	color: white;
+	background: #ffffff00;
+	text-align: left;
+	border: none;
+	border-radius: 10px;
+	transition-duration: 0.1s;
+
+}
+
+.dropdown .titlebar-dropdown button:hover {
+	background: #ffffff20;
+	scale: 1.05;
+}
+
+.dropdown .titlebar-dropdown button:active {
+	background: #00000020;
+	scale: 0.95;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    pointer-events: none;
+
+  }
+  to {
+    opacity: 1;
+    pointer-events: all;
+
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.2s ease-in-out forwards;
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+    pointer-events: all;
+  }
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.fade-out {
+  animation: fadeout 0.2s ease-in-out forwards;
 }

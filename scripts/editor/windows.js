@@ -4,6 +4,8 @@
 	Jan 2025
 */
 
+import { gzjs } from './../engine/glunzunk.js';
+
 function ProjectManager(state) {
   var winbox = new WinBox({
 	  title: 'Project Manager',
@@ -90,7 +92,7 @@ function windowCreateObject() {
 	  max: false,
 	  top: '50px',
 	  class: [ "no-full" ],
-	  url: '/embed-panels/createObject/index.html',
+	  url: './embed-panels/createObject/index.html',
 	  overflow: true,
 	  onclose: function(){
 		this.g.classList.add("windowClose");
@@ -112,3 +114,14 @@ function windowCreateObject() {
 		};
 	});
 };
+
+// Listen for messages from iframe (taken from zdkrimson)
+window.addEventListener('message', function(event) {
+	if (event.data == 'windowCreateObject') {
+		windowCreateObject();
+	};
+
+	if (event.data == '__create3DObj') {
+		gzjs.newObject('cube', 0xff0000, [2, 1, 1], 1)
+	};
+});

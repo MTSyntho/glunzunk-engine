@@ -26,20 +26,42 @@ renderer.toneMappingExposure = 0.5;
 
 sky.material.uniforms.sunPosition.value = sunPosition;
 
+// Shadows
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
 // Objects 
-const ground = new THREE.Mesh( new THREE.BoxGeometry( 10, 0.05 , 10 ), new THREE.MeshBasicMaterial({ color: 0x2e9c24 }));
-const cube = new THREE.Mesh( new THREE.BoxGeometry( 1, 1, 1 ), new THREE.MeshBasicMaterial({ color: 0x633eb5 }) );
-scene.add( cube );
+
+const objects = [];
+
+const ground = new THREE.Mesh( new THREE.BoxGeometry( 10, 0.05 , 10 ), new THREE.MeshStandardMaterial({ color: 0x2e9c24 }));
+const cube = new THREE.Mesh( new THREE.BoxGeometry( 1, 1, 1 ), new THREE.MeshStandardMaterial({ color: 0x633eb5 }) );
+
+cube.castShadow = true;
+cube.receiveShadow = true;
+
+ground.castShadow = true;
+ground.receiveShadow = true;
+
+objects.push(cube);
+objects.push(ground);
+
+export { objects };
+
+// scene.add( cube );
 scene.add( ground );
 
 cube.position.y = 0.5;
-scene.fog = new THREE.Fog( 0xcccccc, 10, 15 );
+scene.fog = new THREE.FogExp2( 0xcccccc, 0.0015 );
 
 // Sunlight
-const sunLight = new THREE.DirectionalLight(0xffffff, 2); // Bright white light
+const sunLight = new THREE.DirectionalLight(0xffffff, 10); // Bright white light
 sunLight.position.copy(sunPosition).multiplyScalar(100); // Move light far away
 sunLight.castShadow = true; // Enable shadows
 scene.add( sunLight );
+
+const hemispherelight = new THREE.HemisphereLight( 0x96bfff, 0x424242, 5 );
+scene.add ( hemispherelight )
 
 
 function animate() {
