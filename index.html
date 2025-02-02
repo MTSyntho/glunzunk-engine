@@ -15,7 +15,7 @@
 					<p class=projectdialognametitle>Project Name:</p>
 					<input type="text" id="name" name="projectname" class=projectinput>
 					<div class=projectbuttons>
-						<button onclick="createproject()" class=projectbtn>Create</button>
+						<button onclick="createProject()" class=projectbtn>Create</button>
 						<button onclick="projectdialog('hide')" class=projectbtn>Cancel</button>
 					</div>
 				</div>
@@ -32,9 +32,14 @@
 				<p class=credittxt>Written by: MTSyntho Dev</p>
 			</div>
 			<div class="projects">
-				<div class="projectlist">
-					<!-- <p class=noprojects>No Projects</p> -->
+				<div class="projectlist" id=projectlist>
+					<p class=noprojects id=noprojects>No Projects</p>
 					<a href='editor.html'>temporary editor btn</a>
+<!-- 					<a onclick=''>
+						<div class="projectoption">
+							<p>Project</p>
+						</div>
+					</a>
 					<div class="projectoption">
 						<p>Project</p>
 					</div>
@@ -55,10 +60,7 @@
 					</div>
 					<div class="projectoption">
 						<p>Project</p>
-					</div>
-					<div class="projectoption">
-						<p>Project</p>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>

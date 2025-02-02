@@ -1,0 +1,62 @@
+{
+  "name": "Scene 1",
+  "environment": {
+    "lighting": {
+      "hemisphere": {
+        "color1": "0xffffff",
+        "color2": "0x4e4e4e",
+        "intensity": 5
+      },
+      "shadowType": "PCFSoft"
+    },
+    "tonemapping": {
+      "type": "cineon",
+      "exposure": 0.5
+    },
+    "fog": {
+      "expo": {
+        "color": "0xcccccc",
+        "density": 0.0015
+      }
+    },
+    "sky": {
+      "enable": true,
+      "turbidity": 11.4,
+      "rayleigh": 3,
+      "mieCoefficient": 0.004,
+      "mieDirectionalG": 0.619,
+      "elevation": 5,
+      "azimuth": 180,
+      "scale": 450000,
+      "sunlight": {
+        "color": "0xffffff",
+        "intensity": 10,
+        "castShadow": true
+      }
+    }
+  },
+  "objects": {
+    "box": {
+      "color": "0xff0000",
+      "width": 2,
+      "height": 1,
+      "depth": 1,
+      "widthSegments": 1,
+      "heightSegments": 1,
+      "depthSegments": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "capsule": {
+      "color": "0x00ffff",
+      "radius": 0.5,
+      "length": 0.7,
+      "capSegments": 10,
+      "radialSegments": 20,
+      "x": 0,
+      "y": 1.5,
+      "z": 0
+    }
+  }
+}

@@ -41,8 +41,10 @@ gamecamera.position.z = 3;
 let activeCamera = camera; // Default to editor camera
 
 function animate() {
+	requestAnimationFrame(animate);
 	renderer.render( scene, activeCamera );
 }
+
 animate();
 
 export { scene, renderer, camera, gamecamera, activeCamera };
