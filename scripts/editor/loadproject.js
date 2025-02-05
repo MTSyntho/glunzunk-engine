@@ -30,14 +30,22 @@ document.addEventListener('DOMContentLoaded', function () {
 	fetch('./projects/sample/scenes/scenes.json')
 		.then(response => response.json())
 		.then(data => {
-			console.log(data); // The content of the JSON file
-			console.log(data.name); // Access specific properties, like name
+			Object.entries(data.scenes).forEach(([key, name]) => {
+				console.log(`Key: ${key}, Value: ${name}`);
+
+				const dropdown = document.getElementById('scene-select');
+				const btn = document.createElement('button')
+
+				btn.textContent = name
+
+				dropdown.appendChild(btn)
+			});
 		})
 		.catch(error => {
 			console.error('Error loading JSON:', error);
 		});	
 
-	fetch('./projects/sample/scenes/scene1/data.json')
+	fetch('./projects/sample/scenes/scene2/data.json')
 		.then(response => response.json())
 		.then(data => {
 			const projecttitle = document.getElementById('projectname');
@@ -96,26 +104,59 @@ document.addEventListener('DOMContentLoaded', function () {
 			gzjs.shadow(true, data.environment.lighting.shadowType);
 			
 			// Objects
-			// Boxes
-			const objects = data.objects;
-			if (objects.box) {
-				const obj = objects.box
-				gzjs.newObject(
-					'box',
-					obj.color,
-					[obj.width, obj.height, obj.depth],
-					[obj.x, obj.y, obj.z]
-				);
-			};
-			if (objects.capsule) {
-				const obj = objects.capsule
-				gzjs.newObject(
-					'capsule',
-					obj.color,
-					[obj.radius, obj.length, obj.capSegments, obj.radialSegments],
-					[obj.x, obj.y, obj.z]
-				);
-			}
+			Object.entries(data.objects).forEach(([key, obj]) => {
+				// Boxes
+			    if (obj.type === 'box') {
+			        gzjs.newObject(
+			            'box',
+			            obj.color,
+			            [obj.width, obj.height, obj.depth],
+			            [obj.x, obj.y, obj.z]
+			        );
+			    }   
+
+			    // Capsules (bean.)
+			    if (obj.type === 'capsule') {
+			        gzjs.newObject(
+			            'capsule',
+			            obj.color,
+			            [obj.radius, obj.length, obj.capSegments, obj.radialSegments],
+			            [obj.x, obj.y, obj.z]
+			        );
+			    }   
+
+			    // Circles
+			    if (obj.type === 'circle') {
+			        gzjs.newObject(
+			            'circle',
+			            obj.color,
+			            [obj.radius, obj.segments, obj.thetaStart, obj.thetaLength],
+			            [obj.x, obj.y, obj.z]
+			        );
+			    }   
+
+			    // Cone
+			    if (obj.type === 'cone') {
+			        gzjs.newObject(
+			            'cone',
+			            obj.color,
+			            [obj.radius, obj.height, obj.radialSegments, obj.heightSegments, obj.openEnded, obj.thetaStart, obj.thetaLength],
+			            [obj.x, obj.y, obj.z]
+			        );
+			    }   
+
+			    // Cylinder
+			    if (obj.type === 'cylinder') {
+			        gzjs.newObject(
+			            'cylinder',
+			            obj.color,
+			            [obj.radiusTop, obj.radiusBottom, obj.height, obj.radialSegments, obj.heightSegments, obj.openEnded, obj.thetaStart, obj.thetaLength],
+			            [obj.x, obj.y, obj.z]
+			        );
+			    }   
+			});
+
+
 
 
 			console.log(data); // The content of the JSON file

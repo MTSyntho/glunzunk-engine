@@ -1,13 +1,11 @@
 {
-  "name": "Scene 1",
+  "name": "Scene 2",
   "environment": {
     "lighting": {
-      "ambient": {
-        "color": "ff4e4e",
-        "intensity": 5
-      },
-      "direction": 90,
-      "intensity": 1,
+        "ambient": {
+            "color": "0xff4e4e",
+            "intensity": 5
+        },
       "shadowType": "Basic"
     },
     "tonemapping": {
@@ -15,10 +13,9 @@
       "exposure": 0.7
     },
     "fog": {
-      "linear": {
-        "color": "cccccc",
-        "near": 10,
-        "far": 15
+      "expo": {
+        "color": "0xcccccc",
+        "density": 0.0015
       }
     },
     "sky": {
@@ -27,11 +24,11 @@
       "rayleigh": 3,
       "mieCoefficient": 0.004,
       "mieDirectionalG": 0.619,
-      "elevation": 0,
-      "azimuth": 180,
+      "elevation": 0.2,
+      "azimuth": 140,
       "scale": 450000,
       "sunlight": {
-        "color": "ffffff",
+        "color": "0xffffff",
         "intensity": 10,
         "castShadow": true
       }
@@ -39,14 +36,54 @@
   },
   "objects": {
     "box": {
-      "color": "00ee00",
-      "width": 10,
-      "height": 0.5,
-      "depth": 10,
+      "type": "box",
+      "color": "0x00ee00",
+      "width": 1,
+      "height": 1,
+      "depth": 1,
       "widthSegments": 1,
       "heightSegments": 1,
       "depthSegments": 1,
       "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "bean": {
+      "type": "capsule",
+      "color": "0x00ffff",
+      "radius": 0.5,
+      "length": 0.7,
+      "capSegments": 10,
+      "radialSegments": 20,
+      "x": 1.5,
+      "y": 0,
+      "z": 0
+    },
+    "disc": {
+      "type": "circle",
+      "color": "0xff0000",
+      "radius": 0.5,
+      "segments": 8,
+      "x": 3,
+      "y": 0,
+      "z": 0
+    },
+    "vlc": {
+      "type": "cone",
+      "color": "0xff7b00",
+      "radius": 0.5,
+      "segments": 8,
+      "radialSegments": 7,
+      "x": 4.5,
+      "y": 0,
+      "z": 0
+    },
+    "can": {
+      "type": "cylinder",
+      "color": "0xffff00",
+      "radiusTop": 0.5,
+      "radiusBottom": 0.5,
+      "x": 6,
       "y": 0,
       "z": 0
     }

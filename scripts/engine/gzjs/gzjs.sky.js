@@ -27,5 +27,7 @@ gzjs.sky = function( turbidity, rayleigh, mieCoe, mieDirG, elevation, azimuth, s
 	sunLight.castShadow = sunCastShadow; // Enable shadows
 	scene.add( sunLight );
 	
+	console.log('[Scene Loader] Added Sky')
+
 };
 

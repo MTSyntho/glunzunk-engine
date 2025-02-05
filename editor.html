@@ -49,6 +49,9 @@
 			<img width=50px src=assets/ui/gzlogo.png>
 			<p class=projectname id=projectname>Project Name</p>
 			<div class=titlebar-right>
+				<a class=titlebar-a onclick='toggleDropdown("scene")'>
+					<img width=24 src=assets/icons/scene.svg>
+				</a>
 				<a class=titlebar-a onclick='toggleDropdown("quick-settings")'>
 					<img width=24 src=assets/icons/build.svg>
 				</a>
@@ -64,6 +67,8 @@
 			</div>
 		</div>
 		<div class=dropdown>
+			<div class=titlebar-dropdown id=scene-select>
+			</div>
 			<div class=titlebar-dropdown id=quick-settings>
 				<button>Save Project</button>
 				<button>Project Properties</button>
