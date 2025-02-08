@@ -16,6 +16,7 @@ const gamecamera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.i
 const renderer = new THREE.WebGLRenderer({ canvas: renderCanvas, antialias:true });
 renderer.setSize( window.innerWidth, window.innerHeight );
 renderer.setAnimationLoop( animate );
+renderer.setPixelRatio(1)
 
 // const camera = gzjs.newCamera( 60, scene, 	window.innerWidth / window.innerHeight, 0.1, 1000 );
 // export { scene, renderer, camera };	

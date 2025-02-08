@@ -22,6 +22,12 @@ loadJS('gzjs.fog')
 loadJS('gzjs.sky')
 loadJS('gzjs.shadow')
 
+
+// Keep below all other modules
+loadJS('gzjs.unloadscene')
+loadJS('gzjs.loadscene')
+
+
 // loadJS('gzjs.camera')
 
 // Define gzjs
