@@ -6,6 +6,7 @@
 
 import * as THREE from 'three';
 // import { FlyControls } from 'three/addons/controls/FlyControls.js';
+import { focusedWindows } from './windows.js';
 import { camera , renderer, scene } from './init.js';
 
 var moveSpeed = 0.1;
@@ -62,6 +63,8 @@ function animate() {
 animate();
 
 function handleCamera() {
+	if (focusedWindows.length !== 0) return;
+
 	var moveVector = new THREE.Vector3();
 
 	var direction = new THREE.Vector3();

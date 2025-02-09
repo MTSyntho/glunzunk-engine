@@ -28,6 +28,7 @@ window.addEventListener('keydown', (event) => {
 
 // Click Event Listener
 window.addEventListener('pointerdown', (event) => {
+    if (event.target !== renderer.domElement) return; // Ignore clicks not on renderer
     if (transformControls.dragging) return; // Ignore clicks while dragging the gizmo
 
     mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
@@ -43,6 +44,7 @@ window.addEventListener('pointerdown', (event) => {
 
         var objClickOn = new CustomEvent("objectSelected");
         objClickOn.uuid = selectedObject.uuid; // Attach uuid directly to the event
+        objClickOn.obj = selectedObject
 
         document.dispatchEvent(objClickOn);
 
@@ -55,6 +57,24 @@ window.addEventListener('pointerdown', (event) => {
     }
 });
 
+window.addEventListener('pointerup', (event) => {
+    if (event.target !== renderer.domElement) return; // Ignore clicks not on renderer
+    if (transformControls.dragging) return; // Ignore clicks while dragging the gizmo
+
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+    raycaster.setFromCamera(mouse, camera);
+    const intersects = raycaster.intersectObjects(gizmoObjects, true);
+
+    if (intersects.length > 0) {
+        var objClickOn = new CustomEvent("objectSelected");
+        objClickOn.uuid = selectedObject.uuid; // Attach uuid directly to the event
+        objClickOn.obj = selectedObject
+
+        document.dispatchEvent(objClickOn);  
+    }
+});
 export { objectSelected }
 
 // Animation Loop

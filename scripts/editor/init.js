@@ -11,7 +11,9 @@ import { TransformControls } from 'three/addons/controls/TransformControls.js';
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.1, 1000 );
-const gamecamera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.1, 1000 );
+// const gamecamera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+const inEngine = true;
 
 const renderer = new THREE.WebGLRenderer({ canvas: renderCanvas, antialias:true });
 renderer.setSize( window.innerWidth, window.innerHeight );
@@ -37,8 +39,8 @@ window.addEventListener('resize', onWindowResize, false);
 camera.position.y = 1;
 camera.position.z = 5;
 
-gamecamera.position.y = 3;
-gamecamera.position.z = 3;
+// gamecamera.position.y = 3;
+// gamecamera.position.z = 3;
 
 let activeCamera = camera; // Default to editor camera
 
@@ -75,4 +77,4 @@ function animate() {
 
 animate();
 
-export { scene, renderer, camera, gamecamera, activeCamera, gizmoObjects, sceneObjects, animate };
+export { scene, renderer, camera, activeCamera, gizmoObjects, sceneObjects, animate, inEngine };

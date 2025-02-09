@@ -4,7 +4,6 @@ const inspector = document.querySelector('[codename="gz-inspector"] .wb-body');
 import { objectSelected } from './gizmo.js'
 import { sceneObjects } from './init.js';
 
-
 if (inspector) {
 	element.create('div', '', 'inspector-div').then(elm => elm
 		.window('gz-inspector')
@@ -29,9 +28,18 @@ document.addEventListener('objectSelected', (event) => {
 		.vertical()
 	)
 
+	 var selectedObject = event.obj
 	var objectuuid = event.uuid
 	var objectname = sceneObjects[objectuuid]
 
+	var objectposx = event.obj.position.x
+	var objectposy = event.obj.position.y
+	var objectposz = event.obj.position.z
+
+	var objectrotx = event.obj.rotation.x
+	var objectroty = event.obj.rotation.y
+	var objectrotz = event.obj.rotation.z
+	
 	var linecss = (`
 		background-color: #ffffff20;
 		width: 100%;
@@ -40,6 +48,69 @@ document.addEventListener('objectSelected', (event) => {
 		margin-bottom: 7px;
 	`)
 
+	function createInput(name, id, content, readonly = false) {
+		element.create('div', '', `inspector-${id}`).then(elm => elm
+			.parent('inspector-div')
+			.flex()
+			.horizontal()
+			.gap('5px')
+		)
+
+		element.create('p', `${name}: `, '').then(elm => elm
+			.parent(`inspector-${id}`)
+		)
+
+		element.create('input', '', '').then(elm => {elm
+			.parent(`inspector-${id}`)
+		    .value(content)
+		    .outline('none')
+		    .border('none')
+		    .backgroundcolor('#ffffff20')
+		    .color('white')
+		    .id(`inspector-input-${id}`)
+		    // .attribute('readonly', readonly)
+		  
+			 // Add event listener after input is created and added to DOM
+		    switch (id) {
+		    	case 'posx':
+					elm.element.addEventListener('input', (event) => {
+						selectedObject.position.x = event.target.value
+				 	});	    	
+				 	break;
+				case 'posy':
+					elm.element.addEventListener('input', (event) => {
+						selectedObject.position.y = event.target.value
+				 	});	   
+				 	break;
+				case 'posz':
+					elm.element.addEventListener('input', (event) => {
+						selectedObject.position.z = event.target.value
+				 	});	   
+					break;
+				 case 'rotx':
+				 	elm.element.addEventListener('input', (event) => {
+						selectedObject.rotation.x = event.target.value
+				 	});	 
+				 	break;
+				case 'roty':
+					elm.element.addEventListener('input', (event) => {
+						selectedObject.rotation.y = event.target.value
+				 	});	     
+				 	break;
+				case 'rotz':
+					elm.element.addEventListener('input', (event) => {
+						selectedObject.rotation.z = event.target.value
+				 	});	   
+				 	break;
+
+				default:
+					// console.error('[GZ Inspector] Unrecognized Input ID: ' + id)
+					break;
+		    }
+		});
+
+
+	}
 	element.create('p', 'Metadata', 'inspector-selectedobj-metadata').then(elm => elm
 		.parent('inspector-div')
 		.margin(0)
@@ -51,51 +122,26 @@ document.addEventListener('objectSelected', (event) => {
 		.css(linecss)
 	)
 
-	element.create('div', '', 'inspector-selectedobj-name').then(elm => elm
-		.parent('inspector-div')
-		.flex()
-		.horizontal()
-		.gap('5px')
-	)
-
-	element.create('p', 'Object Name: ', '').then(elm => elm
-		.parent('inspector-selectedobj-name')
-	)
-
-	element.create('input', '', '').then(elm => elm
-		.parent('inspector-selectedobj-name')
-		.value(objectname)
-		.outline('none')
-		.border('none')
-		.backgroundcolor('#ffffff20')
-		.color('white')
-	)
-
-	element.create('div', '', 'inspector-selectedobj-uuid').then(elm => elm
-		.parent('inspector-div')
-		.flex()
-		.horizontal()
-		.gap('5px')
-	)
-
-	element.create('p', 'UUID: ', '').then(elm => elm
-		.parent('inspector-selectedobj-uuid')
-	)
-
-	element.create('input', '', '').then(elm => elm
-		.parent('inspector-selectedobj-uuid')
-		.value(objectuuid)
-		.outline('none')
-		.border('none')
-		.backgroundcolor('#ffffff20')
-		.color('white')
-		.readonly()
-	)
+	createInput('Object Name', 'name', objectname)
+	createInput('UUID', 'uuid', objectuuid, true)
 
 	element.create('div', '', '').then(elm => elm
 		.parent('inspector-div')
 		.css(linecss)
 	)
+
+	createInput('Position X', 'posx', objectposx)
+	createInput('Position Y', 'posy', objectposy)
+	createInput('Position Z', 'posz', objectposz)
+
+	element.create('div', '', '').then(elm => elm
+		.parent('inspector-div')
+		.css(linecss)
+	)
+
+	createInput('Rotation X', 'rotx', objectrotx)
+	createInput('Rotation Y', 'roty', objectroty)
+	createInput('Rotation Z', 'rotz', objectrotz)
 
 	element.create('p', 'Material', 'inspector-selectedobj-material').then(elm => elm
 		.parent('inspector-div')
@@ -107,8 +153,8 @@ document.addEventListener('objectSelected', (event) => {
 		.parent('inspector-div')
 		.css(linecss)
 	)
-
 });
+
 
 document.addEventListener('objectUnselected', () => {
 	element.get('inspector-div')?.remove()

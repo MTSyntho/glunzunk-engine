@@ -29,6 +29,9 @@ gzjs.unloadscene = function() {
 		delete sceneObjects[key];
 	});
 
+        var objClickOff = new CustomEvent("objectUnselected");
+        document.dispatchEvent(objClickOff);
+        
 	scene.background = null;
 	scene.environment = null;
 

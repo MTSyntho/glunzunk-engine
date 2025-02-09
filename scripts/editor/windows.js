@@ -6,6 +6,8 @@
 
 import { gzjs } from './../engine/glunzunk.js';
 
+var focusedWindows  = []
+
 function ProjectManager(state) {
   var winbox = new WinBox({
 	  title: 'Project Manager',
@@ -16,6 +18,12 @@ function ProjectManager(state) {
 	  innerHTML: `
 	  <p>might replace with embed instead of innerhtml</p>`,
 	  overflow: true,
+	  onfocus: function(){
+			focusedWindows.push( this.id )
+	  },
+	  onblur: function(){
+	  	focusedWindows = focusedWindows.filter(id => id !== this.id);
+	  },
 	  onclose: function(){
 		this.g.classList.add("windowClose");
 		document.getElementById(winbox.id).classList.remove("opentask");
@@ -40,6 +48,12 @@ function InspectorPanel(state) {
 	  min: state,
 	  class: [ "no-full", "no-close" ],
 	  overflow: true,
+	  onfocus: function(){
+			focusedWindows.push( this.id )
+	  },
+	  onblur: function(){
+	  	focusedWindows = focusedWindows.filter(id => id !== this.id);
+	  },
 	  onclose: function(){
 		this.g.classList.add("windowClose");
 		document.getElementById(winbox.id).classList.remove("opentask");
@@ -66,6 +80,12 @@ function ObjectsPanel(state) {
 	  class: [ "no-full", "no-close" ],
 	  url: 'embed-panels/objectsPanel/index.html',
 	  overflow: true,
+	  onfocus: function(){
+			focusedWindows.push( this.id )
+	  },
+	  onblur: function(){
+	  	focusedWindows = focusedWindows.filter(id => id !== this.id);
+	  },
 	  onclose: function(){
 		this.g.classList.add("windowClose");
 		document.getElementById(winbox.id).classList.remove("opentask");
@@ -82,7 +102,7 @@ function ObjectsPanel(state) {
   });
 };
 
-ProjectManager(true);
+// ProjectManager(true);
 InspectorPanel(true);
 ObjectsPanel(true);
 
@@ -115,6 +135,7 @@ function windowCreateObject() {
 	});
 };
 
+export { focusedWindows }
 // Listen for messages from iframe (taken from zdkrimson)
 window.addEventListener('message', function(event) {
 	if (event.data == 'windowCreateObject') {
@@ -122,6 +143,12 @@ window.addEventListener('message', function(event) {
 	};
 
 	if (event.data == '__create3DObj') {
-		gzjs.newObject('cube', 0xff0000, [2, 1, 1], 1)
+			        gzjs.newObject(
+			       			'newobj' + Math.random(0,9999),
+			            'box',
+			            0xff0000,
+			            [2, 1, 1],
+			            [0, 0 , 0]
+			        );
 	};
 });

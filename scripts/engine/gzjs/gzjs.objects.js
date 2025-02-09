@@ -121,6 +121,10 @@ gzjs.newObject = function(name, type, color, size, position) {
 		        );
 		        break;
 
+		    case 'camera':
+		    	newObject = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.1, 1000 );
+		    	break;
+
 		    default:
 		        // Handle the case if type is none of the above
 		        console.error('Unknown type:', type);

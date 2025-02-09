@@ -5,7 +5,7 @@
 */
 
 import * as THREE from 'three';
-import { camera , renderer, scene } from './init.js';
+import { camera , renderer, scene, inEngine } from './init.js';
 import { Sky } from 'three/addons/objects/Sky.js';
 import { gzjs } from './../engine/glunzunk.js';
 

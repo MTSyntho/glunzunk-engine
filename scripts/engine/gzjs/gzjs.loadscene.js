@@ -1,24 +1,27 @@
 import * as THREE from 'three';
 import { gzjs } from './../glunzunk.js';
-import { scene } from './../../editor/init.js';
+import { scene, inEngine } from './../../editor/init.js';
 
 var projectname = null;
 
 gzjs.loadscene = function(scenename, clearscene = false) {
 	// Load Project metadata
-	fetch('./projects/sample/project.json')
-		.then(response => response.json())
-		.then(data => {
-			const projecttitle = document.getElementById('projectname');
-			projectname = data.name;
-			projecttitle.textContent = projectname;
-			console.log(data); // The content of the JSON file
-			console.log(data.name); // Access specific properties, like name
 
-		})
-		.catch(error => {
-			console.error('Error loading JSON:', error);
-		});
+	if (inEngine === true) {
+		fetch('./projects/sample/project.json')
+			.then(response => response.json())
+			.then(data => {
+				const projecttitle = document.getElementById('projectname');
+				projectname = data.name;
+				projecttitle.textContent = projectname;
+				console.log(data); // The content of the JSON file
+				console.log(data.name); // Access specific properties, like name
+
+			})
+			.catch(error => {
+				console.error('Error loading JSON:', error);
+			});
+		}
 
 	gzjs.unloadscene(); // Clear any memory
 	// Actually load project contents
