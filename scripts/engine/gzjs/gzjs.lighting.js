@@ -9,7 +9,7 @@ gzjs.lighting = function(type, intensity, color1, color2) {
 		const hemispherelight = new THREE.HemisphereLight( Number(color1) , Number(color2), intensity );
 		scene.add ( hemispherelight )
 	} else if (type === 'ambient') {
-		const hemispherelight = new THREE.AmbientLight( color1, intensity );
+		const hemispherelight = new THREE.AmbientLight( Number(color1), intensity );
 		scene.add ( hemispherelight )
 	}
 };

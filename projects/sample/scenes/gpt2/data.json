@@ -1,0 +1,222 @@
+{
+  "name": "ChatGPT Again (Monstrous Scene)",
+  "environment": {
+    "lighting": {
+      "ambient": {
+        "color": "0x7f007f",
+        "intensity": 20
+      },
+      "shadowType": "PCFSoft"
+    },
+    "tonemapping": {
+      "type": "reinhard",
+      "exposure": 2
+    },
+    "fog": {
+      "linear": {
+        "color": "0x000000",
+        "near": 50,
+        "far": 200
+      }
+    },
+    "sky": {
+      "enable": true,
+      "turbidity": 20,
+      "rayleigh": 10,
+      "mieCoefficient": 0.1,
+      "mieDirectionalG": 0.8,
+      "elevation": 0,
+      "azimuth": 90,
+      "scale": 100000,
+      "sunlight": {
+        "color": "0xff0000",
+        "intensity": 50,
+        "castShadow": true
+      }
+    }
+  },
+  "objects": {
+    "ground": {
+      "type": "box",
+      "color": "0x000000",
+      "width": 500,
+      "height": 1,
+      "depth": 500,
+      "x": 0,
+      "y": -1,
+      "z": 0
+    },
+    "monstrosity1": {
+      "type": "box",
+      "color": "0xff0000",
+      "width": 20,
+      "height": 30,
+      "depth": 20,
+      "x": 0,
+      "y": 15,
+      "z": 0
+    },
+    "monstrosity2": {
+      "type": "cylinder",
+      "color": "0x00ff00",
+      "radiusTop": 10,
+      "radiusBottom": 5,
+      "height": 40,
+      "x": -50,
+      "y": 20,
+      "z": 50
+    },
+    "monstrosity3": {
+      "type": "cone",
+      "color": "0x0000ff",
+      "radiusTop": 15,
+      "radiusBottom": 0,
+      "height": 60,
+      "x": 100,
+      "y": 30,
+      "z": -100
+    },
+    "tower": {
+      "type": "box",
+      "color": "0xffff00",
+      "width": 5,
+      "height": 50,
+      "depth": 5,
+      "x": 200,
+      "y": 25,
+      "z": 200
+    },
+    "random_pyramid": {
+      "type": "cone",
+      "color": "0x8800ff",
+      "radiusTop": 10,
+      "radiusBottom": 0,
+      "height": 50,
+      "x": -200,
+      "y": 25,
+      "z": -200
+    },
+    "random_tube": {
+      "type": "cylinder",
+      "color": "0xff8800",
+      "radiusTop": 5,
+      "radiusBottom": 5,
+      "height": 100,
+      "x": 0,
+      "y": 50,
+      "z": 200
+    },
+    "floating_box": {
+      "type": "box",
+      "color": "0x00ff00",
+      "width": 10,
+      "height": 10,
+      "depth": 10,
+      "x": -100,
+      "y": 30,
+      "z": 150
+    },
+    "random_wall": {
+      "type": "box",
+      "color": "0x666666",
+      "width": 10,
+      "height": 100,
+      "depth": 10,
+      "x": 300,
+      "y": 50,
+      "z": 300
+    },
+    "capsule_monster": {
+      "type": "capsule",
+      "color": "0xff007f",
+      "radius": 5,
+      "length": 40,
+      "capSegments": 20,
+      "radialSegments": 50,
+      "x": 50,
+      "y": 20,
+      "z": -150
+    },
+    "random_sphere": {
+      "type": "capsule",
+      "color": "0x7f00ff",
+      "radius": 7,
+      "length": 30,
+      "capSegments": 20,
+      "radialSegments": 50,
+      "x": -50,
+      "y": 15,
+      "z": -100
+    },
+    "streets": {
+      "type": "box",
+      "color": "0x555555",
+      "width": 50,
+      "height": 0.1,
+      "depth": 500,
+      "x": 0,
+      "y": 0,
+      "z": -250
+    },
+    "more_streets": {
+      "type": "box",
+      "color": "0x555555",
+      "width": 500,
+      "height": 0.1,
+      "depth": 50,
+      "x": 0,
+      "y": 0,
+      "z": -100
+    },
+    "random_building1": {
+      "type": "box",
+      "color": "0x0099ff",
+      "width": 15,
+      "height": 100,
+      "depth": 15,
+      "x": 150,
+      "y": 50,
+      "z": 100
+    },
+    "random_building2": {
+      "type": "box",
+      "color": "0xffff00",
+      "width": 25,
+      "height": 80,
+      "depth": 25,
+      "x": -200,
+      "y": 40,
+      "z": 100
+    },
+    "random_building3": {
+      "type": "box",
+      "color": "0xff99cc",
+      "width": 10,
+      "height": 120,
+      "depth": 10,
+      "x": 0,
+      "y": 60,
+      "z": 200
+    },
+    "random_cones": {
+      "type": "cone",
+      "color": "0x33cc33",
+      "radiusTop": 8,
+      "radiusBottom": 0,
+      "height": 25,
+      "x": -300,
+      "y": 20,
+      "z": 50
+    },
+    "floating_cone": {
+      "type": "cone",
+      "color": "0xcc0000",
+      "radiusTop": 5,
+      "radiusBottom": 0,
+      "height": 40,
+      "x": 0,
+      "y": 20,
+      "z": -300
+    }
+  }
+}

@@ -39,7 +39,6 @@ function InspectorPanel(state) {
 	  top: '50px',
 	  min: state,
 	  class: [ "no-full", "no-close" ],
-	  url: 'embed-panels/inspector/index.html',
 	  overflow: true,
 	  onclose: function(){
 		this.g.classList.add("windowClose");
@@ -54,7 +53,8 @@ function InspectorPanel(state) {
 
 		return true;
 	  }
-  });
+  });	  
+  document.getElementById(winbox.id).setAttribute('codename', 'gz-inspector')
 };
 
 function ObjectsPanel(state) {

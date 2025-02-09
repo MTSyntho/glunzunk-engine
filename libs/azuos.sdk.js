@@ -328,6 +328,19 @@ const element = {
 					elm.placeholder = string
 					return elementObject;
 				},
+				value: (string) => {
+					elm.value = string
+					return elementObject;
+				},
+				window: (elementcodename) => {
+					var parent = document.querySelector(`[codename="${elementcodename}"] .wb-body`);
+					if (parent) {
+						parent.appendChild(elm);  // Append the element to the parent
+					} else {
+						console.error(`[AzuOS SDK] Cannot append '${elm.tagName}' element (Codename: '${elementObject.codename}') to "${elementcodename}"`);
+					}
+					return elementObject;
+				},
 				parent: (elementcodename) => {
 					var parent = document.querySelector(`[codename="${elementcodename}"]`);
 					if (parent) {
@@ -336,7 +349,8 @@ const element = {
 						console.error(`[AzuOS SDK] Cannot append '${elm.tagName}' element (Codename: '${elementObject.codename}') to "${elementcodename}"`);
 					}
 					return elementObject;
-				}			};
+				}
+			};
 			// if (elm.getAttribute('system-css') === '') {
 			// 	elm
 			// }
@@ -355,9 +369,9 @@ const element = {
 			// }
 
 			elm.setAttribute("codename", codename);
-			if (!manualIsElementOverwrite) {
-				elm.setAttribute("isElement", "");
-			}
+			// if (!manualIsElementOverwrite) {
+			// 	elm.setAttribute("isElement", "");
+			// }
 			resolve(elementObject);
 
 			// console.log(elm.classList)
@@ -365,7 +379,8 @@ const element = {
 				elm.classList.add('__azuos-button-small');
 			}
 		});
-	}
+	},
+		get: (codename) => document.querySelector(`[codename="${codename}"]`)
 };
 
 

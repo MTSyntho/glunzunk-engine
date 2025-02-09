@@ -1,11 +1,11 @@
 import * as THREE from 'three';
 import { gzjs } from './../glunzunk.js';
 // import { objects } from './../../default-project.js';
-import { scene, gizmoObjects } from './../../editor/init.js';
+import { scene, gizmoObjects, sceneObjects } from './../../editor/init.js';
 
 var newObject = null;
 
-gzjs.newObject = function(type, color, size, position) {
+gzjs.newObject = function(name, type, color, size, position) {
 		switch (type) {
 		    case 'box':
 		        newObject = new THREE.Mesh(
@@ -134,6 +134,8 @@ gzjs.newObject = function(type, color, size, position) {
 		newObject.receiveShadow = true;
 
 		gizmoObjects.push( newObject )
+
+		sceneObjects[newObject.uuid] = name
 
 		scene.add( newObject )
 };

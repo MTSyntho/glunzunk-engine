@@ -1,7 +1,6 @@
 import * as THREE from 'three';
 import { TransformControls } from 'three/addons/controls/TransformControls.js';
-import { scene, camera, renderer } from './init.js';
-import { objects } from './../default-project.js';
+import { scene, camera, renderer, gizmoObjects, sceneObjects } from './init.js';
 
 
 // Transform Controls for Gizmos
@@ -11,6 +10,8 @@ const transformControls = new TransformControls(camera, renderer.domElement);
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
 let selectedObject = null;
+
+var objectSelected = false;
 
 
 window.addEventListener('keydown', (event) => {
@@ -27,21 +28,34 @@ window.addEventListener('keydown', (event) => {
 
 // Click Event Listener
 window.addEventListener('pointerdown', (event) => {
+    if (transformControls.dragging) return; // Ignore clicks while dragging the gizmo
+
     mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
     mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
 
     raycaster.setFromCamera(mouse, camera);
-    const intersects = raycaster.intersectObjects(objects);
+    const intersects = raycaster.intersectObjects(gizmoObjects, true);
 
     if (intersects.length > 0) {
         selectedObject = intersects[0].object;
-        transformControls.attach(selectedObject); // Attach gizmo
-        // scene.add(transformControls);
+        transformControls.attach(selectedObject);
+        scene.add(transformControls.getHelper());
+
+        var objClickOn = new CustomEvent("objectSelected");
+        objClickOn.uuid = selectedObject.uuid; // Attach uuid directly to the event
+
+        document.dispatchEvent(objClickOn);
+
     } else {
-	    transformControls.detach(); // Detach gizmo
-	    // scene.remove(transformControls);
-	};
+        transformControls.detach();
+        scene.remove(transformControls.getHelper());
+
+        var objClickOff = new CustomEvent("objectUnselected");
+        document.dispatchEvent(objClickOff);
+    }
 });
+
+export { objectSelected }
 
 // Animation Loop
 function animate() {

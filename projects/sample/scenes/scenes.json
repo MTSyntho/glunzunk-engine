@@ -1,6 +1,9 @@
 {
   "scenes": {
   	"1": "scene1",
-  	"2": "scene2"
+  	"2": "scene2",
+  	"3": "chatgpt",
+  	"4": "gptcity",
+  	"5": "gpt2"
   }
 }

@@ -1,0 +1,170 @@
+{
+  "name": "GPT City (City in a Field)",
+  "environment": {
+    "lighting": {
+      "ambient": {
+        "color": "0x88ccff",
+        "intensity": 4
+      },
+      "shadowType": "PCFSoft"
+    },
+    "tonemapping": {
+      "type": "reinhard",
+      "exposure": 0.7
+    },
+    "fog": {
+      "linear": {
+        "color": "0xaaffaa",
+        "near": 20,
+        "far": 120
+      }
+    },
+    "sky": {
+      "enable": true,
+      "turbidity": 5,
+      "rayleigh": 2,
+      "mieCoefficient": 0.003,
+      "mieDirectionalG": 0.7,
+      "elevation": 30,
+      "azimuth": 180,
+      "scale": 500000,
+      "sunlight": {
+        "color": "0xfff8dc",
+        "intensity": 10,
+        "castShadow": true
+      }
+    }
+  },
+  "objects": {
+    "ground": {
+      "type": "box",
+      "color": "0x228b22",
+      "width": 100,
+      "height": 1,
+      "depth": 100,
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+    "street1": {
+      "type": "box",
+      "color": "0x555555",
+      "width": 20,
+      "height": 0.1,
+      "depth": 100,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "street2": {
+      "type": "box",
+      "color": "0x555555",
+      "width": 100,
+      "height": 0.1,
+      "depth": 20,
+      "x": 0,
+      "y": 0,
+      "z": 50
+    },
+    "house1": {
+      "type": "box",
+      "color": "0xffcc99",
+      "width": 5,
+      "height": 3,
+      "depth": 5,
+      "x": -10,
+      "y": 1.5,
+      "z": 10
+    },
+    "house2": {
+      "type": "box",
+      "color": "0xffcc99",
+      "width": 5,
+      "height": 3,
+      "depth": 5,
+      "x": 10,
+      "y": 1.5,
+      "z": 10
+    },
+    "office_building": {
+      "type": "box",
+      "color": "0x6699ff",
+      "width": 10,
+      "height": 10,
+      "depth": 10,
+      "x": 0,
+      "y": 5,
+      "z": 0
+    },
+    "skyscraper": {
+      "type": "box",
+      "color": "0x808080",
+      "width": 10,
+      "height": 30,
+      "depth": 10,
+      "x": 0,
+      "y": 15,
+      "z": 25
+    },
+    "tree1_trunk": {
+      "type": "cylinder",
+      "color": "0x8b4513",
+      "radiusTop": 0.5,
+      "radiusBottom": 0.5,
+      "height": 4,
+      "x": -20,
+      "y": 2,
+      "z": 15
+    },
+    "tree1_foliage": {
+      "type": "cone",
+      "color": "0x228b22",
+      "radiusTop": 3,
+      "radiusBottom": 0,
+      "height": 6,
+      "x": -20,
+      "y": 5,
+      "z": 15
+    },
+    "tree2_trunk": {
+      "type": "cylinder",
+      "color": "0x8b4513",
+      "radiusTop": 0.5,
+      "radiusBottom": 0.5,
+      "height": 4,
+      "x": 20,
+      "y": 2,
+      "z": 15
+    },
+    "tree2_foliage": {
+      "type": "cone",
+      "color": "0x228b22",
+      "radiusTop": 3,
+      "radiusBottom": 0,
+      "height": 6,
+      "x": 20,
+      "y": 5,
+      "z": 15
+    },
+    "bus_stop": {
+      "type": "box",
+      "color": "0xffff00",
+      "width": 4,
+      "height": 2,
+      "depth": 1,
+      "x": 0,
+      "y": 1,
+      "z": 40
+    },
+    "street_light": {
+      "type": "cylinder",
+      "color": "0x333333",
+      "radiusTop": 0.1,
+      "radiusBottom": 0.1,
+      "height": 5,
+      "x": 0,
+      "y": 2.5,
+      "z": 20
+    }
+  }
+}

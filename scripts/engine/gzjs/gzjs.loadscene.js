@@ -85,6 +85,7 @@ gzjs.loadscene = function(scenename, clearscene = false) {
 				// Boxes
 			    if (obj.type === 'box') {
 			        gzjs.newObject(
+			        	key,
 			            'box',
 			            obj.color,
 			            [obj.width, obj.height, obj.depth],
@@ -95,6 +96,7 @@ gzjs.loadscene = function(scenename, clearscene = false) {
 			    // Capsules (bean.)
 			    if (obj.type === 'capsule') {
 			        gzjs.newObject(
+			        	key,
 			            'capsule',
 			            obj.color,
 			            [obj.radius, obj.length, obj.capSegments, obj.radialSegments],
@@ -105,6 +107,7 @@ gzjs.loadscene = function(scenename, clearscene = false) {
 			    // Circles
 			    if (obj.type === 'circle') {
 			        gzjs.newObject(
+			        	obj,
 			            'circle',
 			            obj.color,
 			            [obj.radius, obj.segments, obj.thetaStart, obj.thetaLength],
@@ -115,6 +118,7 @@ gzjs.loadscene = function(scenename, clearscene = false) {
 			    // Cone
 			    if (obj.type === 'cone') {
 			        gzjs.newObject(
+			        	key,
 			            'cone',
 			            obj.color,
 			            [obj.radius, obj.height, obj.radialSegments, obj.heightSegments, obj.openEnded, obj.thetaStart, obj.thetaLength],
@@ -125,6 +129,7 @@ gzjs.loadscene = function(scenename, clearscene = false) {
 			    // Cylinder
 			    if (obj.type === 'cylinder') {
 			        gzjs.newObject(
+			        	key,
 			            'cylinder',
 			            obj.color,
 			            [obj.radiusTop, obj.radiusBottom, obj.height, obj.radialSegments, obj.heightSegments, obj.openEnded, obj.thetaStart, obj.thetaLength],

@@ -15,7 +15,7 @@ const gamecamera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.i
 
 const renderer = new THREE.WebGLRenderer({ canvas: renderCanvas, antialias:true });
 renderer.setSize( window.innerWidth, window.innerHeight );
-renderer.setAnimationLoop( animate );
+// renderer.setAnimationLoop( animate );
 renderer.setPixelRatio(1)
 
 // const camera = gzjs.newCamera( 60, scene, 	window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -48,6 +48,7 @@ let activeCamera = camera; // Default to editor camera
 // const raycaster = new THREE.Raycaster();
 // const mouse = new THREE.Vector2();
 const gizmoObjects = []; // Store selectable objects
+const sceneObjects = {}
 
 
 // // Handle Mouse Clicks
@@ -68,10 +69,10 @@ const gizmoObjects = []; // Store selectable objects
 
 
 function animate() {
-	// requestAnimationFrame(animate);
+	requestAnimationFrame(animate);
 	renderer.render( scene, activeCamera );
 }
 
 animate();
 
-export { scene, renderer, camera, gamecamera, activeCamera, gizmoObjects };
+export { scene, renderer, camera, gamecamera, activeCamera, gizmoObjects, sceneObjects, animate };
