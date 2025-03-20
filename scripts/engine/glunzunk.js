@@ -21,6 +21,7 @@ loadJS('gzjs.tonemapping')
 loadJS('gzjs.fog')
 loadJS('gzjs.sky')
 loadJS('gzjs.shadow')
+// loadJS('gzjs.postprocessing')
 
 
 // Keep below all other modules

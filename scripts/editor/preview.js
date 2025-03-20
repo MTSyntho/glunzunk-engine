@@ -12,11 +12,11 @@ function toggleGameplay() {
 		previewBool = true;
 	};
 
-	function animate() {
-	    renderer.render(scene, activeCamera);
-	    requestAnimationFrame(animate);
-	}
-	animate();
+	// function animate() {
+	//     renderer.render(scene, activeCamera);
+	//     requestAnimationFrame(animate);
+	// }
+	// animate();
 
 };
 

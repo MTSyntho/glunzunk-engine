@@ -9,19 +9,24 @@ import { gzjs } from './../engine/glunzunk.js';
 import { TransformControls } from 'three/addons/controls/TransformControls.js';
 // import animate from '/scripts/editor/render.js';
 
+// import { composer } from './../engine/gzjs/gzjs.postprocessing.js';
+
+import { handleCamera } from './../editor/camera.js';
+
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.1, 1000 );
 // const gamecamera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
 const inEngine = true;
 
+let composer;
+
 const renderer = new THREE.WebGLRenderer({ canvas: renderCanvas, antialias:true });
 renderer.setSize( window.innerWidth, window.innerHeight );
-// renderer.setAnimationLoop( animate );
 renderer.setPixelRatio(1)
 
-// const camera = gzjs.newCamera( 60, scene, 	window.innerWidth / window.innerHeight, 0.1, 1000 );
-// export { scene, renderer, camera };	
+// const camera = gzjs.newCamera( 60, scene,    window.innerWidth / window.innerHeight, 0.1, 1000 );
+// export { scene, renderer, camera };  
 
 // Function to handle window resizing
 function onWindowResize() {
@@ -44,37 +49,48 @@ camera.position.z = 5;
 
 let activeCamera = camera; // Default to editor camera
 
-// const transformControls = new TransformControls(camera, renderer.domElement);
-// scene.add(transformControls);
-
 // const raycaster = new THREE.Raycaster();
 // const mouse = new THREE.Vector2();
 const gizmoObjects = []; // Store selectable objects
 const sceneObjects = {}
 
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+import { GlitchPass } from 'three/addons/postprocessing/GlitchPass.js';
 
-// // Handle Mouse Clicks
-// window.addEventListener('click', (event) => {
-//     mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-//     mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+    // const composer = new EffectComposer( renderer ) ;
+    // composer.addPass( new RenderPass( scene, camera ));
 
-//     raycaster.setFromCamera(mouse, activeCamera);
-//     const intersects = raycaster.intersectObjects(gizmoObjects);
+    //     const glitchPass = new GlitchPass();
+    //     glitchPass.goWild = true; // Force extreme glitching
+    //     composer.addPass(glitchPass);
+        
+    // const outputPass = new OutputPass();
+    // composer.addPass(outputPass);   
 
-//     if (intersects.length > 0) {
-//         transformControls.attach(intersects[0].object);
-//     } else {
-//         transformControls.detach();
-//     }
-// });
+                composer = new EffectComposer( renderer );
+                composer.addPass( new RenderPass( scene, camera ) );
 
+                const glitchPass = new GlitchPass();
+                composer.addPass( glitchPass );
 
+                const outputPass = new OutputPass();
+                composer.addPass( outputPass );
+
+const clock = new THREE.Clock();
 
 function animate() {
-	requestAnimationFrame(animate);
-	renderer.render( scene, activeCamera );
-}
+    requestAnimationFrame(animate);
 
+    const delta = clock.getDelta(); // Get time since last frame
+
+    handleCamera();
+
+    composer.render();
+
+    // renderer.render(scene, activeCamera);
+}
 animate();
 
-export { scene, renderer, camera, activeCamera, gizmoObjects, sceneObjects, animate, inEngine };
+export { renderer, scene, camera, activeCamera, gizmoObjects, sceneObjects, inEngine };

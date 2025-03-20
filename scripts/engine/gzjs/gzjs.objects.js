@@ -3,145 +3,64 @@ import { gzjs } from './../glunzunk.js';
 // import { objects } from './../../default-project.js';
 import { scene, gizmoObjects, sceneObjects } from './../../editor/init.js';
 
-var newObject = null;
+var object = null
+function createMaterial(type, options) {
+    switch (type) {
+        case 'basic': return new THREE.MeshBasicMaterial(options);
+        case 'depth': return new THREE.MeshDepthMaterial(options);
+        case 'lambert': return new THREE.MeshLambertMaterial(options);
+        case 'matcap': return new THREE.MeshMatcapMaterial(options);
+        case 'normal': return new THREE.MeshNormalMaterial(options);
+        case 'phong': return new THREE.MeshPhongMaterial(options);
+        case 'physical': return new THREE.MeshPhysicalMaterial(options);
+        case 'standard': return new THREE.MeshStandardMaterial(options);
+        case 'toon': return new THREE.MeshToonMaterial(options);
+        default: return new THREE.MeshStandardMaterial(options);
+    }
+}
 
-gzjs.newObject = function(name, type, color, size, position) {
-		switch (type) {
-		    case 'box':
-		        newObject = new THREE.Mesh(
-		            new THREE.BoxGeometry(size[0], size[1], size[2]),
-		            new THREE.MeshStandardMaterial({ color: Number(color) })
-		        );
-		        break;
+gzjs.newObject = function(name, type, color, position, params = {}, materialType = 'standard', materialProps = {}){
+    const geometryMap = {
+        'box': () => new THREE.BoxGeometry(params.width || 1, params.height || 1, params.depth || 1),
+        'capsule': () => new THREE.CapsuleGeometry(params.radius || 1, params.length || 2, params.capSegments || 4, params.radialSegments || 8),
+        'circle': () => new THREE.CircleGeometry(params.radius || 1, params.segments || 32, params.thetaStart || 0, params.thetaLength || Math.PI * 2),
+        'cone': () => new THREE.ConeGeometry(params.radius || 1, params.height || 2, params.radialSegments || 8, params.heightSegments || 1, params.openEnded || false, params.thetaStart || 0, params.thetaLength || Math.PI * 2),
+        'cylinder': () => new THREE.CylinderGeometry(params.radiusTop || 1, params.radiusBottom || 1, params.height || 2, params.radialSegments || 8, params.heightSegments || 1, params.openEnded || false, params.thetaStart || 0, params.thetaLength || Math.PI * 2),
+        'dodecahedron': () => new THREE.DodecahedronGeometry(params.radius || 1, params.detail || 0),
+        'icosahedron': () => new THREE.IcosahedronGeometry(params.radius || 1, params.detail || 0),
+        'lathe': () => new THREE.LatheGeometry(params.points || [], params.segments || 12, params.phiStart || 0, params.phiLength || Math.PI * 2),
+        'octahedron': () => new THREE.OctahedronGeometry(params.radius || 1, params.detail || 0),
+        'plane': () => new THREE.PlaneGeometry(params.width || 1, params.height || 1, params.widthSegments || 1, params.heightSegments || 1),
+        'ring': () => new THREE.RingGeometry(params.innerRadius || 0.5, params.outerRadius || 1, params.thetaSegments || 8, params.phiSegments || 1, params.thetaStart || 0, params.thetaLength || Math.PI * 2),
+        'sphere': () => new THREE.SphereGeometry(params.radius || 1, params.widthSegments || 32, params.heightSegments || 16, params.phiStart || 0, params.phiLength || Math.PI * 2, params.thetaStart || 0, params.thetaLength || Math.PI),
+        'tetrahedron': () => new THREE.TetrahedronGeometry(params.radius || 1, params.detail || 0),
+        'torus': () => new THREE.TorusGeometry(params.radius || 1, params.tube || 0.4, params.radialSegments || 8, params.tubularSegments || 6, params.arc || Math.PI * 2),
+        'torusknot': () => new THREE.TorusKnotGeometry(params.radius || 1, params.tube || 0.4, params.tubularSegments || 64, params.radialSegments || 8, params.p || 2, params.q || 3),
+    };
 
-		    case 'capsule':
-		    case 'bean':  // 'bean' and 'capsule' both trigger the same case
-		        newObject = new THREE.Mesh(
-		            new THREE.CapsuleGeometry(size[0], size[1], size[2], size[3]),
-		            new THREE.MeshStandardMaterial({ color: Number(color) })
-		        );
-		        break;
+    if (type === 'camera') {
+        return new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+    }
 
-		    case 'circle':
-		        newObject = new THREE.Mesh(
-		            new THREE.CircleGeometry(size[0], size[1], size[2], size[3]),
-		            new THREE.MeshStandardMaterial({ color: Number(color) })
-		        );
-		        break;
+    if (!geometryMap[type]) {
+        console.error('Unknown type:', type);
+        return null;
+    }
 
-		    case 'cone':
-		   	case 'vlc':
-		   		newObject = new THREE.Mesh(
-		            new THREE.ConeGeometry(size[0], size[1], size[2], size[3], size[4], size[5], size[6]),
-		            new THREE.MeshStandardMaterial({ color: Number(color) })
-		        );
-		        break;
+    const materialOptions = { color: Number(color), ...materialProps };
+    object = new THREE.Mesh(geometryMap[type](), createMaterial(materialType, materialOptions));
 
-		    case 'cylinder':
-		    	newObject = new THREE.Mesh(
-		            new THREE.CylinderGeometry(size[0], size[1], size[2], size[3], size[4], size[5], size[6], size[7]),
-		            new THREE.MeshStandardMaterial({ color: Number(color) })
-		        );
-		        break;
-		    case 'dodecahedron':
-		    case 'hedron1':
-		    	newObject = new THREE.Mesh(
-		            new THREE.DodecahedronGeometry(size[0], size[1]),
-		            new THREE.MeshStandardMaterial({ color: Number(color) })
-		        );
-		        break;
+    object.position.set(...position);
+    object.castShadow = true;
+    object.receiveShadow = true;
 
-		    case 'icosahedron':
-		    case 'hedron2':
-		    	newObject = new THREE.Mesh(
-		            new THREE.IsosahedronGeometry(size[0], size[1], size[2], size[3], size[4], size[5], size[6]),
-		            new THREE.MeshStandardMaterial({ color: Number(color) })
-		        );
-		        break;
+		gizmoObjects.push( object )
 
-		    case 'lathe':
-		    	newObject = new THREE.Mesh(
-		            new THREE.LatheGeometry(size[0], size[1], size[2]),
-		            new THREE.MeshStandardMaterial({ color: Number(color) })
-		        );
-		        break;
+		sceneObjects[object.uuid] = name
 
-		    case 'octahedron':
-		    case 'hedron3':
-		    	newObject = new THREE.Mesh(
-		            new THREE.OctahedronGeometry(size[0], size[1]),
-		            new THREE.MeshStandardMaterial({ color: Number(color) })
-		        );
-		        break;
-
-		    case 'plane':
-		    	newObject = new THREE.Mesh(
-		            new THREE.PlaneGeometry(size[0], size[1], size[2], size[3]),
-		            new THREE.MeshStandardMaterial({ color: Number(color) })
-		        );
-		        break;
-
-		    case 'ring':
-		    case 'cd':
-		    case 'disc':
-		   		newObject = new THREE.Mesh(
-		            new THREE.RingGeometry(size[0], size[1], size[2], size[3], size[4], size[5]),
-		            new THREE.MeshStandardMaterial({ color: Number(color) })
-		        );
-		        break;
-
-		    case 'sphere':
-		    case 'ball':
-		    	newObject = new THREE.Mesh(
-		            new THREE.SphereGeometry(size[0], size[1], size[2], size[3], size[4], size[5], size[6]),
-		            new THREE.MeshStandardMaterial({ color: Number(color) })
-		        );
-		        break;
-
-		    case 'tetrahedron':
-		    case 'hedron4':
-		    	newObject = new THREE.Mesh(
-		            new THREE.TetrahedronGeometry(size[0], size[1]),
-		            new THREE.MeshStandardMaterial({ color: Number(color) })
-		        );
-		        break;
-
-		    case 'torus':
-		   	case 'donut':
-		   		newObject = new THREE.Mesh(
-		            new THREE.TorusGeometry(size[0], size[1], size[2], size[3], size[4]),
-		            new THREE.MeshStandardMaterial({ color: Number(color) })
-		        );
-		        break;
-
-		    case 'torusknot':
-		    	newObject = new THREE.Mesh(
-		            new THREE.TorusKnotGeometry(size[0], size[1], size[2], size[3], size[4], size[5]),
-		            new THREE.MeshStandardMaterial({ color: Number(color) })
-		        );
-		        break;
-
-		    case 'camera':
-		    	newObject = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.1, 1000 );
-		    	break;
-
-		    default:
-		        // Handle the case if type is none of the above
-		        console.error('Unknown type:', type);
-		        return;
-		}
-
-		// Set object position
-		newObject.position.set(position[0], position[1], position[2]);
-
-		newObject.castShadow = true;
-		newObject.receiveShadow = true;
-
-		gizmoObjects.push( newObject )
-
-		sceneObjects[newObject.uuid] = name
-
-		scene.add( newObject )
+    scene.add(object);
+    return object;
 };
 
-export { newObject };
+export { object };
+ 

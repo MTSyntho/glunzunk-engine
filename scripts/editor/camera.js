@@ -49,18 +49,16 @@ document.addEventListener('keyup', (event) => keys[event.code] = false);
 // document.addEventListener('click', requestPointerLock);
 
 // Animation Loop
-const clock = new THREE.Clock();
-function animate() {
-    requestAnimationFrame(animate);
+// function animate() {
+//     requestAnimationFrame(animate);
 
-    const delta = clock.getDelta(); // Get time since last frame
-    // flyControls.update(delta); // Update FlyControls
-    handleCamera()
+//     // flyControls.update(delta); // Update FlyControls
+//     // handleCamera()
     
-    renderer.render(scene, camera);
-}
+//     renderer.render(scene, camera);
+// }
 
-animate();
+// animate();
 
 function handleCamera() {
 	if (focusedWindows.length !== 0) return;
@@ -93,3 +91,5 @@ function handleCamera() {
 	moveVector.applyQuaternion(camera.quaternion); // idk what a quaternion is but it seems cool
 	camera.rotation.z += 0; // no weird z axis rotation (camera rolling)
 }
+
+export { handleCamera }

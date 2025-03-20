@@ -39,9 +39,11 @@
     "ground": {
       "type": "box",
       "color": "0x228b22",
-      "width": 100,
-      "height": 1,
-      "depth": 100,
+      "properties": {
+        "width": 100,
+        "height": 1,
+        "depth": 100
+      },
       "x": 0,
       "y": -0.5,
       "z": 0
@@ -49,9 +51,11 @@
     "street1": {
       "type": "box",
       "color": "0x555555",
+      "properties": {
       "width": 20,
       "height": 0.1,
-      "depth": 100,
+      "depth": 100
+      },
       "x": 0,
       "y": 0,
       "z": 0
@@ -59,9 +63,11 @@
     "street2": {
       "type": "box",
       "color": "0x555555",
+      "properties": {
       "width": 100,
       "height": 0.1,
-      "depth": 20,
+      "depth": 20
+      },
       "x": 0,
       "y": 0,
       "z": 50
@@ -69,9 +75,11 @@
     "house1": {
       "type": "box",
       "color": "0xffcc99",
-      "width": 5,
-      "height": 3,
-      "depth": 5,
+      "properties": {
+        "width": 5,
+        "height": 3,
+        "depth": 5        
+      },
       "x": -10,
       "y": 1.5,
       "z": 10
@@ -79,9 +87,11 @@
     "house2": {
       "type": "box",
       "color": "0xffcc99",
-      "width": 5,
-      "height": 3,
-      "depth": 5,
+      "properties": {
+        "width": 5,
+        "height": 3,
+        "depth": 5
+      },
       "x": 10,
       "y": 1.5,
       "z": 10
@@ -89,9 +99,11 @@
     "office_building": {
       "type": "box",
       "color": "0x6699ff",
-      "width": 10,
-      "height": 10,
-      "depth": 10,
+      "properties": {
+        "width": 10,
+        "height": 10,
+        "depth": 10
+      },
       "x": 0,
       "y": 5,
       "z": 0
@@ -99,9 +111,20 @@
     "skyscraper": {
       "type": "box",
       "color": "0x808080",
-      "width": 10,
-      "height": 30,
-      "depth": 10,
+      "properties": {
+        "width": 10,
+        "height": 30,
+        "depth": 10
+      },
+      "material": {
+        "type": "physical",
+        "properties": {
+          "roughness": 0.6,
+          "metalness": 0.2,
+          "clearcoat": 0.5,
+          "clearcoatRoughness": 0.1
+        }
+      },
       "x": 0,
       "y": 15,
       "z": 25
@@ -109,9 +132,11 @@
     "tree1_trunk": {
       "type": "cylinder",
       "color": "0x8b4513",
-      "radiusTop": 0.5,
-      "radiusBottom": 0.5,
-      "height": 4,
+      "properties": {
+        "radiusTop": 0.5,
+        "radiusBottom": 0.5,
+        "height": 4
+      },
       "x": -20,
       "y": 2,
       "z": 15
@@ -119,9 +144,11 @@
     "tree1_foliage": {
       "type": "cone",
       "color": "0x228b22",
-      "radiusTop": 3,
-      "radiusBottom": 0,
-      "height": 6,
+      "properties": {
+        "radiusTop": 3,
+        "radiusBottom": 0,
+        "height": 6
+      },
       "x": -20,
       "y": 5,
       "z": 15
@@ -129,9 +156,11 @@
     "tree2_trunk": {
       "type": "cylinder",
       "color": "0x8b4513",
-      "radiusTop": 0.5,
-      "radiusBottom": 0.5,
-      "height": 4,
+      "properties": {
+        "radiusTop": 0.5,
+        "radiusBottom": 0.5,
+        "height": 4
+      },
       "x": 20,
       "y": 2,
       "z": 15
@@ -139,9 +168,11 @@
     "tree2_foliage": {
       "type": "cone",
       "color": "0x228b22",
-      "radiusTop": 3,
-      "radiusBottom": 0,
-      "height": 6,
+      "properties": {
+        "radiusTop": 3,
+        "radiusBottom": 0,
+        "height": 6
+      },
       "x": 20,
       "y": 5,
       "z": 15
@@ -149,9 +180,11 @@
     "bus_stop": {
       "type": "box",
       "color": "0xffff00",
-      "width": 4,
-      "height": 2,
-      "depth": 1,
+      "properties": {
+        "width": 4,
+        "height": 2,
+        "depth": 1
+      },
       "x": 0,
       "y": 1,
       "z": 40
@@ -159,9 +192,11 @@
     "street_light": {
       "type": "cylinder",
       "color": "0x333333",
-      "radiusTop": 0.1,
-      "radiusBottom": 0.1,
-      "height": 5,
+      "properties": {
+        "radiusTop": 0.1,
+        "radiusBottom": 0.1,
+        "height": 5
+      },
       "x": 0,
       "y": 2.5,
       "z": 20

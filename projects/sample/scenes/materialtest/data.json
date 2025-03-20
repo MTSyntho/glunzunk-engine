@@ -46,6 +46,15 @@
         "width": 2,
         "height": 1,
         "depth": 1
+      },
+      "material": {
+        "type": "physical",
+        "properties": {
+          "roughness": 0.6,
+          "metalness": 0.2,
+          "clearcoat": 0.5,
+          "clearcoatRoughness": 0.1
+        }
       }
     },
     "bean": {
@@ -72,6 +81,65 @@
         "length": 0.5,
         "capSegments": 3,
         "radialSegments": 5
+      }
+    },
+    "glassSphere": {
+      "type": "sphere",
+      "color": "0x00ff00",
+      "x": 2,
+      "y": 2,
+      "z": 0,
+      "properties": {
+        "radius": 1,
+        "widthSegments": 32,
+        "heightSegments": 16
+      },
+      "material": {
+        "type": "standard",
+        "properties": {
+          "roughness": 0,
+          "metalness": 0.8,
+          "opacity": 0.4,
+          "transparent": true
+        }
+      }
+    },
+    "glowingBox": {
+      "type": "box",
+      "color": "0xffaa00",
+      "x": -2,
+      "y": 1,
+      "z": 0,
+      "properties": {
+        "width": 1,
+        "height": 1,
+        "depth": 1
+      },
+      "material": {
+        "type": "phong",
+        "properties": {
+          "emissive": "0xffaa00",
+          "emissiveIntensity": 5
+        }
+      }
+    },
+    "wireframeTorus": {
+      "type": "torus",
+      "color": "0x4444ff",
+      "x": 0,
+      "y": 4,
+      "z": 0,
+      "properties": {
+        "radius": 1,
+        "tube": 0.4,
+        "radialSegments": 8,
+        "tubularSegments": 6
+      },
+      "material": {
+        "type": "basic",
+        "properties": {
+          "wireframe": true
+        }
       }
     }
   }

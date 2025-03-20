@@ -1,11 +1,11 @@
 {
-  "name": "Scene 2",
+  "name": "Scee 2",
   "environment": {
     "lighting": {
-        "ambient": {
-            "color": "0xff4e4e",
-            "intensity": 5
-        },
+      "ambient": {
+        "color": "0xff4e4e",
+        "intensity": 5
+      },
       "shadowType": "Basic"
     },
     "tonemapping": {
@@ -38,54 +38,64 @@
     "box": {
       "type": "box",
       "color": "0x00ee00",
-      "width": 1,
-      "height": 1,
-      "depth": 1,
-      "widthSegments": 1,
-      "heightSegments": 1,
-      "depthSegments": 1,
       "x": 0,
       "y": 0,
-      "z": 0
+      "z": 0,
+      "properties": {
+        "width": 1,
+        "height": 1,
+        "depth": 1,
+        "widthSegments": 1,
+        "heightSegments": 1,
+        "depthSegments": 1
+      }
     },
     "bean": {
       "type": "capsule",
       "color": "0x00ffff",
-      "radius": 0.5,
-      "length": 0.7,
-      "capSegments": 10,
-      "radialSegments": 20,
       "x": 1.5,
       "y": 0,
-      "z": 0
+      "z": 0,
+      "properties": {
+        "radius": 0.5,
+        "length": 0.7,
+        "capSegments": 10,
+        "radialSegments": 20
+      }
     },
     "disc": {
       "type": "circle",
       "color": "0xff0000",
-      "radius": 0.5,
-      "segments": 8,
       "x": 3,
       "y": 0,
-      "z": 0
+      "z": 0,
+      "properties": {
+        "radius": 0.5,
+        "segments": 8
+      }
     },
     "vlc": {
       "type": "cone",
       "color": "0xff7b00",
-      "radius": 0.5,
-      "segments": 8,
-      "radialSegments": 7,
       "x": 4.5,
       "y": 0,
-      "z": 0
+      "z": 0,
+      "properties": {
+        "radius": 0.5,
+        "segments": 8,
+        "radialSegments": 7
+      }
     },
     "can": {
       "type": "cylinder",
       "color": "0xffff00",
-      "radiusTop": 0.5,
-      "radiusBottom": 0.5,
       "x": 6,
       "y": 0,
-      "z": 0
+      "z": 0,
+      "properties": {
+        "radiusTop": 0.5,
+        "radiusBottom": 0.5
+      }
     }
   }
 }

@@ -85,63 +85,19 @@ gzjs.loadscene = function(scenename, clearscene = false) {
 			
 			// Objects
 			Object.entries(data.objects).forEach(([key, obj]) => {
-				// Boxes
-			    if (obj.type === 'box') {
-			        gzjs.newObject(
-			        	key,
-			            'box',
-			            obj.color,
-			            [obj.width, obj.height, obj.depth],
-			            [obj.x, obj.y, obj.z]
-			        );
-			    }   
-
-			    // Capsules (bean.)
-			    if (obj.type === 'capsule') {
-			        gzjs.newObject(
-			        	key,
-			            'capsule',
-			            obj.color,
-			            [obj.radius, obj.length, obj.capSegments, obj.radialSegments],
-			            [obj.x, obj.y, obj.z]
-			        );
-			    }   
-
-			    // Circles
-			    if (obj.type === 'circle') {
-			        gzjs.newObject(
-			        	obj,
-			            'circle',
-			            obj.color,
-			            [obj.radius, obj.segments, obj.thetaStart, obj.thetaLength],
-			            [obj.x, obj.y, obj.z]
-			        );
-			    }   
-
-			    // Cone
-			    if (obj.type === 'cone') {
-			        gzjs.newObject(
-			        	key,
-			            'cone',
-			            obj.color,
-			            [obj.radius, obj.height, obj.radialSegments, obj.heightSegments, obj.openEnded, obj.thetaStart, obj.thetaLength],
-			            [obj.x, obj.y, obj.z]
-			        );
-			    }   
-
-			    // Cylinder
-			    if (obj.type === 'cylinder') {
-			        gzjs.newObject(
-			        	key,
-			            'cylinder',
-			            obj.color,
-			            [obj.radiusTop, obj.radiusBottom, obj.height, obj.radialSegments, obj.heightSegments, obj.openEnded, obj.thetaStart, obj.thetaLength],
-			            [obj.x, obj.y, obj.z]
-			        );
-			    }   
+                gzjs.newObject(
+                    key,
+                    obj.type,
+                    obj.color,
+                    [obj.x, obj.y, obj.z],
+                    obj.properties,
+                    obj.material?.type || 'standard',
+                    obj.material?.properties || {}
+                );
 			});
 
-
+			// Post Processing
+			// gzjs.postProcessing('glitch');
 
 
 			console.log(data); // The content of the JSON file
