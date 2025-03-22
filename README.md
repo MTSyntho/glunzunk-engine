@@ -1,9 +1,9 @@
 
 ![Glunzunk Engine Title Logo](assets/ui/gztitle.png)
 
-**Glunzunk Engine** is _**100% free**_ open-source, no-code Game Development Software, _specfically a Game Engine_.
+**Glunzunk Engine** is _**100% free**_ open-source, no-code Game Development Software based on [three.js](https://threejs.org), _specfically a Game Engine_.
 ## 📷 Screenshots 
-Not Ready _Yet..._
+Not Ready _as of yet..._
 ## 😄 Getting Started
 
 | ❔ I'd like to... | Description                |
@@ -16,16 +16,23 @@ Not Ready _Yet..._
 ## 📂 File Structure (Source Code) 
 | 📄 File | Description |
 | :-------- | :-------- |
-| 📂 assets | Contains all engine assets like Images, Audio, Fonts and such. |
+| 📂 assets | Contains all engine assets like Images, Audio, Fonts, etc. |
 | 📂 scripts | Where most required engine scripts reside. |
+| 📂 libs | Contains all JavaScript Libaries (including three.js) |
+| 📂 projects | GZ Engine Sample Projects |
+| 📂 embed-panels | Used by the windowing system in-engine, although will be deprecated eventually |
 | main.py | Imports required libaries/modules. Starts the `pywebview` module, triggering the engine to load |
 | editor.html | This is the Game Editor, where all the game building takes place! |
-| babylon.js | The 3D Game Engine Glunzunk Engine is based off of.|
 | index.html | Glunzunk Engine Home Menu |
 
 ## ❓ How GZ Engine Compiles Games?
-Your Glunzunk Project is exported as a python project, which then using `pyinstaller`, the game can be compiled for Windows, Mac & Linux, and using Kivy's `buildozer`, Android builds are compiled.
-Traditional methods of compilation done-through electron, nw.js or cordova is typically avoided due to the potential of games containing important python code required for it to function correctly.
+Your Glunzunk Project is by default, just a collection of JSON files and your game assets.
+
+When building your game, it is first going to be rewritten into JavaScript code that modern browsers should understand and execute.
+
+After building a web build of your game, using tools like Electron, NW.JS, Cordova, etc, you'll be able to export your game to any platform of your choice.
+
+(If your game utilizes python code, it will not be eligible for a web build, unless i figure webaseembly (which is unlikely))
 
 ## 💻 How to Compile GZ Engine?
 Install all modules in `requirements.txt`
@@ -72,8 +79,7 @@ _(Probably doesn't deserve it)_
 
 ## 📄 Documentation
 
-[-> Documentation can be found here! <-](https://glunzunk-engine.readthedocs.io)
-
+[-> Documentation can be found here! <-](https://glunzunk-engine.readthedocs.io) (Hasn't been written as of yet, very outdated)
 
 ## 🤔 FAQ
 
@@ -83,7 +89,7 @@ Absolutely Yes!! This is a non-profit project.
 
 #### Can I Contribute?
 
-Of course you can! Just make sure you add or fix features that are needed, not what only you want, should benefit others too.
+Of course you can! Just make sure you add or fix features that are needed, not only what you want, should benefit others too.
 
 #### Do I need to download the Pre-Made assets?
 
@@ -92,18 +98,17 @@ Nope!
 
 ## ✨ Features
 
-- Light/dark mode toggle
+- Themes
 - Live previews
-- Fullscreen mode
-- Cross platform
+- Cross-Platform
 - No-Code (Optional)
-- Custom JavaScript & Python Support 
-- Helpful Tutorials
+- Custom JavaScript
+- Python Support (Native Builds Only)
 - Pre-Made Assets
-- Potential Path-Tracing
-- Pre-Made and Custom Shaders
-- Both Orthographic and Perspective Camera Options
-- Supports Windows, MacOS, Linux, Android and Web!
+- Ray-Tracing & Path-Tracing (Not guaranteed)
+- Shader Editor (Not guaranteed)
+- Orthographic and Perspective Camera Options
+- Supports Windows, MacOS, Linux, Android and Web
 
 
 ## 💿 Installation
