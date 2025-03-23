@@ -5,23 +5,44 @@
 */
 
 import * as THREE from 'three';
+import { handleCamera } from './../editor/camera.js';
+import { renderer, scene, activeCamera } from './../editor/init.js';
+import { gzjs } from './../engine/glunzunk.js';
+import { composer } from './../engine/gzjs/gzjs.postprocessing.js';
 
-const renderer = new THREE.WebGLRenderer({ canvas: renderCanvas });
-renderer.setSize( window.innerWidth, window.innerHeight );
-renderer.setAnimationLoop( animate );
-document.body.appendChild( renderer.domElement );
 
-const default clock = new THREE.Clock();
-export default function animate() {
+// const renderer = new THREE.WebGLRenderer({ canvas: renderCanvas });
+// renderer.setSize( window.innerWidth, window.innerHeight );
+// renderer.setAnimationLoop( animate );
+// document.body.appendChild( renderer.domElement );
 
-	// cube.rotation.x += 0.01;
-	// cube.rotation.y += 0.01;
+const clock = new THREE.Clock();
 
-	const deltaTime = clock.getDelta();
-	// updateControls(deltaTime);	
-	renderer.render(scene, camera);
-	requestAnimationFrame(animate);
+// export default function animate() {
 
+// 	// cube.rotation.x += 0.01;
+// 	// cube.rotation.y += 0.01;
+
+// 	const deltaTime = clock.getDelta();
+// 	// updateControls(deltaTime);	
+// 	renderer.render(scene, camera);
+// 	requestAnimationFrame(animate);
+
+// }
+
+gzjs.postProcessing('add', 'n8ao')
+
+function animate() {
+    requestAnimationFrame(animate);
+
+    const delta = clock.getDelta(); // Get time since last frame
+
+    handleCamera();
+
+    composer.render(scene, activeCamera);
+
+    // renderer.render(scene, activeCamera);
 }
+animate();
 
  // animate();

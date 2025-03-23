@@ -53,6 +53,7 @@ gzjs.newObject = function(name, type, color, position, params = {}, materialType
     object.position.set(...position);
     object.castShadow = true;
     object.receiveShadow = true;
+    object.name = name;
 
 		gizmoObjects.push( object )
 

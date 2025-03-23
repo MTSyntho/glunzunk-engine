@@ -63,6 +63,7 @@ document.addEventListener('keyup', (event) => keys[event.code] = false);
 const clock = new THREE.Clock();
 
 function handleCamera() {
+	console.log('hi')
 	if (focusedWindows.length !== 0) return;
 
 	var moveVector = new THREE.Vector3();
@@ -82,8 +83,8 @@ function handleCamera() {
 	if (keys['KeyS']) moveVector.addScaledVector(direction, -moveSpeed * delta)
 	if (keys['KeyD']) moveVector.addScaledVector(right, -moveSpeed * delta)
 
-	if (keys['KeyE'] || keys['Space']) moveVector.y += moveSpeed;
-	if (keys['KeyQ'] || keys['ShiftLeft'] || keys['ShiftRight']) moveVector.y -= moveSpeed;
+	if (keys['KeyE'] || keys['Space']) moveVector.y += moveSpeed * delta;
+	if (keys['KeyQ'] || keys['ShiftLeft'] || keys['ShiftRight']) moveVector.y -= moveSpeed * delta;
 
 	camera.position.add(moveVector)
 

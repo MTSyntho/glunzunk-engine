@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three.js SSAO with Postprocessing</title>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.137.5/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/postprocessing"></script>
+  <script>
+    // Set up the scene
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    // Create a simple cube
+    const geometry = new THREE.BoxGeometry();
+    const material = new THREE.MeshStandardMaterial({ color: 0x0077ff });
+    const cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
+
+    // Add ambient and directional lights
+    const ambientLight = new THREE.AmbientLight(0x404040);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+    directionalLight.position.set(5, 5, 5).normalize();
+    scene.add(ambientLight, directionalLight);
+
+    // Set up the camera position
+    camera.position.z = 5;
+
+    // Create a composer for post-processing
+    const composer = new POSTPROCESSING.EffectComposer(renderer);
+
+    // Create a render pass
+    const renderPass = new POSTPROCESSING.RenderPass(scene, camera);
+    composer.addPass(renderPass);
+
+    // Create an SSAO effect
+    const ssaoEffect = new POSTPROCESSING.SSAOEffect(camera, scene.background, {
+      radius: 0.1,
+      intensity: 1.0,
+      luminanceInfluence: 0.9,
+      color: new THREE.Color(0x000000)
+    });
+    composer.addPass(ssaoEffect);
+
+    // Handle window resizing
+    window.addEventListener('resize', () => {
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      composer.setSize(window.innerWidth, window.innerHeight);
+    });
+
+    // Animation loop
+    function animate() {
+      requestAnimationFrame(animate);
+
+      // Rotate the cube
+      cube.rotation.x += 0.01;
+      cube.rotation.y += 0.01;
+
+      // Render the scene with SSAO effect
+      composer.render();
+    }
+
+    animate();
+  </script>
+</body>
+</html>

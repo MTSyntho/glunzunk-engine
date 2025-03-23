@@ -3,15 +3,20 @@
 	<head>
 		<title>Glunzunk Engine</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<link rel="stylesheet" href="editorNative.css">
 		<link rel="stylesheet" href="assets/css/satoshi.css">
 		<link rel="stylesheet" href="assets/fonts/web/inter.css">
 		<link rel="stylesheet" href="assets/fonts/roboto/style.css">
 		<link rel="stylesheet" href="libs/winbox.min.css">
-		<link rel="stylesheet" href="windowNative.css">
+		<link rel="stylesheet" href="editor.css">
+		<link rel="stylesheet" href="window.css">
 		<script src="scripts/editor/dropdown.js"></script>
 
-		<!-- <script src="scripts/engine/babylon.js"></script> -->
+		<!-- Code Editor -->
+		<script src="libs/codemirror/codemirror.js"></script>
+		<link rel="stylesheet" href="libs/codemirror/codemirror.css">
+		<link rel="stylesheet" href="libs/codemirror/glunzunk.css">
+		<script src="libs/codemirror/javascript.js"></script> <!-- Syntax Highlighting -->
+
 		<script src="libs/winbox.min.js"></script>
 		<script src="libs/jquery.min.js"></script>
 		<script src="libs/azuos.sdk.js"></script>
@@ -30,7 +35,8 @@
 		  {
 			"imports": {
 			  "three": "./libs/threejs/three.module.min.js",
-			  "three/addons/": "./libs/threejs/jsm-addons/"
+			  "three/addons/": "./libs/threejs/jsm-addons/",
+			  "three/external-shaders/": "./libs/threejs/external-shaders/"
 			}
 		  }
 		</script>
@@ -43,12 +49,13 @@
 		<!-- <script src="scripts/editor/gizmo.js" type=module></script> -->
 		<!-- <script src="scripts/default-project.js" type=module></script> -->
 		<script src="scripts/editor/preview.js" type=module></script>
-		<!-- <script src="scripts/editor/render.js" type=module></script> -->
+		<script src="scripts/editor/render.js" type=module></script>
 	</head>
 	<body>
 		<div class=titlebar>
 			<img width=50px src=assets/ui/gzlogo.png>
 			<p class=projectname id=projectname>Project Name</p>
+			<!-- <button onclick="gzjs.object('table').x = 50">testt</button> -->
 			<div class=titlebar-right>
 				<a class=titlebar-a onclick='toggleDropdown("scene")'>
 					<img width=24 src=assets/icons/scene.svg>
@@ -58,6 +65,9 @@
 				</a>
 				<a class=titlebar-a onclick='toggleGameplay()'>
 					<img width=24 src=assets/icons/play.svg>
+				</a>
+				<a class=titlebar-a onclick='codeEditor("toggle")'>
+					<img width=24 src=assets/icons/code.svg>
 				</a>
 				<a class=titlebar-a onclick='toggleDropdown("quick-settings")'>
 					<img width=24 src=assets/icons/menu.svg>
@@ -78,6 +88,9 @@
 			</div>
 		</div>
 		<canvas id=renderCanvas></canvas>
+		<div class=script-editor id=script-editor>
+			<textarea placeholder="Write some code :3" wrap="soft"></textarea>
+		</div>
 		<div class=gizmo-manager>
 			<button class='tiny-btn light-color' onclick="showGizmo('position')">
 				<img width=24 src=assets/icons/position.svg>
@@ -89,5 +102,17 @@
 				<img width=24 src=assets/icons/scale.svg>
 			</button>
 		</div>
+		<script src="scripts/editor/scriptEditor.js"></script> <!-- Script Editor -->
+		<!-- testing testing -->
+<!-- 		<script type="module">
+
+			import { gzjs } from './scripts/engine/glunzunk.js';
+
+			setTimeout(function() {
+				console.log(gzjs.object('table').position.x)
+				gzjs.object('table').position.x = 50
+			}, 2000)
+
+		</script> -->
 	</body>
 </html>

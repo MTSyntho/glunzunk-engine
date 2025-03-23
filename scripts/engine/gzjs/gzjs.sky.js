@@ -26,6 +26,22 @@ gzjs.sky = function( turbidity, rayleigh, mieCoe, mieDirG, elevation, azimuth, s
 	sunLight.position.copy(sunPosition).multiplyScalar(100); // Move light far away
 	sunLight.castShadow = sunCastShadow; // Enable shadows
 	scene.add( sunLight );
+
+	// sunLight.shadow.camera.left = -500;
+	// sunLight.shadow.camera.right = 500;
+	// sunLight.shadow.camera.top = 500;
+	// sunLight.shadow.camera.bottom = -500;
+	// sunLight.shadow.camera.near = 0.5;
+	// sunLight.shadow.camera.far = 200000; // Large enough to cover distant objects
+	// sunLight.shadow.camera.updateProjectionMatrix();
+
+	// sunLight.shadow.mapSize.width = 8192;
+	// sunLight.shadow.mapSize.height = 8192;
+
+
+	// Sunlight Frustrum
+	// const helper = new THREE.CameraHelper(sunLight.shadow.camera);
+	// scene.add(helper);
 	
 	console.log('[Scene Loader] Added Sky')
 

@@ -16,12 +16,13 @@ function loadJS(file) {
 }
 
 loadJS('gzjs.objects')
+loadJS('gzjs.object')
 loadJS('gzjs.lighting')
 loadJS('gzjs.tonemapping')
 loadJS('gzjs.fog')
 loadJS('gzjs.sky')
 loadJS('gzjs.shadow')
-// loadJS('gzjs.postprocessing')
+loadJS('gzjs.postprocessing')
 
 
 // Keep below all other modules
