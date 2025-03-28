@@ -35,6 +35,16 @@
       }
     }
   },
+  "effects": {
+    "n8ao": {
+      "configuration.aoRadius": 5,
+      "configuration.aoSamples": 17,
+      "configuration.distanceFalloff": 1.5,
+      "configuration.halfRes": true,
+      "configuration.accumulate": true,
+      "configuration.intensity": 7.42
+    }
+  },
   "objects": {
     "ground": {
       "type": "box",

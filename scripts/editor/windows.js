@@ -13,7 +13,7 @@ function ProjectManager(state) {
 	  title: 'Project Manager',
 	  max: false,
 	  top: '50px',
-	  min: state,
+	  // min: state,
 	  class: [ "no-full", "no-close" ],
 	  innerHTML: `
 	  <p>might replace with embed instead of innerhtml</p>`,
@@ -26,8 +26,8 @@ function ProjectManager(state) {
 	  },
 	  onclose: function(){
 		this.g.classList.add("windowClose");
-		document.getElementById(winbox.id).classList.remove("opentask");
-		document.getElementById(winbox.id).classList.add("closetask");
+		document.getElementById(winbox.id).classList.remove("windowOpen");
+		document.getElementById(winbox.id).classList.add("windowClose");
 
 		setTimeout(() => {
 		  this.onclose = null;
@@ -56,8 +56,8 @@ function InspectorPanel(state) {
 	  },
 	  onclose: function(){
 		this.g.classList.add("windowClose");
-		document.getElementById(winbox.id).classList.remove("opentask");
-		document.getElementById(winbox.id).classList.add("closetask");
+		document.getElementById(winbox.id).classList.remove("windowOpen");
+		document.getElementById(winbox.id).classList.add("windowClose");
 
 		setTimeout(() => {
 		  this.onclose = null;
@@ -88,8 +88,8 @@ function ObjectsPanel(state) {
 	  },
 	  onclose: function(){
 		this.g.classList.add("windowClose");
-		document.getElementById(winbox.id).classList.remove("opentask");
-		document.getElementById(winbox.id).classList.add("closetask");
+		document.getElementById(winbox.id).classList.remove("windowOpen");
+		document.getElementById(winbox.id).classList.add("windowClose");
 
 		setTimeout(() => {
 		  this.onclose = null;
@@ -103,8 +103,51 @@ function ObjectsPanel(state) {
 };
 
 // ProjectManager(true);
-InspectorPanel(true);
-ObjectsPanel(true);
+try {
+	InspectorPanel(true);
+	ObjectsPanel(true);	
+	MaterialPanel(true);
+} catch (error) {
+	console.error('Failed to initialize windows: ' +  error)
+}
+
+function MaterialPanel(state) {
+  var winbox = new WinBox({
+	  title: 'Material Editor',
+	  max: false,
+	  min: state,
+	  top: '50px',
+	  class: [ "no-full", "no-close" ],
+	  // onminimize: function(){
+		// 	document.getElementById(winbox.id).classList.remove("windowOpen");
+		// 	document.getElementById(winbox.id).classList.add("windowClose");	  	
+	  // },
+	  // oncreate: function(){
+
+	  // },
+	  onfocus: function(){
+			focusedWindows.push( this.id )
+	  },
+	  onblur: function(){
+	  	focusedWindows = focusedWindows.filter(id => id !== this.id);
+	  },
+	  overflow: true,
+	  onclose: function(){
+			this.g.classList.add("windowClose");
+			document.getElementById(winbox.id).classList.remove("windowOpen");
+			document.getElementById(winbox.id).classList.add("windowClose");
+
+			setTimeout(() => {
+			  this.onclose = null;
+			  this.close();
+			  document.getElementById(winbox.id).remove();
+			}, 200);
+
+			return true;
+	  }
+  });
+  document.getElementById(winbox.id).setAttribute('codename', 'gz-material')
+};
 
 function windowCreateObject() {
   var winbox = new WinBox({
@@ -116,8 +159,8 @@ function windowCreateObject() {
 	  overflow: true,
 	  onclose: function(){
 		this.g.classList.add("windowClose");
-		document.getElementById(winbox.id).classList.remove("opentask");
-		document.getElementById(winbox.id).classList.add("closetask");
+		document.getElementById(winbox.id).classList.remove("windowOpen");
+		document.getElementById(winbox.id).classList.add("windowClose");
 
 		setTimeout(() => {
 		  this.onclose = null;
@@ -135,7 +178,8 @@ function windowCreateObject() {
 	});
 };
 
-export { focusedWindows }
+export { focusedWindows, MaterialPanel }
+
 // Listen for messages from iframe (taken from zdkrimson)
 window.addEventListener('message', function(event) {
 	if (event.data == 'windowCreateObject') {
@@ -143,12 +187,21 @@ window.addEventListener('message', function(event) {
 	};
 
 	if (event.data == '__create3DObj') {
-			        gzjs.newObject(
-			       			'newobj' + Math.random(0,9999),
-			            'box',
-			            0xff0000,
-			            [2, 1, 1],
-			            [0, 0 , 0]
-			        );
-	};
+		gzjs.newObject(
+			'newobj' + Math.random(0,9999),
+		  'box',
+		  0xff0000,
+		  [2, 1, 1],
+		  [0, 0 ,0]
+		);
+	}
+
+	if (event.data == '__create3DCam') {
+		gzjs.newCamera(
+			'camera' + Math.random(0,9999),
+			'perspective',
+			[0, 0, 0],
+			[0, 0, 0]
+		)
+	}
 });

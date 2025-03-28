@@ -6,6 +6,7 @@ import { Sky } from 'three/addons/objects/Sky.js';
 gzjs.sky = function( turbidity, rayleigh, mieCoe, mieDirG, elevation, azimuth, scale, sunColor, sunIntensity, sunCastShadow ) {
 	// Create Sky
 	const skyBG = new Sky();
+	skyBG.name = 'gzjsSky'
 	skyBG.scale.setScalar( scale );
 	scene.add( skyBG );
 
@@ -23,6 +24,7 @@ gzjs.sky = function( turbidity, rayleigh, mieCoe, mieDirG, elevation, azimuth, s
 
 	// Sunlight
 	const sunLight = new THREE.DirectionalLight( Number(sunColor), sunIntensity); // Bright white light
+	sunLight.name = 'gzjsSunlight'
 	sunLight.position.copy(sunPosition).multiplyScalar(100); // Move light far away
 	sunLight.castShadow = sunCastShadow; // Enable shadows
 	scene.add( sunLight );

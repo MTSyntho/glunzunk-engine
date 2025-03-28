@@ -37,8 +37,16 @@ window.addEventListener('pointerdown', (event) => {
     raycaster.setFromCamera(mouse, camera);
     const intersects = raycaster.intersectObjects(gizmoObjects, true);
 
+    console.log(gizmoObjects)
+    console.log(intersects)
+
     if (intersects.length > 0) {
         selectedObject = intersects[0].object;
+
+        if (selectedObject.userData.isCameraHitbox) {
+            selectedObject = scene.getObjectByName(selectedObject.userData.cameraName); // Get the real camera
+        }
+
         transformControls.attach(selectedObject);
         scene.add(transformControls.getHelper());
 
@@ -75,7 +83,16 @@ window.addEventListener('pointerup', (event) => {
         document.dispatchEvent(objClickOn);  
     }
 });
-export { objectSelected }
+
+function unselectObject() {
+    // transformControls.detach();
+    // scene.remove(transformControls.getHelper());
+
+    var objClickOff = new CustomEvent("objectUnselected");
+    document.dispatchEvent(objClickOff); 
+};
+
+export { objectSelected, transformControls, unselectObject }
 
 // Animation Loop
 function animate() {

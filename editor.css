@@ -236,3 +236,40 @@ p, h1, h2, h3, h4, h5, h6 {
     .outline('none')
     .padding('20px')
 );*/
+
+.winbox select {
+  background: none;
+  color: white;
+  font-family: 'Inter';
+  border: 1px solid #ffffff50;
+  border-radius: 20px;
+  outline: none;
+  transition-duration: 0.2s;
+/*  width: 90px;*/
+  height: 30px;
+  padding: 5px;
+  box-shadow: 0px 3px 7px #00000050;
+}
+.winbox button {
+  background: none;
+  color: white;
+  font-family: 'Inter';
+  border: 1px solid #ffffff50;
+  border-radius: 20px;
+  outline: none;
+  transition-duration: 0.2s;
+/*  width: 90px;*/
+  height: 30px;
+  padding: 5px;
+  box-shadow: 0px 3px 7px #00000050;
+}
+
+.winbox button:hover {
+	scale: 1.02;
+	background: #ffffff10;
+}
+
+.winbox button:active {
+	scale: 0.98;
+	background: #00000020;
+}

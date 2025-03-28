@@ -63,7 +63,6 @@ document.addEventListener('keyup', (event) => keys[event.code] = false);
 const clock = new THREE.Clock();
 
 function handleCamera() {
-	console.log('hi')
 	if (focusedWindows.length !== 0) return;
 
 	var moveVector = new THREE.Vector3();

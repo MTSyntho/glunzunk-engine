@@ -3,6 +3,7 @@ const inspector = document.querySelector('[codename="gz-inspector"] .wb-body');
 
 import { objectSelected } from './gizmo.js'
 import { sceneObjects } from './init.js';
+import { MaterialPanel } from './windows.js'
 
 if (inspector) {
 	element.create('div', '', 'inspector-div').then(elm => elm
@@ -12,7 +13,7 @@ if (inspector) {
 		.vertical()
 	)
 
-	element.create('p', 'No Object is currently being selected.<br>Please select an object.', 'noobj').then(elm => elm
+	element.create('p', 'No Object is currently being selected.<br>Please select an object.', 'inspector-noobj').then(elm => elm
 		.parent('inspector-div')
 	)
 }
@@ -39,6 +40,10 @@ document.addEventListener('objectSelected', (event) => {
 	var objectrotx = event.obj.rotation.x
 	var objectroty = event.obj.rotation.y
 	var objectrotz = event.obj.rotation.z
+
+	var objectscalex = event.obj.scale.x
+	var objectscaley = event.obj.scale.y
+	var objectscalez = event.obj.scale.z
 	
 	var linecss = (`
 		background-color: #ffffff20;
@@ -87,7 +92,7 @@ document.addEventListener('objectSelected', (event) => {
 						selectedObject.position.z = event.target.value
 				 	});	   
 					break;
-				 case 'rotx':
+				case 'rotx':
 				 	elm.element.addEventListener('input', (event) => {
 						selectedObject.rotation.x = event.target.value
 				 	});	 
@@ -100,6 +105,21 @@ document.addEventListener('objectSelected', (event) => {
 				case 'rotz':
 					elm.element.addEventListener('input', (event) => {
 						selectedObject.rotation.z = event.target.value
+				 	});	   
+				 	break;
+				case 'scalex':
+				 	elm.element.addEventListener('input', (event) => {
+						selectedObject.scale.x = event.target.value
+				 	});	 
+				 	break;
+				case 'scaley':
+					elm.element.addEventListener('input', (event) => {
+						selectedObject.scale.y = event.target.value
+				 	});	     
+				 	break;
+				case 'scalez':
+					elm.element.addEventListener('input', (event) => {
+						selectedObject.scale.z = event.target.value
 				 	});	   
 				 	break;
 
@@ -143,18 +163,64 @@ document.addEventListener('objectSelected', (event) => {
 	createInput('Rotation Y', 'roty', objectroty)
 	createInput('Rotation Z', 'rotz', objectrotz)
 
-	element.create('p', 'Material', 'inspector-selectedobj-material').then(elm => elm
+	element.create('div', '', '').then(elm => elm
 		.parent('inspector-div')
-		.margin(0)
-		.margintop('4px')
+		.css(linecss)
 	)
+
+	createInput('Scale X', 'scalex', objectscalex)
+	createInput('Scale Y', 'scaley', objectscaley)
+	createInput('Scale Z', 'scalez', objectscalez)
+
+	// element.create('p', 'Material', 'inspector-selectedobj-material').then(elm => elm
+	// 	.parent('inspector-div')
+	// 	.margin(0)
+	// 	.margintop('4px')
+	// )
 
 	element.create('div', '', '').then(elm => elm
 		.parent('inspector-div')
 		.css(linecss)
 	)
+
+	element.create('select', '', 'inspector-object-shape-dropdown').then(elm => {elm
+		.parent('inspector-div')
+
+		elm.element.addEventListener('change', function() {
+			switch (elm.element.value) {
+				case 'Box':
+					selectedObject.material = gzjs.createMaterial('basic', { color: 0xb3495e })
+					break;
+				case 'Capsule':
+					selectedObject.material = gzjs.createMaterial('lambert', { color: 0xb3495e })
+					break;			
+				case 'Sphere':
+					selectedObject.material = gzjs.createMaterial('phong', { color: 0xb3495e })
+					break;	
+				case 'Cylinder':
+					selectedObject.material = gzjs.createMaterial('physical', { color: 0xb3495e })
+					break;			
+				case 'Plane':
+					selectedObject.material = gzjs.createMaterial('standard', { color: 0xb3495e })
+					break;		
+			}
+		})
+	})
+	// element.create('button', 'Material' , 'material-btn').then(elm => {elm
+	// 	.parent('inspector-div')
+	// 	.id('inspector-material-btn')
+	// 	// .attribute('onclick', MaterialPanel)
+
+	// 	elm.element.addEventListener('click', MaterialPanel)
+	// });
+
+	// element.get('material-btn')?.onclick = MaterialPanel
+	// document.getElementById('inspector-material-btn').addEventListener('onclick')
+
+	// document.getElementById('inspector-material-btn').addEventListener('click', MaterialPanel)
 });
 
+	
 
 document.addEventListener('objectUnselected', () => {
 	element.get('inspector-div')?.remove()

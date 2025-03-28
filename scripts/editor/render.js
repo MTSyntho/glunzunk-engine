@@ -6,7 +6,7 @@
 
 import * as THREE from 'three';
 import { handleCamera } from './../editor/camera.js';
-import { renderer, scene, activeCamera } from './../editor/init.js';
+import { inEngine, renderer, scene, activeCamera } from './../editor/init.js';
 import { gzjs } from './../engine/glunzunk.js';
 import { composer } from './../engine/gzjs/gzjs.postprocessing.js';
 
@@ -30,14 +30,16 @@ const clock = new THREE.Clock();
 
 // }
 
-gzjs.postProcessing('add', 'n8ao')
+// gzjs.postProcessing('add', 'godrays')
 
 function animate() {
     requestAnimationFrame(animate);
 
     const delta = clock.getDelta(); // Get time since last frame
 
-    handleCamera();
+    if (inEngine === true) {
+        handleCamera();   
+    }
 
     composer.render(scene, activeCamera);
 

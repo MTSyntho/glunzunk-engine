@@ -15,7 +15,7 @@ gzjs.tonemapping = function(type, exposure) {
 		renderer.toneMapping = THREE.CineonToneMapping;
 	} else if (type == 'acesfilmic' || type == 'aces') {
 		renderer.toneMapping = THREE.ACESFilmicToneMapping;
-	} else if (type == 'agx') {
+	} else if (type == 'AgX') {
 		renderer.toneMapping = THREE.AgXToneMapping;
 	} else if (type == 'neutral') {
 		renderer.toneMapping = THREE.NeutralToneMapping;

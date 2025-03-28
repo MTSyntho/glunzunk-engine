@@ -1,10 +1,10 @@
 import * as THREE from 'three';
 import { gzjs } from './../glunzunk.js';
 // import { objects } from './../../default-project.js';
-import { scene, gizmoObjects, sceneObjects } from './../../editor/init.js';
+import { scene, gizmoObjects, sceneObjects, inEngine } from './../../editor/init.js';
 
 var object = null
-function createMaterial(type, options) {
+gzjs.createMaterial = function(type, options) {
     switch (type) {
         case 'basic': return new THREE.MeshBasicMaterial(options);
         case 'depth': return new THREE.MeshDepthMaterial(options);
@@ -39,6 +39,11 @@ gzjs.newObject = function(name, type, color, position, params = {}, materialType
     };
 
     if (type === 'camera') {
+        if (inEngine === true) {
+            const helper = new THREE.CameraHelper( camera );
+            scene.add( helper );            
+        }
+
         return new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
     }
 
@@ -47,8 +52,9 @@ gzjs.newObject = function(name, type, color, position, params = {}, materialType
         return null;
     }
 
+
     const materialOptions = { color: Number(color), ...materialProps };
-    object = new THREE.Mesh(geometryMap[type](), createMaterial(materialType, materialOptions));
+    object = new THREE.Mesh(geometryMap[type](), gzjs.createMaterial(materialType, materialOptions));
 
     object.position.set(...position);
     object.castShadow = true;
@@ -62,6 +68,56 @@ gzjs.newObject = function(name, type, color, position, params = {}, materialType
     scene.add(object);
     return object;
 };
+
+
+gzjs.newCamera = function(name, type, position, rotation, params = {}) {
+    var camera = null;
+    if (type === 'perspective' || type === 'PerspectiveCamera') {
+        camera = new THREE.PerspectiveCamera(params.fov || 60, params.aspect || window.innerWidth / window.innerHeight, params.near || 0.1, params.far || 2000)   
+    }  
+    // } else if (type === 'orthographic' || type === 'OrthographicCamera') {
+    //     camera = new THREE.PerspectiveCamera(params.fov || 60, params.aspect || window.innerWidth / window.innerHeight, params.near || 0.1, params.far || 2000, params.zoom || 1)
+    //     camera.name = name;           
+    // }
+
+    camera.name = name;   
+    camera.position.set(...position)
+    // camera.rotation.set( rotation.x, rotation.y, rotation.z )
+
+    const cameraHitbox = new THREE.Mesh(
+        new THREE.BoxGeometry(1, 1, 1),  // Adjust size if needed
+        new THREE.MeshBasicMaterial({ color: 0xff0000, visible: false }) // Invisible box
+    );
+
+    cameraHitbox.position.copy(camera.position);
+    cameraHitbox.userData.isCameraHitbox = true; // Mark as camera hitbox
+    // camera.userData.isCamera = true; // Mark as actual camera
+    cameraHitbox.userData.cameraName = name
+    
+    gizmoObjects.push( cameraHitbox )
+    sceneObjects[camera.uuid] = name
+
+    scene.add( camera );
+    scene.add( cameraHitbox );
+
+    camera.matrixAutoUpdate = true; 
+    camera.updateProjectionMatrix();
+
+    camera.userData.isSelectable = true;
+
+    if (inEngine === true) {
+        const helper = new THREE.CameraHelper( camera );
+        scene.add( helper );            
+    }    
+
+    return camera;
+}
+
+// if (object.material.opacity < 1) {
+//     object.material.transparent = true
+// } else {
+//     object.material.transparent = false
+// }
 
 export { object };
  

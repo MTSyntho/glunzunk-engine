@@ -5,6 +5,7 @@ import { scene } from './../../editor/init.js';
 var newObject = null;
 
 gzjs.fog = function(type, color, para1, para2) {
+	console.log( type + color + para1 + para2 )
 	if (type === 'expo' || type === 'exponential') {
 		scene.fog = new THREE.FogExp2( Number(color), para1 /* Density */);
 	} else if (type == 'linear') {

@@ -44,8 +44,11 @@
 		<script src="scripts/editor/init.js" type=module></script>
 		<script src="scripts/editor/windows.js" type=module></script>
 		<script src="scripts/editor/inspector.js" type=module></script>
+		<script src="scripts/editor/materialeditor.js" type=module></script>
+		<script src="scripts/editor/deleteObject.js" type=module></script>
 		<script src="scripts/editor/camera.js" type=module></script>
 		<script src="scripts/editor/loadproject.js" type=module></script>
+		<script src="scripts/editor/saveproject.js" type=module></script>
 		<!-- <script src="scripts/editor/gizmo.js" type=module></script> -->
 		<!-- <script src="scripts/default-project.js" type=module></script> -->
 		<script src="scripts/editor/preview.js" type=module></script>
@@ -63,7 +66,7 @@
 				<a class=titlebar-a onclick='toggleDropdown("quick-settings")'>
 					<img width=24 src=assets/icons/build.svg>
 				</a>
-				<a class=titlebar-a onclick='toggleGameplay()'>
+				<a class=titlebar-a onclick='beginPreview()'>
 					<img width=24 src=assets/icons/play.svg>
 				</a>
 				<a class=titlebar-a onclick='codeEditor("toggle")'>
@@ -78,7 +81,7 @@
 			<div class=titlebar-dropdown id=scene-select>
 			</div>
 			<div class=titlebar-dropdown id=quick-settings>
-				<button>Save Project</button>
+				<button onclick="saveProject()">Save Project</button>
 				<button>Project Properties</button>
 				<button>Close Project</button>
 				<button>Exit Engine</button>

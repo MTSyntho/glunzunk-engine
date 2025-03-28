@@ -3,17 +3,11 @@
 	<head>
 		<title>Glunzunk Engine</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<link rel="stylesheet" href="editor.css">
 		<link rel="stylesheet" href="assets/css/satoshi.css">
 		<link rel="stylesheet" href="assets/fonts/web/inter.css">
 		<link rel="stylesheet" href="assets/fonts/roboto/style.css">
-		<link rel="stylesheet" href="libs/winbox.min.css">
-		<link rel="stylesheet" href="window.css">
+		<link rel="stylesheet" href="editor.css">
 
-		<!-- <script src="scripts/engine/babylon.js"></script> -->
-		<script src="libs/winbox.min.js"></script>
-		<script src="libs/jquery.min.js"></script>
-		<script src="libs/azuos.sdk.js"></script>
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 		<style>
 			#renderCanvas {
@@ -29,13 +23,15 @@
 		  {
 			"imports": {
 			  "three": "./libs/threejs/three.module.min.js",
-			  "three/addons/": "./libs/threejs/jsm-addons/"
+			  "three/addons/": "./libs/threejs/jsm-addons/",
+			  "three/external-shaders/": "./libs/threejs/external-shaders/"
 			}
 		  }
 		</script>
 		<script src="scripts/engine/glunzunk.js" type=module></script>
 		<script src="scripts/editor/init.js" type=module></script>
-		<script src="scripts/editor/preview.js" type=module></script>
+		<script src="scripts/editor/loadproject.js" type=module></script>
+		<script src="scripts/editor/render.js" type=module></script>
 	</head>
 	<body>
 		<canvas id=renderCanvas></canvas>

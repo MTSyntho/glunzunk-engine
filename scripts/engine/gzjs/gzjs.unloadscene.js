@@ -40,5 +40,7 @@ gzjs.unloadscene = function() {
 	renderer.outputColorSpace = THREE.SRGBColorSpace;
 
 	renderer.renderLists.dispose();	
+
+	gzjs.postProcessing('clear')
 };
 
