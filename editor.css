@@ -50,8 +50,8 @@ body {
 }
 
 
-p, h1, h2, h3, h4, h5, h6 {
-	font-family: 'Inter Regular';
+p, h1, h2, h3, h4, h5, h6, div {
+	font-family: 'Inter';
 	color: white;
 	margin: 0;
 }
@@ -126,7 +126,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .dropdown .titlebar-dropdown button {
 	width: 100%;
 	padding: 10px;
-	font-family: 'Inter Regular';
+	font-family: 'Inter';
 	color: white;
 	background: #ffffff00;
 	text-align: left;
@@ -272,4 +272,74 @@ p, h1, h2, h3, h4, h5, h6 {
 .winbox button:active {
 	scale: 0.98;
 	background: #00000020;
+}
+
+.script-editor-home {
+	background-color: transparent;
+	position: fixed;
+/*	top: 50px;*/
+/*	z-index: 100;*/
+	padding: 20px;
+	width: 100%;
+	height: 100%;
+	font-family: 'Inter';
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  flex-direction: column;
+  gap: 7px;
+}
+
+.scripting-area {
+	background-color: transparent;
+	position: fixed;
+	top: 50px;
+	padding: 20px;
+	width: calc(100% - 40px);
+	height: calc(100% - 50px);
+	font-family: 'Inter';
+  display: flex;
+  gap: 7px;
+  align-items: center; /* Centers horizontally */
+  flex-direction: column;
+}
+
+.scripting-area .event {
+	background-color: #ffffff10;
+	width: 100%;
+	height: 50px;
+  border: 1px solid #ffffff20;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.script-editor-title {
+/*	text-align: center;*/
+	scale: 1.2;
+/*	margin-bottom: 7px;*/
+}
+
+.script-editor button {
+	background: #272030;
+  color: white;
+  font-family: 'Inter';
+  border: 1px solid #ffffff50;
+  border-radius: 20px;
+  outline: none;
+  transition-duration: 0.2s;
+  width: 170px;
+  height: 30px;
+  padding: 5px;
+  box-shadow: 0px 3px 7px #00000050;
+}
+
+.script-editor button:hover {
+	scale: 1.02;
+	background: #342b40;
+}
+
+.script-editor button:active {
+	scale: 0.98;
+	background: #1f1926;
 }

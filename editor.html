@@ -92,6 +92,25 @@
 		</div>
 		<canvas id=renderCanvas></canvas>
 		<div class=script-editor id=script-editor>
+<!-- 			<div class=script-editor-home>
+				<h2 class=script-editor-title>Script Editor</h2>
+				<p>Give your game life through scripting.</p>
+				<div class=script-editor-buttons>
+					<button>Create Script</button>
+					<button>Import Script</button>
+				</div>
+				<div class=script-editor-recents></div>
+			</div> -->
+				<div class=scripting-area>
+					<div class=event>
+						<div class=event-condition>
+							<p>Add a Condition</p>
+						</div>
+						<div class=event-action>
+							<p>Add an Acton</p>
+						</div>
+					</div>
+				</div>
 			<textarea placeholder="Write some code :3" wrap="soft"></textarea>
 		</div>
 		<div class=gizmo-manager>
@@ -106,16 +125,5 @@
 			</button>
 		</div>
 		<script src="scripts/editor/scriptEditor.js"></script> <!-- Script Editor -->
-		<!-- testing testing -->
-<!-- 		<script type="module">
-
-			import { gzjs } from './scripts/engine/glunzunk.js';
-
-			setTimeout(function() {
-				console.log(gzjs.object('table').position.x)
-				gzjs.object('table').position.x = 50
-			}, 2000)
-
-		</script> -->
 	</body>
 </html>
