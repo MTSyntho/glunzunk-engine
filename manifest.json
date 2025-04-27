@@ -5,7 +5,7 @@
   "description": "A WebGL-based 3D Game Engine.",
   "orientation": "landscape",
   "start_url": "./index.html",
-  "display": "standalone",
+  "display": "fullscreen",
   "background_color": "black",
   "categories": ["games", "development"],
   "icons": [
