@@ -1,0 +1,18 @@
+{
+  "name": "Glunzunk Engine",
+  "short_name": "GZ Engine",
+  "id": "com.mtsyntho.glunzunk",
+  "description": "A WebGL-based 3D Game Engine.",
+  "orientation": "landscape",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "development"],
+  "icons": [
+    {
+      "src": "assets/ui/gzlogo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
