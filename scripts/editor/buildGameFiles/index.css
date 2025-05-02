@@ -1,0 +1,60 @@
+body {
+	/*background-color: #2C2C2C;*/
+	background: rgb(41,17,22);
+	background-attachment: fixed;
+	background: -moz-linear-gradient(21deg, rgba(41,17,22,1) 0%, rgba(64,38,77,1) 100%);
+	background: -webkit-linear-gradient(21deg, rgba(41,17,22,1) 0%, rgba(64,38,77,1) 100%);
+	background: linear-gradient(21deg, rgba(41,17,22,1) 0%, rgba(64,38,77,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#291116",endColorstr="#40264d",GradientType=1);
+}
+
+html, body, .main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('scripts/Inter-Regular.woff2');
+}
+
+@font-face {
+  font-family: 'RobotoThinItalic';
+  src: url('scripts/Roboto-ThinItalic.woff');
+}
+
+
+.watermark {
+ 	font-family: 'Inter';
+	color: white;
+	padding: 0;
+	margin: 0;
+	position: fixed;
+	bottom: 50px;
+	font-size: 20px;
+	opacity: 0.5;
+	text-align: center;
+	left: 50%;
+  text-shadow: 0px 0px 20px #000000cc;
+	transform: translateX(-50%); /* Center horizontally */
+}
+
+
+.loading {
+	font-family: 'RobotoThinItalic';
+	color: white;
+	font-size: 70px;
+	position: absolute;
+	top: calc(50% - 70px);
+	left: 50%;
+	transform: translate(-50%, -50%);
+  text-shadow: 0px 0px 30px #ffffffcc;
+}
+
+.main {
+	padding: 20px;
+	background-color: #000000cc;
+}

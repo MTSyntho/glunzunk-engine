@@ -4,7 +4,9 @@
   	"2": "scene2",
     "3": "materialtest",
   	"4": "house",
-  	"5": "gptcity",
-  	"6": "gpt2"
+    "5": "dark",
+    "6": "rgb",
+    "7": "grass1",
+    "8": "home"
   }
 }

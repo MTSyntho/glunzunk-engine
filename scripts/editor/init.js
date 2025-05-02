@@ -50,6 +50,8 @@ let activeCamera = camera; // Default to editor camera
 const gizmoObjects = []; // Store selectable objects
 const sceneObjects = {}
 
+const sceneLights = [];
+
 // import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 // import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 // import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
@@ -96,4 +98,4 @@ const sceneObjects = {}
 // }
 // animate();
 
-export { renderer, scene, camera, activeCamera, gizmoObjects, sceneObjects, inEngine };
+export { renderer, scene, camera, activeCamera, gizmoObjects, sceneObjects, sceneLights, inEngine };

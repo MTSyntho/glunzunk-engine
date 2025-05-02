@@ -8,8 +8,10 @@ import * as THREE from 'three';
 import { camera , renderer, scene, inEngine } from './init.js';
 import { Sky } from 'three/addons/objects/Sky.js';
 import { gzjs } from './../engine/glunzunk.js';
+import { refreshResources } from './../editor/resourcespanel.js';
 
 var projectScenes = null;
+var projectImages = null;
 
 // Fetch the JSON file
 	document.addEventListener('DOMContentLoaded', function () {
@@ -40,6 +42,37 @@ var projectScenes = null;
 				console.error('Error loading JSON:', error);
 			});	
 
+		fetch('./projects/sample/assets.json')
+			.then(response => response.json())
+			.then(data => {
+				projectImages = data.images
+				Object.entries(projectImages).forEach(([key, imageData]) => {
+					var fileString = `./projects/sample/assets/images/${imageData.file}`
+					try {		
+						gzjs.createTexture(
+							key,
+							// imageData.file, 
+							fileString,
+							imageData.wrapS, 
+							imageData.wrapT, 
+							imageData.repeat
+						)	
+						// console.log(
+						// 	key,
+						// 	fileString,
+						// 	imageData.wrapS, 
+						// 	imageData.wrapT, 
+						// 	imageData.repeat
+						// )
+					} catch (error) {
+						console.error(`Failed to import texture ${key}: ` +  error)
+					}
+				});
+				refreshResources()
+			})
+			.catch(error => {
+				console.error('Error loading JSON:', error);
+			});	
 	});
 
 export { projectScenes }

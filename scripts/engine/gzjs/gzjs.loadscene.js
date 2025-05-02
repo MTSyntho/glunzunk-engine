@@ -3,11 +3,18 @@ import { gzjs } from './../glunzunk.js';
 import { scene, inEngine } from './../../editor/init.js';
 
 var projectname = null;
+let scenename;
+
+scene.userData = {
+	currentScene: '',
+	isSceneReady: false
+}
 
 gzjs.loadscene = function(scenename) {
 	// Load Project metadata
 
 	window.gzjs_sceneName = scenename;
+	// scenename = null;
 
 	if (inEngine === true) {
 		fetch('./projects/sample/project.json')
@@ -31,6 +38,9 @@ gzjs.loadscene = function(scenename) {
 		}
 
 	gzjs.unloadscene(); // Clear any memory
+
+	scene.userData.isSceneReady = false
+	
 	// Actually load project contents
 	fetch(`./projects/sample/scenes/${scenename}/data.json`)
 		.then(response => response.json())
@@ -43,7 +53,7 @@ gzjs.loadscene = function(scenename) {
 			}
 
 
-			// Lighting
+			// Environment Lighting
 			const lighting = data.environment.lighting
 			console.log(data)
 			if (lighting.hemisphere) {
@@ -98,7 +108,21 @@ gzjs.loadscene = function(scenename) {
 			gzjs.shadow(true, data.environment.lighting.shadowType);
 			
 			// Objects
+			let texturePaths = { textures: {} }
 			Object.entries(data.objects).forEach(([key, obj]) => {
+				// let texturePaths;
+
+				Object.entries(obj.material?.textures || {}).forEach(([name, data]) => {
+					// console.log(name, data)
+					// console.log(gzjs.texture(data))
+					// texturePaths = {
+					// 	textures: {
+					// 		[name]: gzjs.texture(data)
+					// 	}
+					// }
+					texturePaths.textures[name] = gzjs.texture(data)
+				});
+				// console.log(texturePaths)
                 gzjs.newObject(
                     key,
                     obj.type,
@@ -106,9 +130,23 @@ gzjs.loadscene = function(scenename) {
                     [obj.x, obj.y, obj.z],
                     obj.properties,
                     obj.material?.type || 'standard',
-                    obj.material?.properties || {}
+                    obj.material?.properties || {},
+                    texturePaths
                 );
 			});
+
+			// Light Objects
+			if (data.lights) {
+				Object.entries(data.lights).forEach(([key, obj]) => {
+					gzjs.createLight(
+						obj.type,
+						key,
+						obj.color,
+						[obj.x, obj.y, obj.z],
+						obj.properties || {}
+					)
+				});
+			}
 
 			// Post Processing
 			// gzjs.postProcessing('glitch');
@@ -120,11 +158,11 @@ gzjs.loadscene = function(scenename) {
 			// Post-Processing
 			Object.entries(data.effects).forEach(([key, obj]) => {
 				gzjs.postProcessing('add', key, obj);
+				console.log(key, obj)
 			});
 
-			scene.userData = {
-				currentScene: scenename
-			}
+			scene.userData.currentScene = scenename
+			scene.userData.isSceneReady = true
 
 		})
 		.catch(error => {
@@ -132,10 +170,13 @@ gzjs.loadscene = function(scenename) {
 		});	
 };
 
-gzjs.isSceneLoaded = function(scenename) {
-	if (scene.userData.currentScene === scenename) {
-		return true;
-	} else {
-		return false;
-	}
-}
+
+export { scenename }
+
+// gzjs.isSceneLoaded = function(scenename) {
+// 	if (scene.userData.currentScene === scenename) {
+// 		return true;
+// 	} else {
+// 		return false;
+// 	}
+// }

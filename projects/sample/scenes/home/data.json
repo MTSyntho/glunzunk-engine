@@ -1,0 +1,325 @@
+{
+  "name": "House",
+  "environment": {
+    "lighting": {
+      "hemisphere": {
+        "color1": "0xffffff",
+        "color2": "0x4e4e4e",
+        "intensity": 5
+      },
+      "shadowType": "VSM"
+    },
+    "tonemapping": {
+      "type": "aces",
+      "exposure": 0.4
+    },
+    "fog": {
+      "expo": {
+        "color": "0xcccccc",
+        "density": 0.0015
+      }
+    },
+    "sky": {
+      "enable": true,
+      "turbidity": 11.4,
+      "rayleigh": 3,
+      "mieCoefficient": 0.004,
+      "mieDirectionalG": 0.619,
+      "elevation": 20,
+      "azimuth": 160,
+      "scale": 450000,
+      "sunlight": {
+        "color": "0xffffff",
+        "intensity": 10,
+        "castShadow": true
+      }
+    }
+  },
+  "effects": {
+    "bloom": {
+      "threshold": 0.2,
+      "radius": 0.5,
+      "strength": 0.2
+    },
+    "smaa": {}
+  },
+  "objects": {
+    "ground": {
+      "type": "box",
+      "color": "0xffffff",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "properties": {
+        "width": 10,
+        "height": 0.1,
+        "depth": 10,
+        "widthSegments": 20,
+        "heightSegments": 20,
+        "depthSegments": 20
+      },
+      "material": {
+        "type": "physical",
+        "properties": {
+          "displacementScale": 0.05
+        },
+        "textures": {
+          "map": "checkerfloor-color",
+          "aoMap": "checkerfloor-ao",
+          "normalMap": "checkerfloor-normal",
+          "roughnessMap": "checkerfloor-roughness",
+          "displacementMap": "checkerfloor-displacement"
+        }
+      }
+    },
+    "blackTileWall1Left": {
+      "type": "box",
+      "color": "0xffffff",
+      "x": -2,
+      "y": 1.5,
+      "z": 0,
+      "properties": {
+        "width": 0.1,
+        "height": 3,
+        "depth": 3,
+        "widthSegments": 10,
+        "heightSegments": 10,
+        "depthSegments": 10
+      },
+      "material": {
+        "type": "physical",
+        "properties": {
+          "displacementScale": 0.05
+        },
+        "textures": {
+          "map": "blacktile-color",
+          "aoMap": "blacktile-ao",
+          "normalMap": "blacktile-normal",
+          "roughnessMap": "blacktile-roughness",
+          "displacementMap": ""
+        }
+      }
+    },
+    "blackTileWall2Left": {
+      "type": "box",
+      "color": "0xffffff",
+      "x": -2,
+      "y": 1.5,
+      "z": 3,
+      "properties": {
+        "width": 0.1,
+        "height": 3,
+        "depth": 3,
+        "widthSegments": 10,
+        "heightSegments": 10,
+        "depthSegments": 10
+      },
+      "material": {
+        "type": "physical",
+        "properties": {
+          "displacementScale": 0.05
+        },
+        "textures": {
+          "map": "blacktile-color",
+          "aoMap": "blacktile-ao",
+          "normalMap": "blacktile-normal",
+          "roughnessMap": "blacktile-roughness",
+          "displacementMap": ""
+        }
+      }
+    },
+    "blackTileWall3Back": {
+      "type": "box",
+      "color": "0xffffff",
+      "x": -0.5,
+      "y": 1.5,
+      "z": 4.5,
+      "properties": {
+        "width": 3,
+        "height": 3,
+        "depth": 0.1,
+        "widthSegments": 10,
+        "heightSegments": 10,
+        "depthSegments": 10
+      },
+      "material": {
+        "type": "physical",
+        "properties": {
+          "displacementScale": 0.05
+        },
+        "textures": {
+          "map": "blacktile-color",
+          "aoMap": "blacktile-ao",
+          "normalMap": "blacktile-normal",
+          "roughnessMap": "blacktile-roughness",
+          "displacementMap": ""
+        }
+      }
+    },
+    "blackTileWall1Right": {
+      "type": "box",
+      "color": "0xffffff",
+      "x": 1,
+      "y": 1.5,
+      "z": 0,
+      "properties": {
+        "width": 0.1,
+        "height": 3,
+        "depth": 3,
+        "widthSegments": 10,
+        "heightSegments": 10,
+        "depthSegments": 10
+      },
+      "material": {
+        "type": "physical",
+        "properties": {
+          "displacementScale": 0.05
+        },
+        "textures": {
+          "map": "blacktile-color",
+          "aoMap": "blacktile-ao",
+          "normalMap": "blacktile-normal",
+          "roughnessMap": "blacktile-roughness",
+          "displacementMap": ""
+        }
+      }
+    },
+    "blackTileWall2Right": {
+      "type": "box",
+      "color": "0xffffff",
+      "x": 1,
+      "y": 1.5,
+      "z": 3,
+      "properties": {
+        "width": 0.1,
+        "height": 3,
+        "depth": 3,
+        "widthSegments": 10,
+        "heightSegments": 10,
+        "depthSegments": 10
+      },
+      "material": {
+        "type": "physical",
+        "properties": {
+          "displacementScale": 0.05
+        },
+        "textures": {
+          "map": "blacktile-color",
+          "aoMap": "blacktile-ao",
+          "normalMap": "blacktile-normal",
+          "roughnessMap": "blacktile-roughness",
+          "displacementMap": ""
+        }
+      }
+    },
+    "table": {
+      "type": "box",
+      "color": "0xffffff",
+      "x": 0.45,
+      "y": 0.45,
+      "z": 2.5,
+      "properties": {
+        "width": 1,
+        "height": 1,
+        "depth": 4
+      },
+      "material": {
+        "type": "physical",
+        "textures": {
+          "map": "tableWood-color",
+          "aoMap": "tableWood-ao",
+          "normalMap": "tableWood-normal",
+          "roughnessMap": "tableWood-roughness",
+          "displacementMap": ""
+        }
+      }
+    },
+    "tabletop": {
+      "type": "box",
+      "color": "0xffffff",
+      "x": 0.45,
+      "y": 1,
+      "z": 2.4,
+      "properties": {
+        "width": 1.2,
+        "height": 0.1,
+        "depth": 4.1
+      },
+      "material": {
+        "type": "physical",
+        "textures": {
+          "map": "tabletop-color",
+          "aoMap": "tabletop-ao",
+          "normalMap": "tabletop-normal",
+          "roughnessMap": "tabletop-roughness",
+          "displacementMap": ""
+        }
+      }
+    },
+    "goldBall": {
+      "type": "sphere",
+      "color": "0xffffff",
+      "x": 0.5,
+      "y": 1.2,
+      "z": 1,
+      "properties": {
+        "radius": 0.2,
+        "widthSegments": 8,
+        "heightSegments": 8
+      },
+      "material": {
+        "type": "physical",
+        "properties": {
+          "metalness": 0.9
+        },
+        "textures": {
+          "map": "gold-color",
+          "aoMap": "gold-ao",
+          "normalMap": "gold-normal",
+          "roughnessMap": "gold-roughness",
+          "displacementMap": ""
+        }
+      }
+    }
+  },
+  "lights": {
+    "doorway": {
+      "type": "rectarea",
+      "color": "0xffffff",
+      "x": -0.5,
+      "y": 1.5,
+      "z": -1.5,
+      "properties": {
+        "intensity": 1,
+        "distance": 50,
+        "width": 3,
+        "height": -3
+      }
+    },
+    "doorwayinvert": {
+      "type": "rectarea",
+      "color": "0xffffff",
+      "x": -0.5,
+      "y": 1.5,
+      "z": -1.5,
+      "properties": {
+        "intensity": 1,
+        "distance": 50,
+        "width": 3,
+        "height": 3
+      }
+    },
+    "wallbounce": {
+      "type": "rectarea",
+      "color": "0xaaaaaa",
+      "x": -0.5,
+      "y": 1.5,
+      "z": 4.5,
+      "properties": {
+        "intensity": 0.2,
+        "width": 3,
+        "height": 3
+      }
+    }
+  }
+}

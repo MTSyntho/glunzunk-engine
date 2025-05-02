@@ -29,7 +29,7 @@ document.addEventListener('objectSelected', (event) => {
 		.vertical()
 	)
 
-	 var selectedObject = event.obj
+	var selectedObject = event.obj
 	var objectuuid = event.uuid
 	var objectname = sceneObjects[objectuuid]
 
@@ -44,6 +44,21 @@ document.addEventListener('objectSelected', (event) => {
 	var objectscalex = event.obj.scale.x
 	var objectscaley = event.obj.scale.y
 	var objectscalez = event.obj.scale.z
+
+	let objectwidth;
+	let objectheight;
+	let objectdepth;
+
+	if (event.obj.geometry.type === 'BoxGeometry') {
+		objectscalex = event.obj.geometry.parameters.width
+		objectscaley = event.obj.geometry.parameters.height
+		objectscalez = event.obj.geometry.parameters.depth		
+	} else if (event.obj.geometry.type === 'ConeGeometry' || event.obj.geometry.type === 'CylinderGeometry') {
+		objectscaley = event.obj.geometry.parameters.height
+	} else if (event.obj.geometry.type === 'PlaneGeometry') {
+		objectscalex = event.obj.geometry.parameters.width
+		objectscaley = event.obj.geometry.parameters.height		
+	}
 	
 	var linecss = (`
 		background-color: #ffffff20;

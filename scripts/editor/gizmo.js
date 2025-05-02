@@ -12,7 +12,7 @@ const mouse = new THREE.Vector2();
 let selectedObject = null;
 
 var objectSelected = false;
-
+const originalSizes = new Map(); // Map <uuid, Vector3>
 
 window.addEventListener('keydown', (event) => {
     if (event.key === 'z' || event.key === '1') {
@@ -26,6 +26,19 @@ window.addEventListener('keydown', (event) => {
     };
 });
 
+function showGizmo(state) {
+    if (state == 'position') {
+        transformControls.setMode('translate'); // Move
+    };
+    if (state == 'rotation') {
+        transformControls.setMode('rotate');    // Rotate
+    };
+    if (state == 'scale') {
+        transformControls.setMode('scale');     // Scale
+    };
+};
+
+window.showGizmo = showGizmo
 // Click Event Listener
 window.addEventListener('pointerdown', (event) => {
     if (event.target !== renderer.domElement) return; // Ignore clicks not on renderer
@@ -42,6 +55,18 @@ window.addEventListener('pointerdown', (event) => {
 
     if (intersects.length > 0) {
         selectedObject = intersects[0].object;
+        if (selectedObject.geometry instanceof THREE.BoxGeometry) {
+            const size = new THREE.Vector3();
+            selectedObject.geometry.boundingBox?.getSize(size);
+            
+            if (!selectedObject.geometry.boundingBox) {
+                selectedObject.geometry.computeBoundingBox();
+                selectedObject.geometry.boundingBox.getSize(size);
+            }
+
+            originalSizes.set(selectedObject.uuid, size.clone());
+        }
+
 
         if (selectedObject.userData.isCameraHitbox) {
             selectedObject = scene.getObjectByName(selectedObject.userData.cameraName); // Get the real camera
@@ -81,6 +106,27 @@ window.addEventListener('pointerup', (event) => {
         objClickOn.obj = selectedObject
 
         document.dispatchEvent(objClickOn);  
+    }
+});
+
+transformControls.addEventListener('mouseUp', () => {
+    if (!selectedObject) return;
+
+    if (
+        selectedObject.geometry instanceof THREE.BoxGeometry &&
+        originalSizes.has(selectedObject.uuid)
+    ) {
+        const baseSize = originalSizes.get(selectedObject.uuid);
+        const newScale = selectedObject.scale;
+
+        const newSize = new THREE.Vector3().copy(baseSize).multiply(newScale);
+
+        selectedObject.geometry.dispose();
+        selectedObject.geometry = new THREE.BoxGeometry(newSize.x, newSize.y, newSize.z);
+
+        selectedObject.scale.set(1, 1, 1);
+
+        originalSizes.set(selectedObject.uuid, newSize.clone());
     }
 });
 

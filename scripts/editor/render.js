@@ -9,42 +9,62 @@ import { handleCamera } from './../editor/camera.js';
 import { inEngine, renderer, scene, activeCamera } from './../editor/init.js';
 import { gzjs } from './../engine/glunzunk.js';
 import { composer } from './../engine/gzjs/gzjs.postprocessing.js';
+import { updateCanvasStats } from './canvasstats.js'
+
+let frames = 0;
+let fps = 0;
+let previousTime = performance.now()
+
+const maxRatio = 1; // Cap to avoid performance issues
+const screenWidth = window.screen.width;
+const screenHeight = window.screen.height;
 
 
-// const renderer = new THREE.WebGLRenderer({ canvas: renderCanvas });
-// renderer.setSize( window.innerWidth, window.innerHeight );
-// renderer.setAnimationLoop( animate );
-// document.body.appendChild( renderer.domElement );
+
+const screenPixels = screenWidth * screenHeight;
+
+    // Ratio of canvas to screen size (scaled to match pixel density)
+
+
 
 const clock = new THREE.Clock();
-
-// export default function animate() {
-
-// 	// cube.rotation.x += 0.01;
-// 	// cube.rotation.y += 0.01;
-
-// 	const deltaTime = clock.getDelta();
-// 	// updateControls(deltaTime);	
-// 	renderer.render(scene, camera);
-// 	requestAnimationFrame(animate);
-
-// }
-
-// gzjs.postProcessing('add', 'godrays')
 
 function animate() {
     requestAnimationFrame(animate);
 
     const delta = clock.getDelta(); // Get time since last frame
 
+    gzjs.whenFrameRendered() // to trigger game loop
+
     if (inEngine === true) {
         handleCamera();   
     }
 
+    const canvasWidth = renderer.domElement.clientWidth;
+    const canvasHeight = renderer.domElement.clientHeight;
+
+    const canvasPixels = canvasWidth * canvasHeight;
+
+    const canvasScreenRatio = Math.sqrt(canvasPixels / screenPixels);
+    const baseRatio = window.devicePixelRatio * 1.5;
+
+    renderer.setPixelRatio(Math.min(baseRatio * canvasScreenRatio, maxRatio))
+
+    frames ++;
+    const time = performance.now();
+
+    if (time >= previousTime + 1000) {
+        fps = Math.round( ( frames * 1000 ) / ( time - previousTime ) )
+        frames = 0;
+        previousTime = time;
+    }
+    updateCanvasStats()
+    
     composer.render(scene, activeCamera);
 
     // renderer.render(scene, activeCamera);
 }
 animate();
 
- // animate();
+export { fps } 
+ // animate();}

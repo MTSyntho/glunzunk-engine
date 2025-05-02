@@ -15,14 +15,31 @@ function loadJS(file) {
     console.log(`[GZJS Module Import] Imported '${file}.js'`)
 }
 
+const engineFiles = [
+    'gzjs.objects',
+    'gzjs.object',
+    'gzjs.texture',
+    'gzjs.lighting',
+    'gzjs.tonemapping',
+    'gzjs.fog',
+    'gzjs.sky',
+    'gzjs.shadow',
+    'gzjs.postprocessing',
+    'gzjs.unloadscene',
+    'gzjs.whenFrameRendered'
+    // load scene is excluded as it works with project folders, not already compiled games
+]
+
 loadJS('gzjs.objects')
 loadJS('gzjs.object')
+loadJS('gzjs.texture')
 loadJS('gzjs.lighting')
 loadJS('gzjs.tonemapping')
 loadJS('gzjs.fog')
 loadJS('gzjs.sky')
 loadJS('gzjs.shadow')
 loadJS('gzjs.postprocessing')
+loadJS('gzjs.whenFrameRendered')
 
 
 // Keep below all other modules
@@ -35,6 +52,8 @@ loadJS('gzjs.loadscene')
 // Define gzjs
 var gzjs = {}
 export { gzjs }
+
+export { engineFiles }
 
 // Splash Screen 
 

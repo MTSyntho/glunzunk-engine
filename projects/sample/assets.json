@@ -1,0 +1,291 @@
+{
+  "images": {
+    "Diffuse": {
+      "file": "diffuse.png",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 2, 2 ],
+      "pixelPerfect": false
+    },
+    "AO": {
+      "file": "ambientOcclusion.png",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 2, 2 ],
+      "pixelPerfect": false
+    },
+    "NormalMap": {
+      "file": "normal.png",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 2, 2 ],
+      "pixelPerfect": false
+    },
+    "Bump": {
+      "file": "bump.png",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 2, 2 ],
+      "pixelPerfect": false
+    },
+    "Specular": {
+      "file": "specular.png",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 2, 2 ],
+      "pixelPerfect": false
+    },
+    "TileDiffuse": {
+      "file": "TilesCeramicSquareLarge001_COL_1K.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 100, 100 ],
+      "pixelPerfect": false
+    },
+    "TileAO": {
+      "file": "TilesCeramicSquareLarge001_AO_1K.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 100, 100 ],
+      "pixelPerfect": false
+    },
+    "TileDisplace": {
+      "file": "TilesCeramicSquareLarge001_DISP_1K.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 100, 100 ],
+      "pixelPerfect": false
+    },
+    "TileNormal": {
+      "file": "TilesCeramicSquareLarge001_NRM_1K.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 100, 100 ],
+      "pixelPerfect": false
+    },
+    "TileReflection": {
+      "file": "TilesCeramicSquareLarge001_REFL_1K.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 100, 100 ],
+      "pixelPerfect": false
+    },
+    "grass1-color": {
+      "file": "grass1/Ground068_1K-JPG_Color.jpg",
+      "wrapS": "mirrorRepeat",
+      "wrapT": "mirrorRepeat",
+      "repeat": [ 5, 5 ],
+      "pixelPerfect": false
+    },
+    "grass1-displacement": {
+      "file": "grass1/Ground068_1K-JPG_Displacement.jpg",
+      "wrapS": "mirrorRepeat",
+      "wrapT": "mirrorRepeat",
+      "repeat": [ 5, 5 ],
+      "pixelPerfect": false
+    },
+    "grass1-normal": {
+      "file": "grass1/Ground068_1K-JPG_NormalGL.jpg",
+      "wrapS": "mirrorRepeat",
+      "wrapT": "mirrorRepeat",
+      "repeat": [ 5, 5 ],
+      "pixelPerfect": false
+    },
+    "grass1-roughness": {
+      "file": "grass1/Ground068_1K-JPG_Roughness.jpg",
+      "wrapS": "mirrorRepeat",
+      "wrapT": "mirrorRepeat",
+      "repeat": [ 5, 5 ],
+      "pixelPerfect": false
+    },
+    "grass1-ao": {
+      "file": "grass1/Ground068_1K-JPG_AmbientOcclusion.jpg",
+      "wrapS": "mirrorRepeat",
+      "wrapT": "mirrorRepeat",
+      "repeat": [ 5, 5 ],
+      "pixelPerfect": false
+    },
+    "rock-color": {
+      "file": "rock/Rocks007_1K-JPG_Color.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 2, 1 ],
+      "pixelPerfect": false
+    },
+    "rock-displacement": {
+      "file": "rock/Rocks007_1K-JPG_Displacement.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 2, 1 ],
+      "pixelPerfect": false
+    },
+    "rock-normal": {
+      "file": "rock/Rocks007_1K-JPG_NormalGL.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 2, 1 ],
+      "pixelPerfect": false
+    },
+    "rock-roughness": {
+      "file": "rock/Rocks007_1K-JPG_Roughness.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 2, 1 ],
+      "pixelPerfect": false
+    },
+    "rock-ao": {
+      "file": "rock/Rocks007_1K-JPG_AmbientOcclusion.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 2, 1 ],
+      "pixelPerfect": false
+    },
+    "checkerfloor-color": {
+      "file": "house/checkerboardTiles/Tiles074_2K-JPG_Color.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 4, 4 ],
+      "pixelPerfect": false
+    },
+    "checkerfloor-displacement": {
+      "file": "house/checkerboardTiles/Tiles074_2K-JPG_Displacement.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 4, 4 ],
+      "pixelPerfect": false
+    },
+    "checkerfloor-normal": {
+      "file": "house/checkerboardTiles/Tiles074_2K-JPG_NormalGL.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 4, 4 ],
+      "pixelPerfect": false
+    },
+    "checkerfloor-roughness": {
+      "file": "house/checkerboardTiles/Tiles074_2K-JPG_Roughness.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 4, 4 ],
+      "pixelPerfect": false
+    },
+    "blacktile-color": {
+      "file": "house/blackTiles/Tiles108_1K-JPG_Color.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 4, 4 ],
+      "pixelPerfect": false
+    },
+    "blacktile-displacement": {
+      "file": "house/blackTiles/Tiles108_1K-JPG_Displacement.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 4, 4 ],
+      "pixelPerfect": false
+    },
+    "blacktile-normal": {
+      "file": "house/blackTiles/Tiles108_1K-JPG_NormalGL.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 4, 4 ],
+      "pixelPerfect": false
+    },
+    "blacktile-roughness": {
+      "file": "house/blackTiles/Tiles108_1K-JPG_Roughness.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 4, 4 ],
+      "pixelPerfect": false
+    },
+    "blacktile-ao": {
+      "file": "house/blackTiles/Tiles108_1K-JPG_AmbientOcclusion.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 4, 4 ],
+      "pixelPerfect": false
+    },
+    "tableWood-color": {
+      "file": "house/wood/Wood052_1K-JPG_Color.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 1, 4 ],
+      "pixelPerfect": false
+    },
+    "tableWood-displacement": {
+      "file": "house/wood/Wood052_1K-JPG_Displacement.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 1, 4 ],
+      "pixelPerfect": false
+    },
+    "tableWood-normal": {
+      "file": "house/wood/Wood052_1K-JPG_NormalGL.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 1, 4 ],
+      "pixelPerfect": false
+    },
+    "tableWood-roughness": {
+      "file": "house/wood/Wood052_1K-JPG_Roughness.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 1, 4 ],
+      "pixelPerfect": false
+    },
+    "tabletop-color": {
+      "file": "house/marble/Marble006_1K-JPG_Color.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 1, 4 ],
+      "pixelPerfect": false
+    },
+    "tabletop-displacement": {
+      "file": "house/marble/Marble006_1K-JPG_Displacement.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 1, 4 ],
+      "pixelPerfect": false
+    },
+    "tabletop-normal": {
+      "file": "house/marble/Marble006_1K-JPG_NormalGL.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 1, 4 ],
+      "pixelPerfect": false
+    },
+    "tabletop-roughness": {
+      "file": "house/marble/Marble006_1K-JPG_Roughness.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 1, 4 ],
+      "pixelPerfect": false
+    },
+    "gold-color": {
+      "file": "house/gold/Metal048A_1K-JPG_Color.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 2, 1 ],
+      "pixelPerfect": false
+    },
+    "gold-displacement": {
+      "file": "house/gold/Metal048A_1K-JPG_Displacement.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 2, 1 ],
+      "pixelPerfect": false
+    },
+    "gold-normal": {
+      "file": "house/gold/Metal048A_1K-JPG_NormalGL.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 2, 1 ],
+      "pixelPerfect": false
+    },
+    "gold-roughness": {
+      "file": "house/gold/Metal048A_1K-JPG_Roughness.jpg",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 2, 1 ],
+      "pixelPerfect": false
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { gzjs } from './../engine/glunzunk.js';
-import { renderer, scene, sceneObjects } from './../editor/init.js';
+import { renderer, scene, sceneObjects, sceneLights } from './../editor/init.js';
 import { projectScenes } from './loadproject.js'
 
 function saveProject() {
@@ -24,7 +24,9 @@ function saveProject() {
 					}
 				}
 			},
-			objects: {}
+			effects: {},
+			objects: {},
+			lights: {}
 		}
 
 		// Lighting
@@ -89,21 +91,21 @@ function saveProject() {
 			delete sceneJSON.environment.fog
 		}
 
-		// Sky
+		// Sky 
 		sceneJSON.environment.sky = {
 			enable: true,
-			turbidity: gzjs.object('gzjsSky').material.uniforms['turbidity'].value,
-			rayleigh: gzjs.object('gzjsSky').material.uniforms['rayleigh'].value,
-			mieCoefficient: gzjs.object('gzjsSky').material.uniforms['mieCoefficient'].value,
-			mieDirectionalG: gzjs.object('gzjsSky').material.uniforms['mieDirectionalG'].value,
-			// elevation: gzjs.object('gzjsSky').material.uniforms['sunPosition'].value
+			turbidity: gzjs.object('gzjsSky')?.material.uniforms['turbidity'].value ?? 0,
+			rayleigh: gzjs.object('gzjsSky')?.material.uniforms['rayleigh'].value ?? 0,
+			mieCoefficient: gzjs.object('gzjsSky')?.material.uniforms['mieCoefficient'].value ?? 0,
+			mieDirectionalG: gzjs.object('gzjsSky')?.material.uniforms['mieDirectionalG'].value ?? 0,
+			// elevation: gzjs.object('gzjsSky')?.material.uniforms['sunPosition'].value ?? 0,
 			elevation: 0,
 			azimuth: 180,
-			scale: gzjs.object('gzjsSky').scale.y, // either x, y, and z will work
+			scale: gzjs.object('gzjsSky')?.scale.y ?? 0, // either x, y, and z will work
 			sunlight: {
-				color: "0x" + gzjs.object('gzjsSunlight').color.getHexString(),
-				intensity: gzjs.object('gzjsSunlight').intensity,
-				castShadow: gzjs.object('gzjsSunlight').castShadow
+				color: "0x" + (gzjs.object('gzjsSunlight')?.color.getHexString() ?? 'ffffff'),
+				intensity: gzjs.object('gzjsSunlight')?.intensity ?? 0,
+				castShadow: gzjs.object('gzjsSunlight')?.castShadow ?? false
 			}
 		}
 
@@ -118,6 +120,8 @@ function saveProject() {
 			sceneJSON.environment.lighting.shadowType = 'VSM'
 		};
 
+		// Post-processing
+		// if ()
 		// Objects
 		Object.keys(sceneObjects).forEach(uuid => {
 			const obj = scene.getObjectByProperty('uuid', uuid)
@@ -139,13 +143,32 @@ function saveProject() {
 				if (obj.material.type === 'MeshBasicMaterial') {
 					sceneJSON.objects[obj.name].material.type = 'basic'
 				} else if (obj.material.type === 'MeshLambertMaterial') {
-					sceneJSON.objects[obj.nane].material.type = 'lambert'
+					sceneJSON.objects[obj.name].material.type = 'lambert'
 				} else if (obj.material.type === 'MeshPhongMaterial') {
 					sceneJSON.objects[obj.name].material.type = 'phong'
 				} else if (obj.material.type === 'MeshPhysicalMaterial') {
 					sceneJSON.objects[obj.name].material.type = 'physical'
 				} else if (obj.material.type === 'MeshStandardMaterial') {
 					sceneJSON.objects[obj.name].material.type = 'standard'
+				}
+
+				console.log(obj.material)
+				// if (sceneJSON.objects[obj.name].material.properties) {
+				// 	sceneJSON.objects[obj.name].material.properties = obj.material.properties
+				// }
+
+				if (sceneJSON.objects[obj.name].material) {
+					var textures = {
+						map: obj.material.map?.name ?? "",
+						aoMap: obj.material.aoMap?.name ?? "",
+						normalMap: obj.material.normalMap?.name ?? "",
+						roughnessMap: obj.material.roughnessMap?.name ?? "",
+						displacementMap: obj.material.displacementMap?.name ?? ""					
+					}
+
+					if (textures) {
+						sceneJSON.objects[obj.name].material.textures = textures;
+					}
 				}
 
 				// console.log(obj.material)
@@ -187,13 +210,42 @@ function saveProject() {
 
 				// Properties
 				sceneJSON.objects[obj.name].properties = obj.geometry.parameters
+
 			}
 		})
+
+		// Light Objects
+		console.log(sceneLights)
+		Object.values(sceneLights).forEach(light => {
+
+	        sceneJSON.lights[light.name] = {
+	            type: '',
+	            color: '',
+	            position: {},
+	            properties: {}
+	        };
+   
+			console.log(light)
+			if (light.type === 'PointLight') {
+				sceneJSON.lights[light.name].type = 'point'
+			} else if (light.type === 'RectAreaLight') {
+				sceneJSON.lights[light.name].type = 'rectarea'
+				sceneJSON.lights[light.name].properties.width = light.width
+				sceneJSON.lights[light.name].properties.height = light.height
+			}
+
+			sceneJSON.lights[light.name].color = "0x" + light.color.getHexString()
+			sceneJSON.lights[light.name].position = light.position
+			sceneJSON.lights[light.name].properties.intensity = light.intensity
+			sceneJSON.lights[light.name].properties.distance = light.distance
+			sceneJSON.lights[light.name].properties.castShadow = light.castShadow ?? (light.type === 'RectAreaLight' ? false : true); // chatgpt had to write this condition thingy ;-;
+		});
 
 		console.log(sceneJSON)
 
 		var jsonResult = JSON.stringify(sceneJSON, null, 2);
 		console.log(jsonResult);
+
 
 // 	Object.entries(projectScenes).forEach(([key, name]) => {
 // 		gzjs.loadscene(name)
@@ -372,6 +424,7 @@ function saveProject() {
 
 // // console.log(projectScenes)
 
+		return sceneJSON
 }
 
 window.saveProject = saveProject;

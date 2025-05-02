@@ -3,6 +3,7 @@
 	<head>
 		<title>Glunzunk Engine</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel="stylesheet" href="loading.css">
 		<link rel="stylesheet" href="assets/css/satoshi.css">
 		<link rel="stylesheet" href="assets/fonts/web/inter.css">
 		<link rel="stylesheet" href="assets/fonts/roboto/style.css">
@@ -17,6 +18,10 @@
 		<link rel="stylesheet" href="libs/codemirror/glunzunk.css">
 		<script src="libs/codemirror/javascript.js"></script> <!-- Syntax Highlighting -->
 
+		<!-- ZIP Library -->
+		<!-- <script src="libs/fflate.0.8.2.js"></script> -->
+		<script src="libs/jszip.min.js"></script>
+
 		<script src="libs/winbox.min.js"></script>
 		<script src="libs/jquery.min.js"></script>
 		<script src="libs/azuos.sdk.js"></script>
@@ -29,6 +34,18 @@
 				width: 100%;
 				height: 100%;
 				touch-action: none;
+			}
+			#canvasStats {
+				position: fixed;
+				top: 90px;
+				margin: 10px;
+				display: flex;
+				flex-direction: row;
+				gap: 5px;
+				font-family: 'Roboto Monospace';
+				font-size: 12px;
+  				text-shadow: 0px 2px 7px #000000cc;
+  				pointer-events: none;
 			}
 		</style>
 		<script type="importmap">
@@ -49,12 +66,50 @@
 		<script src="scripts/editor/camera.js" type=module></script>
 		<script src="scripts/editor/loadproject.js" type=module></script>
 		<script src="scripts/editor/saveproject.js" type=module></script>
+		<script src="scripts/editor/resourcespanel.js" type=module></script>
+		<script src="scripts/editor/exportpanel.js" type=module></script>
+		<script src="scripts/editor/buildgame.js" type=module></script>
+
 		<!-- <script src="scripts/editor/gizmo.js" type=module></script> -->
 		<!-- <script src="scripts/default-project.js" type=module></script> -->
 		<script src="scripts/editor/preview.js" type=module></script>
 		<script src="scripts/editor/render.js" type=module></script>
+		<script src="scripts/editor/canvasstats.js" type=module></script>
 	</head>
 	<body>
+		<div class=loading-screen id=loading-screen>
+			<svg class="spinner" id=loading viewBox="0 0 16 16" width="29" height="29" xmlns="http://www.w3.org/2000/svg">
+		      <style>
+		        path {
+		          animation: spinner 3s ease-in-out infinite;
+		          stroke-dasharray: 1, 200;
+		          stroke-dashoffset: 0;
+		          fill: none;
+		          stroke-width: 2;
+		          stroke-miterlimit: 10;
+		          stroke-linecap: round;
+		          transform-origin: 50% 50%;
+		          stroke: #e7e9ec;
+		        }
+
+		        @keyframes spinner {
+		          0% {
+		            stroke-dasharray: 0, 200;
+		            stroke-dashoffset: 0;
+		            transform: rotate(0deg);
+		          }
+
+		          100% {
+		            stroke-dasharray: 130, 200;
+		            stroke-dashoffset: -43.9;
+		            transform: rotate(-360deg);
+		          }
+		        }
+		      </style>
+		      <path d="M8 1A1 1 0 008 15 1 1 0 008 1"></path>
+		    </svg>
+		    <p id=loading-message>Message</p>
+		</div>
 		<div class=titlebar>
 			<img width=50px src=assets/ui/gzlogo.png>
 			<p class=projectname id=projectname>Project Name</p>
@@ -63,7 +118,7 @@
 				<a class=titlebar-a onclick='toggleDropdown("scene")'>
 					<img width=24 src=assets/icons/scene.svg>
 				</a>
-				<a class=titlebar-a onclick='toggleDropdown("quick-settings")'>
+				<a class=titlebar-a onclick='exportPanel("toggle")'>
 					<img width=24 src=assets/icons/build.svg>
 				</a>
 				<a class=titlebar-a onclick='beginPreview()'>
@@ -82,12 +137,75 @@
 			</div>
 			<div class=titlebar-dropdown id=quick-settings>
 				<button onclick="saveProject()">Save Project</button>
+				<button onclick="resourcesPanel('toggle')">Resources</button>
 				<button>Project Properties</button>
 				<button>Close Project</button>
 				<button>Exit Engine</button>
 			</div>
 			<div class=titlebar-dropdown id=environment-settings>
 				<p>Unimplemented</p>
+			</div>
+		</div>
+		<div class=resources-panel id=resources-panel>
+			<div class=panel>
+				<h1>Global Resources</h1>
+				<hr>
+				<div class=resources-list id=resources-list>
+<!-- 					<div class=resource-item>
+						<img height=120 src='assets/textures/checkerboard.png'>
+						<p>Name</p>
+						<p class=resource-item-type>Type</p>
+					</div> -->
+				</div>
+				<div class=resources-btns>
+					<style>
+						#importResource {
+							display: none;
+						}
+					</style>
+					<button onclick='importResource()'>Add Resource</button>
+					<button>Edit Resource</button>
+					<button>Delete Resource</button>
+					<input id=importResource type=file accept='image/*'>
+				</div>
+			</div>
+		</div>
+		<div class=export-panel id=export-panel>
+			<div class=panel>
+				<h1 id=export-platform-title>Export your Game</h1>
+				<hr>
+				<div class=export-list id=export-list>
+					<a class='export-option web-export'>
+						<img height=70 src='assets/textures/checkerboard.png'>
+						<p class=platform-name>Web Build</p>
+					</a>
+					<a class='export-option windows-export'>
+						<img height=70 src='assets/textures/checkerboard.png'>
+						<p class=platform-name>Windows</p>
+					</a>
+					<a class='export-option linux-export'>
+						<img height=70 src='assets/textures/checkerboard.png'>
+						<p class=platform-name>Linux</p>
+					</a>
+					<a class='export-option android-export'>
+						<img height=70 src='assets/textures/checkerboard.png'>
+						<p class=platform-name>Android</p>
+					</a>
+				</div>
+				<div class=export-parameters id=web-export-panel>
+					<h2>Export a Web Build</h2>
+					<p>Select your parameters for the build</p>
+					<label>
+					  <input type="checkbox">
+					  Enable PWA Installation
+					</label>
+					<label>
+					  <input type="checkbox">
+					  Cache Game Offline once loaded
+					</label>
+					<button id=export-game-btn>Export Game</button>
+					<button onclick='exportPanel(false)'>Close Menu</button>
+				</div>
 			</div>
 		</div>
 		<canvas id=renderCanvas></canvas>
@@ -101,7 +219,7 @@
 				</div>
 				<div class=script-editor-recents></div>
 			</div> -->
-				<div class=scripting-area>
+<!-- 				<div class=scripting-area>
 					<div class=event>
 						<div class=event-condition>
 							<p>Add a Condition</p>
@@ -110,7 +228,7 @@
 							<p>Add an Acton</p>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			<textarea placeholder="Write some code :3" wrap="soft"></textarea>
 		</div>
 		<div class=gizmo-manager>
@@ -124,6 +242,7 @@
 				<img width=24 src=assets/icons/scale.svg>
 			</button>
 		</div>
-		<script src="scripts/editor/scriptEditor.js"></script> <!-- Script Editor -->
+		<p id=canvasStats>Canvas Stats ( Loading )</p>
+		<script src="scripts/editor/scriptEditor.js" type=module></script> <!-- Script Editor -->
 	</body>
 </html>

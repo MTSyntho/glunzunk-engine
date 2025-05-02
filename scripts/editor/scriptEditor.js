@@ -1,15 +1,17 @@
-// document.addEventListener('DOMContentLoaded', function () {
-// 	var codemirror = CodeMirror.fromTextArea(document.querySelector('#script-editor textarea'), {
-//       lineNumbers: true,       // Show line numbers
-//       mode: "javascript",      // Syntax highlighting for JavaScript
-//       theme: "glunzunk",        // Set the theme for the editor
-//       matchBrackets: true,     // Highlight matching brackets
-//       extraKeys: {
-//         "Ctrl-Space": "autocomplete" // Enable autocomplete on Ctrl+Space
-//       }
+let codemirror;
 
-//     });
-// });
+document.addEventListener('DOMContentLoaded', function () {
+	codemirror = CodeMirror.fromTextArea(document.querySelector('#script-editor textarea'), {
+      lineNumbers: true,       // Show line numbers
+      mode: "javascript",      // Syntax highlighting for JavaScript
+      theme: "glunzunk",        // Set the theme for the editor
+      matchBrackets: true,     // Highlight matching brackets
+      extraKeys: {
+        "Ctrl-Space": "autocomplete" // Enable autocomplete on Ctrl+Space
+      }
+
+    });
+});
 
 function codeEditor(state) {
 	if (state === true) {
@@ -61,3 +63,11 @@ function codeEditor(state) {
 		}
 	}
 };
+
+window.codeEditor = codeEditor
+
+function getScript() {
+	return codemirror.getValue()
+}
+
+export { getScript as sceneScript }

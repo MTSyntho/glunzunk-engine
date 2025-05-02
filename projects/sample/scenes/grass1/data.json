@@ -1,0 +1,93 @@
+{
+  "name": "Grass 1",
+  "environment": {
+    "lighting": {
+      "hemisphere": {
+        "color1": "0xffffff",
+        "color2": "0x4e4e4e",
+        "intensity": 3
+      },
+      "shadowType": "PCFSoft"
+    },
+    "tonemapping": {
+      "type": "aces",
+      "exposure": 0.3
+    },
+    "fog": {
+      "expo": {
+        "color": "0xcccccc",
+        "density": 0.0015
+      }
+    },
+    "sky": {
+      "enable": true,
+      "turbidity": 11.4,
+      "rayleigh": 3,
+      "mieCoefficient": 0.004,
+      "mieDirectionalG": 0.619,
+      "elevation": 1,
+      "azimuth": 180,
+      "scale": 450000,
+      "sunlight": {
+        "color": "0xffbf94",
+        "intensity": 10,
+        "castShadow": true
+      }
+    }
+  },
+  "objects": {
+    "ground": {
+      "type": "box",
+      "color": "0xffffff",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "properties": {
+        "width": 20,
+        "height": 0.1,
+        "depth": 20,
+        "widthSegments": 20,
+        "heightSegments": 20,
+        "depthSegments": 20
+      },
+      "material": {
+        "type": "physical",
+        "properties": {
+          "displacementScale": 0.2  
+        },
+        "textures": {
+          "map": "grass1-color",
+          "aoMap": "grass1-ao",
+          "normalMap": "grass1-normal",
+          "roughnessMap": "grass1-roughness",
+          "displacementMap": "grass1-displacement"
+        }
+      }
+    },
+    "rock": {
+      "type": "sphere",
+      "color": "0xffffff",
+      "x": 0,
+      "y": 0.8,
+      "z": 0,
+      "properties": {
+        "radius": 0.7,
+        "widthSegments": 256,
+        "heightSegments": 256
+      },
+      "material": {
+        "type": "standard",
+        "properties": {
+          "displacementScale": 0.05
+        },
+        "textures": {
+          "map": "rock-color",
+          "aoMap": "rock-ao",
+          "normalMap": "rock-normal",
+          "roughnessMap": "rock-roughness",
+          "displacementMap": "rock-displacement"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "name": "The Sphere",
+  "environment": {
+    "lighting": {
+      "hemisphere": {
+        "color1": "0xcccccc",
+        "color2": "0x000000",
+        "intensity": 0.05
+      },
+      "shadowType": "Basic"
+    },
+    "tonemapping": {
+      "type": "reinhard",
+      "exposure": 0.5
+    },
+    "fog": {
+      "expo": {
+        "color": "0x000000",
+        "density": 0.0015
+      }
+    },
+    "sky": {
+      "enable": false,
+      "turbidity": 11.4,
+      "rayleigh": 3,
+      "mieCoefficient": 0.004,
+      "mieDirectionalG": 0.619,
+      "elevation": 0,
+      "azimuth": 180,
+      "scale": 450000,
+      "sunlight": {
+        "color": "0xffffff",
+        "intensity": 3,
+        "castShadow": true
+      }
+    }
+  },
+  "effects": {
+    "bloom": {
+      "threshold": 0.5,
+      "radius": 1,
+      "strength": 0.7
+    }
+  },
+  "objects": {
+    "tiles": {
+      "type": "box",
+      "color": "0xffffff",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "properties": {
+        "width": 500,
+        "height": 0.1,
+        "depth": 500,
+        "widthSegments": 1,
+        "heightSegments": 1,
+        "depthSegments": 1
+      },
+      "material": {
+        "type": "physical",
+        "textures": {
+          "map": "TileDiffuse",
+          "aoMap": "TileAO",
+          "normalMap": "TileNormal",
+          "roughnessMap": "TileReflection"
+        }
+      }
+    },
+    "sphere": {
+      "type": "sphere",
+      "color": "0x00ff00",
+      "x": 0,
+      "y": 0.8,
+      "z": 0,
+      "properties": {
+        "radius": 0.7,
+        "widthSegments": 32,
+        "heightSegments": 16
+      },
+      "material": {
+        "type": "standard",
+        "properties": {
+          "roughness": 1
+        }
+      }
+    }
+  },
+  "lights": {
+    "bulb": {
+      "type": "point",
+      "color": "0xffffff",
+      "x": 0,
+      "y": 3,
+      "z": 0,
+      "properties": {
+        "intensity": 10,
+        "distance": 10
+      }
+    }
+  }
+}

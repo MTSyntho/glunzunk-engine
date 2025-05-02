@@ -4,24 +4,39 @@ import { gzjs } from './../glunzunk.js';
 import { scene, gizmoObjects, sceneObjects, inEngine } from './../../editor/init.js';
 
 var object = null
-gzjs.createMaterial = function(type, options) {
+gzjs.createMaterial = function(type, options, textures) {
+    let material;    
     switch (type) {
-        case 'basic': return new THREE.MeshBasicMaterial(options);
-        case 'depth': return new THREE.MeshDepthMaterial(options);
-        case 'lambert': return new THREE.MeshLambertMaterial(options);
-        case 'matcap': return new THREE.MeshMatcapMaterial(options);
-        case 'normal': return new THREE.MeshNormalMaterial(options);
-        case 'phong': return new THREE.MeshPhongMaterial(options);
-        case 'physical': return new THREE.MeshPhysicalMaterial(options);
-        case 'standard': return new THREE.MeshStandardMaterial(options);
-        case 'toon': return new THREE.MeshToonMaterial(options);
-        default: return new THREE.MeshStandardMaterial(options);
+        case 'basic': material = new THREE.MeshBasicMaterial(options); break;
+        case 'depth': material = new THREE.MeshDepthMaterial(options); break;
+        case 'lambert': material = new THREE.MeshLambertMaterial(options); break;
+        case 'matcap': material = new THREE.MeshMatcapMaterial(options); break;
+        case 'normal': material = new THREE.MeshNormalMaterial(options); break;
+        case 'phong': material = new THREE.MeshPhongMaterial(options); break;
+        case 'physical': material = new THREE.MeshPhysicalMaterial(options); break;
+        case 'standard': material = new THREE.MeshStandardMaterial(options); break;
+        case 'toon': material = new THREE.MeshToonMaterial(options); break;
+        default: material = new THREE.MeshStandardMaterial(options); break;
     }
+
+    // console.log(textures)
+
+
+    if (textures.textures) {
+        Object.keys(textures.textures).forEach(key => {
+            // console.log(textures.textures)
+            if (key in material) {
+                material[key] = textures.textures[key];
+            }
+        });
+    }
+
+    return material;
 }
 
-gzjs.newObject = function(name, type, color, position, params = {}, materialType = 'standard', materialProps = {}){
+gzjs.newObject = function(name, type, color, position, params = {}, materialType = 'standard', materialProps = {}, materialTextures = {}){
     const geometryMap = {
-        'box': () => new THREE.BoxGeometry(params.width || 1, params.height || 1, params.depth || 1),
+        'box': () => new THREE.BoxGeometry(params.width || 1, params.height || 1, params.depth || 1, params.widthSegments || 1, params.heightSegments || 1, params.depthSegments || 1),
         'capsule': () => new THREE.CapsuleGeometry(params.radius || 1, params.length || 2, params.capSegments || 4, params.radialSegments || 8),
         'circle': () => new THREE.CircleGeometry(params.radius || 1, params.segments || 32, params.thetaStart || 0, params.thetaLength || Math.PI * 2),
         'cone': () => new THREE.ConeGeometry(params.radius || 1, params.height || 2, params.radialSegments || 8, params.heightSegments || 1, params.openEnded || false, params.thetaStart || 0, params.thetaLength || Math.PI * 2),
@@ -52,18 +67,35 @@ gzjs.newObject = function(name, type, color, position, params = {}, materialType
         return null;
     }
 
+    for (let key in materialProps) {
+        if (typeof materialProps[key] === 'string' && materialProps[key].startsWith('0x')) {
+            materialProps[key] = Number(materialProps[key]);
+        }
+    }
 
     const materialOptions = { color: Number(color), ...materialProps };
-    object = new THREE.Mesh(geometryMap[type](), gzjs.createMaterial(materialType, materialOptions));
+
+    // diff = gzjs.texture('Diffuse')
+    // Object.entries(materialTextures).forEach(([key, obj]) => {
+
+    // });
+
+    const material = gzjs.createMaterial(materialType, materialOptions, materialTextures);
+
+    // console.log(materialTextures)
+    object = new THREE.Mesh(geometryMap[type](), material);
 
     object.position.set(...position);
     object.castShadow = true;
     object.receiveShadow = true;
     object.name = name;
+    // object.geometry.
 
-		gizmoObjects.push( object )
+	gizmoObjects.push( object )
 
-		sceneObjects[object.uuid] = name
+	sceneObjects[object.uuid] = name
+
+    console.log(object)
 
     scene.add(object);
     return object;

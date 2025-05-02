@@ -1,0 +1,39 @@
+{
+  "images": {
+    "Diffuse": {
+      "file": "diffuse.png",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 20, 20 ],
+      "pixelPerfect": false
+    },
+    "AO": {
+      "file": "ambientOcclusion.png",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 20, 20 ],
+      "pixelPerfect": false
+    },
+    "NormalMap": {
+      "file": "normal.png",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 20, 20 ],
+      "pixelPerfect": false
+    },
+    "Bump": {
+      "file": "bump.png",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 20, 20 ],
+      "pixelPerfect": false
+    },
+    "Specular": {
+      "file": "specular.png",
+      "wrapS": "repeat",
+      "wrapT": "repeat",
+      "repeat": [ 20, 20 ],
+      "pixelPerfect": false
+    }
+  }
+}

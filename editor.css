@@ -113,7 +113,8 @@ p, h1, h2, h3, h4, h5, h6, div {
 	z-index: 500;
 	backdrop-filter: blur(10px);
 	width: 200px;
-	height: auto;
+	max-height: calc(100% - 80px); /* Prevents overflow vertically */
+	overflow-y: auto; /* Adds scroll if it overflows */
 	gap: 10px;
 	padding: 7px;
 	border-radius: 10px;
@@ -343,3 +344,154 @@ p, h1, h2, h3, h4, h5, h6, div {
 	scale: 0.98;
 	background: #1f1926;
 }
+
+.resources-panel, .export-panel {
+	position: fixed;
+	background-color: #000000cc;
+	backdrop-filter: blur(20px);
+	width: 100%;
+	height: 100%;
+  display: flex;
+  align-items: center; /* Centers vertically */
+  justify-content: center; /* Centers horizontally */
+/*  touch-action: none;*/
+	display: none;
+  pointer-events: none;
+}
+
+.resources-panel .panel {
+	background-color: #383838ee;
+	box-shadow: 0 0 20px 3px rgba(0, 0, 0, .50);
+	width: 70%;
+	height: 60%;
+  border-radius: 10px;
+  padding: 30px;
+  position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.resources-panel .panel .resources-list {
+	background-color: #00000050;
+	height: calc(100% - 30px - 56px - 24px);
+	padding: 12px;
+	border-radius: 7px;
+	display: flex;
+	gap: 10px;
+/*	box-shadow: 0px 3px -5px #00000020;*/
+}
+
+.resources-panel .panel .resources-btns button {
+	background-color: transparent;
+	border: 1px solid #ffffff50;
+	border-radius: 7px;
+	color: #ffffffaa;
+	margin-top: 7px;
+	padding: 7px 12px;
+	box-shadow: 0px 3px 7px #00000050;
+	transition-duration: 0.2s;
+}
+
+.resources-panel .panel .resources-btns button:hover {
+	background-color: #ffffff10;
+	scale: 1.02;
+}
+
+.resources-panel .panel .resources-btns button:active {
+	background-color: #00000020;
+	scale: 0.98;
+}
+
+.resources-panel .panel .resources-list .resource-item {
+	background-color: #00000050;
+/*	display: flex;
+	flex-direction: row;*/
+/*	align-items: center;*/
+	gap: 7px;
+	border-radius: 7px;
+	width: 120px;
+	height: 165px;
+	padding: 10px;
+}
+
+.resources-panel .panel .resources-list .resource-item .resource-item-type {
+	opacity: 0.5;
+	font-size: 12px;
+	margin-top: -5px;
+	font-style: italic;
+}
+
+.export-panel .panel {
+	background-color: #383838ee;
+	box-shadow: 0 0 20px 3px rgba(0, 0, 0, .50);
+	width: 50%;
+	height: 60%;
+  border-radius: 10px;
+  padding: 30px;
+  position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.export-panel .panel .export-list {
+	background-color: #00000050;
+	height: calc(100% - 30px - 52px);
+	padding: 12px;
+	border-radius: 7px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	overflow-y: auto;
+/*	box-shadow: 0px 3px -5px #00000020;*/
+}
+
+.export-panel .panel .export-list .export-option {
+	background-color: #00000050;
+	width: calc(100% - 18px - 12px);
+	height: 78px;
+	border-radius: 12px;
+	display: flex;
+	flex-direction: row;
+	padding: 12px;
+	padding-left: 18px;
+	gap: 18px;
+	align-items: center;
+	transition-duration: 0.2s;
+}
+
+.export-panel .panel .export-list .export-option .platform-name {
+	font-size: 40px;
+	font-family: 'Roboto Light';
+}
+
+.export-panel .panel .export-list .export-option:hover {
+	background-color: #ffffff10;
+	scale: 1.01;
+}
+
+.export-panel .panel .export-list .export-option:active {
+	background-color: #00000020;
+	scale: 0.99;
+}
+
+.export-panel .panel .export-parameters {
+	background-color: #00000050;
+	width: 90%;
+	height: 73%;
+/*	padding: 24px;*/
+	border-radius: 7px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	overflow-y: auto;
+	position: fixed;
+	top: 88px;
+	display: none;
+	pointer-events: none;
+/*	box-shadow: 0px 3px -5px #00000020;*/
+}
+
