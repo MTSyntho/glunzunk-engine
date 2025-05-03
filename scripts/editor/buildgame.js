@@ -10,27 +10,27 @@ async function exportGame(platform) {
 	// const engineFiles = engineFiles
 	const folderStructure = {
 	  '/assets/assets.json': assetsDirectory,
-	  '/libs/threejs/': '/libs/threejs/',
-	  '/scripts/engine/gzjs/': '/scripts/engine/gzjs/',
-	  '/scripts/engine/glunzunk.js': '/scripts/engine/glunzunk.js',
-	  '/scripts/editor/init.js': '/scripts/editor/buildGameFiles/init.js',
-	  '/scripts/Inter-Regular.woff2': '/assets/fonts/web/Inter-Regular.woff2',
-	  '/scripts/Roboto-ThinItalic.woff': '/assets/fonts/roboto/Roboto-ThinItalic.woff',
-	  // '/scripts/game/scenes.json': '/scripts/game/scenes.json',
-	  '/index.css': '/scripts/editor/buildGameFiles/index.css',
-	  '/index.html': '/scripts/editor/buildGameFiles/index.html',
-	  '/scripts/engine/gzjs/gzjs.loadscene.js': '/scripts/editor/buildGameFiles/gzjs.loadscene.js'
+	  '/libs/threejs/': 'libs/threejs/',
+	  '/scripts/engine/gzjs/': 'scripts/engine/gzjs/',
+	  '/scripts/engine/glunzunk.js': 'scripts/engine/glunzunk.js',
+	  '/scripts/editor/init.js': 'scripts/editor/buildGameFiles/init.js',
+	  '/scripts/Inter-Regular.woff2': 'assets/fonts/web/Inter-Regular.woff2',
+	  '/scripts/Roboto-ThinItalic.woff': 'assets/fonts/roboto/Roboto-ThinItalic.woff',
+	  // '/scripts/game/scenes.json': 'scripts/game/scenes.json',
+	  '/index.css': 'scripts/editor/buildGameFiles/index.css',
+	  '/index.html': 'scripts/editor/buildGameFiles/index.html',
+	  '/scripts/engine/gzjs/gzjs.loadscene.js': 'scripts/editor/buildGameFiles/gzjs.loadscene.js'
 	};
 
 	for (const filename of engineFiles) {
-	  const localPath = `scripts/engine/gzjs/${filename}.js`;
-	  const serverPath = `/scripts/engine/gzjs/${filename}.js`;
+	  const localPath = `/scripts/engine/gzjs/${filename}.js`;
+	  const serverPath = `scripts/engine/gzjs/${filename}.js`;
 	  folderStructure[localPath] = serverPath;
 	}
 
 	for (const path of threeFiles) {
 		const localPath = `/libs/threejs/${path}`;
-		const serverPath = `/libs/threejs/${path}`;
+		const serverPath = `libs/threejs/${path}`;
 		folderStructure[localPath] = serverPath;
 	}
 
@@ -96,20 +96,20 @@ async function exportGame(platform) {
   const zip = new JSZip();
 
   for (const [zipPath, url] of Object.entries(folderStructure)) {
-    try {
+	try {
 			console.log(`[Game Compilation] Fetching ${url}`)
 			buildState.textContent = `Fetching ${url}`
 			await new Promise(r => setTimeout(r, 1));
-      const response = await fetch(url);
-      if (!response.ok) {
-        console.error(`Failed to fetch ${url}: ${response.statusText}`);
-        continue;
-      }
-      const blob = await response.blob();
-      zip.file(zipPath, blob);
-    } catch (error) {
-      console.error(`Error fetching ${url}:`, error);
-    }
+	  const response = await fetch(url);
+	  if (!response.ok) {
+		console.error(`Failed to fetch ${url}: ${response.statusText}`);
+		continue;
+	  }
+	  const blob = await response.blob();
+	  zip.file(zipPath, blob);
+	} catch (error) {
+	  console.error(`Error fetching ${url}:`, error);
+	}
   }
 
 	console.log(`[Game Compilation] Creating /scripts/scenes.json`)
@@ -118,7 +118,7 @@ async function exportGame(platform) {
 
   var scene = saveProject();
 
-  	// scenes.json
+	// scenes.json
 // 	zip.file('scripts/scenes.json', `
 // {
 //   "scenes": {
@@ -128,7 +128,7 @@ async function exportGame(platform) {
 // 	`);
 	var scenesJson = {
 	  scenes: {
-	    "1": scene.name
+		"1": scene.name
 	  }
 	};
 	zip.file('scripts/scenes.json', JSON.stringify(scenesJson, null, 2));
@@ -153,61 +153,61 @@ async function exportGame(platform) {
 
 
   if (environment.lighting) {
-  	console.log(`[Game Compilation] Creating /scripts/scenes/${scene.name}/scene.js : Adding Scene Lighting (Environment)`)
+	console.log(`[Game Compilation] Creating /scripts/scenes/${scene.name}/scene.js : Adding Scene Lighting (Environment)`)
 		buildState.textContent = `Creating /scripts/scenes/${scene.name}/scene.js : Adding Scene Lighting (Environment)`
 		await new Promise(r => setTimeout(r, 5));
-  	if (environment.lighting.hemisphere) {
-  		scenecode += `gzjs.lighting('hemisphere', ${environment.lighting.hemisphere.intensity}, ${environment.lighting.hemisphere.color1}, ${environment.lighting.hemisphere.color2});`
-  	} else if (environment.lighting.ambient) {
-  		scenecode += `gzjs.lighting('ambient', ${environment.lighting.ambient.intensity}, ${environment.lighting.ambient.color});`  		
-  	}
-  	if (environment.lighting.shadowType) {scenecode += `gzjs.shadow(true, '${environment.lighting.shadowType}');`};
+	if (environment.lighting.hemisphere) {
+		scenecode += `gzjs.lighting('hemisphere', ${environment.lighting.hemisphere.intensity}, ${environment.lighting.hemisphere.color1}, ${environment.lighting.hemisphere.color2});`
+	} else if (environment.lighting.ambient) {
+		scenecode += `gzjs.lighting('ambient', ${environment.lighting.ambient.intensity}, ${environment.lighting.ambient.color});`  		
+	}
+	if (environment.lighting.shadowType) {scenecode += `gzjs.shadow(true, '${environment.lighting.shadowType}');`};
   }
 
   if (environment.tonemapping) {
-  	console.log(`[Game Compilation] Creating /scripts/scenes/${scene.name}/scene.js : Adding Tonemapping (Environment)`)
+	console.log(`[Game Compilation] Creating /scripts/scenes/${scene.name}/scene.js : Adding Tonemapping (Environment)`)
 		buildState.textContent = `Creating /scripts/scenes/${scene.name}/scene.js : Adding Tonemapping (Environment)`
 		await new Promise(r => setTimeout(r, 5));
-  	scenecode += `gzjs.tonemapping('${environment.tonemapping.type}', ${environment.tonemapping.exposure});`
+	scenecode += `gzjs.tonemapping('${environment.tonemapping.type}', ${environment.tonemapping.exposure});`
   }
 
   if (environment.fog) {
-  	console.log(`[Game Compilation] Creating /scripts/scenes/${scene.name}/scene.js : Adding Fog (Environment)`)
+	console.log(`[Game Compilation] Creating /scripts/scenes/${scene.name}/scene.js : Adding Fog (Environment)`)
 		buildState.textContent = `Creating /scripts/scenes/${scene.name}/scene.js : Adding Fog (Environment)`
 		await new Promise(r => setTimeout(r, 5));
-  	if (environment.fog.expo) {
-  		scenecode += `gzjs.fog('expo', ${environment.fog.expo.color}, ${environment.fog.expo.density});`
-  	} else if (environment.fog.linear) {
-  		scenecode += `gzjs.fog('linear', ${environment.fog.linear.color}, ${environment.fog.linear.near}, ${environment.fog.linear.far});`
-  	}
+	if (environment.fog.expo) {
+		scenecode += `gzjs.fog('expo', ${environment.fog.expo.color}, ${environment.fog.expo.density});`
+	} else if (environment.fog.linear) {
+		scenecode += `gzjs.fog('linear', ${environment.fog.linear.color}, ${environment.fog.linear.near}, ${environment.fog.linear.far});`
+	}
   }
 
   if (environment.sky) {
-  	if (environment.sky.enable === true) {
-  		console.log(`[Game Compilation] Creating /scripts/scenes/${scene.name}/scene.js : Adding Sky (Environment)`)
-  		buildState.textContent = `Creating /scripts/scenes/${scene.name}/scene.js : Adding Sky (Environment)`
-  		await new Promise(r => setTimeout(r, 5));
-  		console.log(environment.sky)
-  		scenecode += `gzjs.sky(
-  			${environment.sky.turbidity},
-  			${environment.sky.rayleigh},
-  			${environment.sky.mieCoefficient},
-  			${environment.sky.mieDirectionalG},
-  			${environment.sky.elevation},
-  			${environment.sky.azimuth},
-  			${environment.sky.scale},
-  			${environment.sky.sunlight.color},
-  			${environment.sky.sunlight.intensity},
-  			${environment.sky.sunlight.castShadow}
-  		);`
-  	}
+	if (environment.sky.enable === true) {
+		console.log(`[Game Compilation] Creating /scripts/scenes/${scene.name}/scene.js : Adding Sky (Environment)`)
+		buildState.textContent = `Creating /scripts/scenes/${scene.name}/scene.js : Adding Sky (Environment)`
+		await new Promise(r => setTimeout(r, 5));
+		console.log(environment.sky)
+		scenecode += `gzjs.sky(
+			${environment.sky.turbidity},
+			${environment.sky.rayleigh},
+			${environment.sky.mieCoefficient},
+			${environment.sky.mieDirectionalG},
+			${environment.sky.elevation},
+			${environment.sky.azimuth},
+			${environment.sky.scale},
+			${environment.sky.sunlight.color},
+			${environment.sky.sunlight.intensity},
+			${environment.sky.sunlight.castShadow}
+		);`
+	}
   }
 
 
   if (scene.effects) {
-  	console.log(`[Game Compilation] Creating /scripts/scenes/${scene.name}/scene.js : Adding Post-Processing`)
-  	buildState.textContent = `Creating /scripts/scenes/${scene.name}/scene.js : Adding Post-Processing`
-  	await new Promise(r => setTimeout(r, 5));
+	console.log(`[Game Compilation] Creating /scripts/scenes/${scene.name}/scene.js : Adding Post-Processing`)
+	buildState.textContent = `Creating /scripts/scenes/${scene.name}/scene.js : Adding Post-Processing`
+	await new Promise(r => setTimeout(r, 5));
 		for (const [key, obj] of Object.entries(scene.effects)) {
 			scenecode += `gzjs.postProcessing('add', ${key}, ${obj});`
 			console.log(key, obj)
@@ -231,17 +231,17 @@ async function exportGame(platform) {
 
 
 		scenecode += `
-    	gzjs.newObject(
-    	    '${key}',
-    	    '${obj.type}',
-    	    ${obj.color},
-    	    [${[obj.x, obj.y, obj.z]}],
-    	    ${JSON.stringify(obj.properties)}, 
-    	    '${obj.material?.type || 'standard'}',
-    	    ${JSON.stringify(obj.material?.properties || {})},
+		gzjs.newObject(
+			'${key}',
+			'${obj.type}',
+			${obj.color},
+			[${[obj.x, obj.y, obj.z]}],
+			${JSON.stringify(obj.properties)}, 
+			'${obj.material?.type || 'standard'}',
+			${JSON.stringify(obj.material?.properties || {})},
 			{ textures: { ${texturesObject} } }
-    	);`
-    };
+		);`
+	};
   }
 
   // console.log(`[Game Compilation] `)
@@ -302,20 +302,20 @@ async function exportGame(platform) {
   `)
 
   try {
-    const content = await zip.generateAsync({ type: 'blob' });
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(content);
-    link.download = 'glunzunk-game-export.zip';
-    document.body.appendChild(link);
-    console.log(`[Game Compilation] Completed /scripts/scenes/${scene.name}/scene.js`)
-    buildState.textContent = `Completed /scripts/scenes/${scene.name}/scene.js`
-    await new Promise(r => setTimeout(r, 1));
-    link.click();
-    document.body.removeChild(link);
+	const content = await zip.generateAsync({ type: 'blob' });
+	const link = document.createElement('a');
+	link.href = URL.createObjectURL(content);
+	link.download = 'glunzunk-game-export.zip';
+	document.body.appendChild(link);
+	console.log(`[Game Compilation] Completed /scripts/scenes/${scene.name}/scene.js`)
+	buildState.textContent = `Completed /scripts/scenes/${scene.name}/scene.js`
+	await new Promise(r => setTimeout(r, 1));
+	link.click();
+	document.body.removeChild(link);
 		loading.classList.remove('fade-in')
 		loading.classList.add('fade-out')
   } catch (error) {
-    console.error('Error generating ZIP:', error);
+	console.error('Error generating ZIP:', error);
   }
 }
 
